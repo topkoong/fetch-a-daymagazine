@@ -24,7 +24,8 @@
     "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --quiet --fix --ignore-path ./.gitignore",
     "lint:format": "prettier --loglevel warn --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",
     "lint": "yarn lint:format && yarn lint:fix ",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "prepare": "husky install"
   },
   "dependencies": {
     "preact": "^10.10.1",
@@ -46,7 +47,7 @@
     "eslint-plugin-prettier": "latest",
     "eslint-plugin-promise": "^6.0.1",
     "eslint-plugin-simple-import-sort": "^7.0.0",
-    "husky": "latest",
+    "husky": "^8.0.0",
     "lint-staged": "latest",
     "postcss": "^8.4.16",
     "prettier": "^2.7.1",
@@ -54,5 +55,11 @@
     "typescript": "^4.6.4",
     "vite": "^3.0.7",
     "vite-tsconfig-paths": "latest"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css,md,json}": [
+      "prettier --loglevel warn --write"
+    ],
+    "*.{ts,tsx}": "eslint --fix --quiet --fix --ignore-path ./.gitignore"
   }
 }

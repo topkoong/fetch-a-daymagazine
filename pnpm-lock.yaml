@@ -15,7 +15,7 @@ specifiers:
   eslint-plugin-prettier: latest
   eslint-plugin-promise: ^6.0.1
   eslint-plugin-simple-import-sort: ^7.0.0
-  husky: latest
+  husky: ^8.0.0
   lint-staged: latest
   postcss: ^8.4.16
   preact: ^10.10.1
