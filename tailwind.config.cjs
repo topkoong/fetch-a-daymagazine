@@ -8,7 +8,12 @@ module.exports = {
         md: '15px 15px 0px rgba(0, 0, 0, 1)',
       },
       colors: {
-        'bright-blue': '#0b01f9',
+        'bright-green': '#39ff14dd',
+        'bright-yellow': '#fcd200',
+        'dull-black': '#333',
+      },
+      fontFamily: {
+        fasys: ['FA Sysfont C'],
       },
     },
   },
