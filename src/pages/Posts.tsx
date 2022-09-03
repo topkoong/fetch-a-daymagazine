@@ -33,7 +33,7 @@ function Posts() {
     useInfiniteQuery(
       `posts-from-category-${id}`,
       ({
-        pageParam = `${THE_STANDARD_POSTS_ENDPOINT}?categories=${id}&per_page=${PAGE_SIZE}&offset=${currentOffset}`,
+        pageParam = `${A_DAY_POSTS_ENDPOINT}?categories=${id}&per_page=${PAGE_SIZE}&offset=${currentOffset}`,
       }) => fetchPostsWithPagination(pageParam),
       {
         getNextPageParam: (lastPage) => lastPage?.nextCursor,
