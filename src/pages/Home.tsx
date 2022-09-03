@@ -99,7 +99,15 @@ function Home() {
       ) : (
         <ul className='px-6 h-full'>
           {categories.map((category, idx) => (
-            <li className='w-full my-16 h-full' key={category}>
+            <li
+              className='w-full my-16 h-full'
+              key={
+                category +
+                Date.now().toString(16) +
+                Math.random().toString(16) +
+                '0'.repeat(16)
+              }
+            >
               <CategoryHeader
                 category={category}
                 nonThaiCategoriesMapping={nonThaiCategories}
