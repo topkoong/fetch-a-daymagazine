@@ -1,99 +1,113 @@
 import '../app.css';
 
-import {
-  REFETCH_INTERVAL,
-  THE_STANDARD_CATEGORIES_ENDPOINT,
-  THE_STANDARD_POSTS_ENDPOINT,
-} from '@constants/index';
-
+import fetchCategories from '@apis/categories';
+import fetchPosts from '@apis/posts';
 import CategoryHeader from '@components/CategoryHeader';
 import PageBreak from '@components/PageBreak';
 import PageHeader from '@components/PageHeader';
 import Post from '@components/Post';
 import Spinner from '@components/Spinner';
-import axios from 'axios';
+import { REFETCH_INTERVAL } from '@constants/index';
+import { useMemo } from 'preact/hooks';
 import { useQuery } from 'react-query';
-import { useState } from 'preact/hooks';
+
+interface Keyable {
+  [key: string]: string;
+}
 
 function Home() {
-  const [posts, setPosts] = useState<any[]>([]);
-  const [categories, setCategories] = useState<any[]>([]);
-  const [nonThaiCategoriesMapping, setNonThaiCategoriesMapping] = useState<{
-    [key: string]: string;
-  }>({});
+  const {
+    data: postData,
+    error: postError,
+    status: postStatus,
+  } = useQuery('allposts', fetchPosts, {
+    refetchInterval: REFETCH_INTERVAL,
+  });
+  const {
+    data: categoryData,
+    error: categoryError,
+    status: categoryStatus,
+  } = useQuery('allcategories', fetchCategories, {
+    refetchInterval: REFETCH_INTERVAL,
+  });
 
-  const getPosts = async () => {
-    try {
-      const [{ data: fetchedPosts }, { data: fetchedCategories }] = await Promise.all([
-        axios.get(`${THE_STANDARD_POSTS_ENDPOINT}?per_page=30`),
-        axios.get(`${THE_STANDARD_CATEGORIES_ENDPOINT}?per_page=60`),
-      ]);
-      const regEx = /^[A-Za-z0-9]*$/;
-      const nonThaiCategories: any = {};
-      fetchedCategories
-        .filter((section: any) => regEx.test(section.name))
-        .forEach((section: any) => {
-          nonThaiCategories[section.id] = section.name;
-        });
-      const nonThaiCategoryNames: string[] = Object.values(nonThaiCategories);
-      const postsWithCategoryNames = fetchedPosts
-        .map((fetchedPost: any) => ({
+  const nonThaiCategories = useMemo(() => {
+    const regEx = /^[A-Za-z0-9]*$/;
+    const nonThaiCategoriesObj: any = {};
+    categoryData
+      ?.filter((section: any) => regEx.test(section.name))
+      ?.forEach((section: any) => {
+        nonThaiCategoriesObj[section.id] = section.name;
+      });
+    return nonThaiCategoriesObj;
+  }, [categoryData]);
+
+  const nonThaiCategoryNames = useMemo(() => {
+    const nonThaiCategoryNamesArr: string[] = Object.values(nonThaiCategories);
+    return nonThaiCategoryNamesArr;
+  }, [nonThaiCategories]);
+
+  const postsWithCategoryNames = useMemo(
+    () =>
+      postData
+        ?.map((fetchedPost: any) => ({
           ...fetchedPost,
-          categories: fetchedPost.categories
-            .map((category: any) =>
+          categories: fetchedPost?.categories
+            ?.map((category: any) =>
               Object.keys(nonThaiCategories).includes(`${category}`)
                 ? nonThaiCategories[`${category}`]
                 : null,
             )
-            .filter(Boolean),
+            ?.filter(Boolean),
         }))
-        .filter((fetchedPost: any) => fetchedPost?.categories?.length);
-      setNonThaiCategoriesMapping(nonThaiCategories);
-      const groupPostByCategories: any[] = nonThaiCategoryNames
-        .map((nonThaiCategoryName: any) => ({
+        ?.filter((fetchedPost: any) => fetchedPost?.categories?.length),
+    [nonThaiCategories, postData],
+  );
+
+  const groupPostByCategories = useMemo(
+    () =>
+      nonThaiCategoryNames
+        ?.map((nonThaiCategoryName: any) => ({
           [nonThaiCategoryName]: postsWithCategoryNames
-            .filter(({ categories }: any) => categories.includes(nonThaiCategoryName))
-            .flat(),
+            ?.filter(({ categories }: any) => categories.includes(nonThaiCategoryName))
+            ?.flat(),
         }))
-        .filter((elem) => Object.values(elem)[0].length);
-      setCategories(
-        groupPostByCategories.map(
-          (groupPostByCategory) => Object.keys(groupPostByCategory)[0],
-        ),
-      );
+        ?.filter((elem) => elem && Object.values(elem)[0]?.length),
+    [nonThaiCategoryNames, postsWithCategoryNames],
+  );
 
-      setPosts(groupPostByCategories);
-
-      console.log('groupPostByCategories: ', groupPostByCategories);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
-  const { status, isFetching } = useQuery(['allposts'], async () => getPosts(), {
-    // Refetch the data every 5 minutes
-    refetchInterval: REFETCH_INTERVAL,
-  });
+  const categories = useMemo(
+    () =>
+      groupPostByCategories?.map(
+        (groupPostByCategory) => Object.keys(groupPostByCategory)[0],
+      ),
+    [groupPostByCategories],
+  ) as any[];
 
   return (
-    <article className='bg-bright-green w-full'>
+    <article className='bg-bright-green w-full h-full pb-4'>
       <PageHeader title='Fetch a day magazine' />
-      {isFetching || status === 'loading' ? (
-        <div className='spinner-container'>
+      {(postStatus || categoryStatus) === 'loading' ? (
+        <div className='spinner-container h-full'>
           <Spinner />
         </div>
+      ) : (postError || categoryError) instanceof Error ? (
+        <span>
+          Error:
+          {(postError as Keyable)?.message || (categoryError as Keyable)?.message}
+        </span>
       ) : (
-        <ul className='px-6'>
+        <ul className='px-6 h-full'>
           {categories.map((category, idx) => (
-            <li className='w-full my-8' key={category}>
+            <li className='w-full my-16 h-full' key={category}>
               <CategoryHeader
                 category={category}
-                nonThaiCategoriesMapping={nonThaiCategoriesMapping}
+                nonThaiCategoriesMapping={nonThaiCategories}
               />
               <PageBreak />
-              {posts && (
+              {groupPostByCategories && (
                 <ul className='grid grid-cols-1 gap-12 lg:gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-6 my-8'>
-                  {posts[idx][category].slice(0, 5).map((post: any) => (
+                  {groupPostByCategories[idx][category].slice(0, 5).map((post: any) => (
                     <Post key={post.id} post={post} />
                   ))}
                 </ul>

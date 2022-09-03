@@ -7,7 +7,7 @@ import { useState } from 'preact/hooks';
 import { useInfiniteQuery } from 'react-query';
 import { useLocation, useParams } from 'react-router-dom';
 
-import { PAGE_SIZE, THE_STANDARD_POSTS_ENDPOINT } from '../constants';
+import { A_DAY_POSTS_ENDPOINT, PAGE_SIZE } from '../constants';
 
 interface LinkState {
   category: string;
@@ -18,8 +18,8 @@ function Posts() {
   const { id } = useParams();
   const location = useLocation();
   const { category }: LinkState = location.state as LinkState;
-  const fetchPosts = async ({
-    pageParam = `${THE_STANDARD_POSTS_ENDPOINT}?categories=${id}&per_page=${PAGE_SIZE}&offset=${currentOffset}`,
+  const fetchPostsWithPagination = async ({
+    pageParam = `${A_DAY_POSTS_ENDPOINT}?categories=${id}&per_page=${PAGE_SIZE}&offset=${currentOffset}`,
   }) => {
     try {
       setCurrentOffset((prevOffSet) => prevOffSet + PAGE_SIZE);
@@ -34,7 +34,7 @@ function Posts() {
       `posts-from-category-${id}`,
       ({
         pageParam = `${THE_STANDARD_POSTS_ENDPOINT}?categories=${id}&per_page=${PAGE_SIZE}&offset=${currentOffset}`,
-      }) => fetchPosts(pageParam),
+      }) => fetchPostsWithPagination(pageParam),
       {
         getNextPageParam: (lastPage) => lastPage?.nextCursor,
       },
@@ -65,7 +65,7 @@ function Posts() {
                 className='btn-primary'
                 onClick={() =>
                   fetchNextPage({
-                    pageParam: `${THE_STANDARD_POSTS_ENDPOINT}?categories=${id}&per_page=${PAGE_SIZE}&offset=${currentOffset}`,
+                    pageParam: `${A_DAY_POSTS_ENDPOINT}?categories=${id}&per_page=${PAGE_SIZE}&offset=${currentOffset}`,
                   })
                 }
                 disabled={!hasNextPage || isFetchingNextPage}
