@@ -2,12 +2,11 @@ import PageBreak from '@components/PageBreak';
 import PageHeader from '@components/PageHeader';
 import Post from '@components/Post';
 import Spinner from '@components/Spinner';
+import { A_DAY_POSTS_ENDPOINT, PAGE_SIZE } from '@constants/index';
 import axios from 'axios';
 import { useState } from 'preact/hooks';
 import { useInfiniteQuery } from 'react-query';
 import { useLocation, useParams } from 'react-router-dom';
-
-import { A_DAY_POSTS_ENDPOINT, PAGE_SIZE } from '../constants';
 
 interface LinkState {
   category: string;
