@@ -2,23 +2,24 @@ import '../app.css';
 
 import fetchCategories from '@apis/categories';
 import fetchPosts from '@apis/posts';
+import cachedCategoriesData from '@assets/cached/categories.json';
+import cachedPostsData from '@assets/cached/posts.json';
 import CategoryHeader from '@components/CategoryHeader';
 import PageBreak from '@components/PageBreak';
 import PageHeader from '@components/PageHeader';
 import Post from '@components/Post';
 import Spinner from '@components/Spinner';
 import { REFETCH_INTERVAL } from '@constants/index';
+import useBreakpoints from '@hooks/useBreakpoints';
 import { useMemo } from 'preact/hooks';
 import { useQuery } from 'react-query';
-
-import cachedCategoriesData from '../assets/cached/categories.json';
-import cachedPostsData from '../assets/cached/posts.json';
 
 interface Keyable {
   [key: string]: string;
 }
 
 function Home() {
+  const { isXs, isSm, isMd, isLg, isXl } = useBreakpoints();
   const {
     data: postData,
     error: postError,
@@ -93,6 +94,15 @@ function Home() {
     [groupPostByCategories],
   ) as any[];
 
+  const numberOfElementsToBeRendered = useMemo(() => {
+    if (isXs) return 1;
+    if (isSm) return 1;
+    if (isMd) return 2;
+    if (isLg) return 3;
+    if (isXl) return 4;
+    return 8;
+  }, [isLg, isMd, isSm, isXl, isXs]);
+
   return (
     <article className='bg-bright-green w-full h-full pb-4'>
       <PageHeader title='Fetch a day magazine' />
@@ -124,9 +134,11 @@ function Home() {
               <PageBreak />
               {groupPostByCategories && (
                 <ul className='grid grid-cols-1 gap-12 lg:gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-6 my-8'>
-                  {groupPostByCategories[idx][category].slice(0, 5).map((post: any) => (
-                    <Post key={post.id} post={post} />
-                  ))}
+                  {groupPostByCategories[idx][category]
+                    .slice(0, numberOfElementsToBeRendered)
+                    .map((post: any) => (
+                      <Post key={post.id} post={post} />
+                    ))}
                 </ul>
               )}
             </li>
