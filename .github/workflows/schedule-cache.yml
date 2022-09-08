@@ -51,7 +51,7 @@ jobs:
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Updated a day posts cache
-        branch: main
+        branch: master
         commit_options: '--no-verify --signoff'
         file_pattern: src/assets/cached/posts.json
         repository: .
