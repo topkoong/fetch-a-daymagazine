@@ -1,0 +1,57 @@
+name: Schedule a day posts and categories cache update
+
+on:
+  # schedule:
+    # Runs every hour
+    # - cron: '0 * * * *'
+    # Test run every 30 mins
+    # - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+jobs:
+  update_categories_cache:
+    name: Update a day categories cache
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking out the latest code
+        uses: actions/checkout@v3
+
+      - name: Installing jq, a lightweight and flexible command-line JSON processor.
+        shell: sh
+        run: sudo apt-get install jq
+
+      - name: Running fetch-a-day-categories script file
+        run: sh ./cachescripts/fetch-a-day-categories.sh
+        
+      - name: Committing to fetch-a-day-news repository
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Updated a day categories cache
+          branch: main
+          commit_options: '--no-verify --signoff'
+          file_pattern: src/assets/cached/categories.json
+          repository: .
+
+  update_posts_cache:
+    name: Update a day posts cache
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checking out the latest code
+      uses: actions/checkout@v3
+
+    - name: Installing jq, a lightweight and flexible command-line JSON processor.
+      shell: sh
+      run: sudo apt-get install jq
+
+    - name: Running fetch-a-day-posts script file
+      run: sh ./cachescripts/fetch-a-day-posts.sh
+      
+
+    - name: Committing to fetch-a-day-news repository
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Updated a day posts cache
+        branch: main
+        commit_options: '--no-verify --signoff'
+        file_pattern: src/assets/cached/posts.json
+        repository: .

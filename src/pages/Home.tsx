@@ -11,6 +11,9 @@ import { REFETCH_INTERVAL } from '@constants/index';
 import { useMemo } from 'preact/hooks';
 import { useQuery } from 'react-query';
 
+import cachedCategoriesData from '../assets/cached/categories.json';
+import cachedPostsData from '../assets/cached/posts.json';
+
 interface Keyable {
   [key: string]: string;
 }
@@ -21,26 +24,32 @@ function Home() {
     error: postError,
     status: postStatus,
   } = useQuery('allposts', fetchPosts, {
-    refetchInterval: REFETCH_INTERVAL,
+    refetchInterval: REFETCH_INTERVAL * 3,
+    initialData: cachedPostsData,
+    placeholderData: cachedPostsData,
+    staleTime: 1000,
   });
   const {
-    data: categoryData,
+    data: categoriesData,
     error: categoryError,
     status: categoryStatus,
   } = useQuery('allcategories', fetchCategories, {
-    refetchInterval: REFETCH_INTERVAL,
+    refetchInterval: REFETCH_INTERVAL * 3,
+    initialData: cachedCategoriesData,
+    placeholderData: cachedCategoriesData,
+    staleTime: 1000,
   });
 
   const nonThaiCategories = useMemo(() => {
     const regEx = /^[A-Za-z0-9]*$/;
     const nonThaiCategoriesObj: any = {};
-    categoryData
+    categoriesData
       ?.filter((section: any) => regEx.test(section.name))
       ?.forEach((section: any) => {
         nonThaiCategoriesObj[section.id] = section.name;
       });
     return nonThaiCategoriesObj;
-  }, [categoryData]);
+  }, [categoriesData]);
 
   const nonThaiCategoryNames = useMemo(() => {
     const nonThaiCategoryNamesArr: string[] = Object.values(nonThaiCategories);
