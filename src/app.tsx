@@ -28,7 +28,7 @@ function App() {
           element={
             <Suspense
               fallback={
-                <div className='spinner-wrapper h-full'>
+                <div className='spinner-wrapper'>
                   <Spinner />
                 </div>
               }
@@ -42,7 +42,7 @@ function App() {
           element={
             <Suspense
               fallback={
-                <div className='spinner-wrapper h-full'>
+                <div className='spinner-wrapper'>
                   <Spinner />
                 </div>
               }

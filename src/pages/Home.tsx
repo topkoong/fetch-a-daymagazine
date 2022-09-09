@@ -107,7 +107,7 @@ function Home() {
     <article className='bg-bright-green w-full h-full pb-4'>
       <PageHeader title='Toppy X a day magazine' />
       {(postStatus || categoryStatus) === 'loading' ? (
-        <div className='spinner-container h-full'>
+        <div className='spinner-container'>
           <Spinner />
         </div>
       ) : (postError || categoryError) instanceof Error ? (
