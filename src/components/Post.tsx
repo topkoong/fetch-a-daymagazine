@@ -24,7 +24,7 @@ function Post({ post }: any) {
               !isVisible ? 'grayscale blur-md scale-110' : 'grayscale-0 blur-0 scale-100'
             }
           `}
-            src={!isVisible ? placeholderImage : post?.opengraph_image?.url}
+            src={!isVisible ? placeholderImage : post?.featured_image?.sizes?.medium?.src}
             loading='lazy'
           />
         </div>
