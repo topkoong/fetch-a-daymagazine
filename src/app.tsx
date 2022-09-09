@@ -1,4 +1,4 @@
-import '../app.css';
+import './app.css';
 
 import Spinner from '@components/Spinner';
 import { lazy, Suspense } from 'preact/compat';
