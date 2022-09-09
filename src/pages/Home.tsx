@@ -1,5 +1,3 @@
-import '../app.css';
-
 import fetchCategories from '@apis/categories';
 import fetchPosts from '@apis/posts';
 import cachedCategoriesData from '@assets/cached/categories.json';
