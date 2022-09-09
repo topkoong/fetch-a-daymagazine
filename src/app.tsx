@@ -1,9 +1,10 @@
+import Spinner from '@components/Spinner';
+import { lazy, Suspense } from 'preact/compat';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Route, Routes } from 'react-router-dom';
-
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Posts from './pages/Posts';
+const Navbar = lazy(() => import('@components/Navbar'));
+const Home = lazy(() => import('@pages/Home'));
+const Posts = lazy(() => import('@pages/Posts'));
 
 function App() {
   // Create a client
@@ -16,10 +17,26 @@ function App() {
   });
   return (
     <QueryClientProvider client={queryClient}>
-      <Navbar />
+      <Suspense fallback={<Spinner />}>
+        <Navbar />
+      </Suspense>
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='posts/categories/:id' element={<Posts />} />
+        <Route
+          path='/'
+          element={
+            <Suspense fallback={<Spinner />}>
+              <Home />
+            </Suspense>
+          }
+        />
+        <Route
+          path='posts/categories/:id'
+          element={
+            <Suspense fallback={<Spinner />}>
+              <Posts />
+            </Suspense>
+          }
+        />
       </Routes>
     </QueryClientProvider>
   );

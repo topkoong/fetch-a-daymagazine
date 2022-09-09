@@ -1,9 +1,6 @@
-import PageBreak from '@components/PageBreak';
-import PageHeader from '@components/PageHeader';
-import Post from '@components/Post';
-import Spinner from '@components/Spinner';
 import { A_DAY_POSTS_ENDPOINT, PAGE_SIZE } from '@constants/index';
 import axios from 'axios';
+import { lazy } from 'preact/compat';
 import { useState } from 'preact/hooks';
 import { useInfiniteQuery } from 'react-query';
 import { useLocation, useParams } from 'react-router-dom';
@@ -11,6 +8,11 @@ import { useLocation, useParams } from 'react-router-dom';
 interface LinkState {
   category: string;
 }
+
+const PageBreak = lazy(() => import('@components/PageBreak'));
+const PageHeader = lazy(() => import('@components/PageHeader'));
+const Post = lazy(() => import('@components/Post'));
+const Spinner = lazy(() => import('@components/Spinner'));
 
 function Posts() {
   const [currentOffset, setCurrentOffset] = useState<number>(0);
