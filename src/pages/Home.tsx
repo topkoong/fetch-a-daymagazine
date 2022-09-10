@@ -105,7 +105,7 @@ function Home() {
   }, [isLg, isMd, isSm, isXl, isXs]);
 
   return (
-    <article className='bg-bright-green w-full h-full pb-4'>
+    <article className='w-full h-full pb-4'>
       <PageHeader title='Toppy X a day magazine' />
       {(postStatus || categoryStatus) === 'loading' ? (
         <div className='spinner-container'>
