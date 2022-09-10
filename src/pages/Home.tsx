@@ -1,6 +1,7 @@
 import fetchCategories from '@apis/categories';
 import fetchPosts from '@apis/posts';
 import cachedCategoriesData from '@assets/cached/categories.json';
+import cachedMobilePostsData from '@assets/cached/mobile-posts.json';
 import cachedPostsData from '@assets/cached/posts.json';
 import { REFETCH_INTERVAL } from '@constants/index';
 import useBreakpoints from '@hooks/useBreakpoints';
@@ -26,8 +27,8 @@ function Home() {
     status: postStatus,
   } = useQuery('allposts', fetchPosts, {
     refetchInterval: REFETCH_INTERVAL * 3,
-    initialData: cachedPostsData,
-    placeholderData: cachedPostsData,
+    initialData: isXs || isSm ? cachedMobilePostsData : cachedPostsData,
+    placeholderData: isXs || isSm ? cachedMobilePostsData : cachedPostsData,
     staleTime: 1000,
   });
   const {
