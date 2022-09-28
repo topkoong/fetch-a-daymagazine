@@ -168,7 +168,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"68088cf04e\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -585,7 +585,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"21193a67a6\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -995,7 +995,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"68088cf04e\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -1405,7 +1405,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -1815,7 +1815,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"8f84ce2d90\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -2218,7 +2218,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"60ae3994a5\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -2462,7 +2462,7 @@
   },
   {
     "id": 14358,
-    "count": 843,
+    "count": 844,
     "description": "Creative Description",
     "link": "https://adaymagazine.com/category/creative/",
     "name": "Creative",
@@ -2636,7 +2636,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -8183,7 +8183,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -8437,7 +8437,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"21193a67a6\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d0b1132213\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -8691,7 +8691,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -8945,7 +8945,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -9476,7 +9476,7 @@
   },
   {
     "id": 15295,
-    "count": 107,
+    "count": 108,
     "description": "",
     "link": "https://adaymagazine.com/category/creative/book-creative/",
     "name": "Book",
@@ -9643,7 +9643,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -9897,7 +9897,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -10595,7 +10595,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"cad91c69d4\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -10849,7 +10849,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"68088cf04e\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -11096,7 +11096,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -11794,7 +11794,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -12485,7 +12485,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -13183,7 +13183,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -13881,7 +13881,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -14967,7 +14967,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"21193a67a6\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -15228,7 +15228,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -15463,7 +15463,7 @@
   },
   {
     "id": 14360,
-    "count": 903,
+    "count": 904,
     "description": "",
     "link": "https://adaymagazine.com/category/life/",
     "name": "Life",
@@ -15630,7 +15630,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -24024,7 +24024,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"de68057683\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d8aacba72b\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -24271,7 +24271,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"21193a67a6\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -24518,7 +24518,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"21193a67a6\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"cad91c69d4\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -24605,7 +24605,7 @@
   },
   {
     "id": 15302,
-    "count": 176,
+    "count": 177,
     "description": "",
     "link": "https://adaymagazine.com/category/life/culture/",
     "name": "Culture",
@@ -24772,7 +24772,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -25033,7 +25033,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -25731,7 +25731,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -25985,7 +25985,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"8f84ce2d90\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d0b1132213\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -26683,7 +26683,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -27524,7 +27524,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"8f84ce2d90\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -28222,7 +28222,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"21193a67a6\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -28913,7 +28913,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -29611,7 +29611,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"21193a67a6\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -29865,7 +29865,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -30126,7 +30126,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -30669,7 +30669,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"8f84ce2d90\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d8aacba72b\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -31071,7 +31071,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"07a2d7440a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -31473,7 +31473,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"60ae3994a5\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -32030,7 +32030,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"8f84ce2d90\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -32432,7 +32432,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"8f84ce2d90\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2b922bfb51\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -32842,7 +32842,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"60ae3994a5\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -33533,7 +33533,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"68088cf04e\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -34238,7 +34238,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -34936,7 +34936,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"60ae3994a5\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -35345,7 +35345,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"60ae3994a5\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -36579,7 +36579,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -36827,7 +36827,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"60ae3994a5\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"1f16c0ed1c\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -37222,7 +37222,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -38210,7 +38210,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"29a8671af1\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d8aacba72b\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -38457,7 +38457,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"21193a67a6\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d8aacba72b\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -38711,7 +38711,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"21193a67a6\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -39233,7 +39233,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"07a2d7440a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"cad91c69d4\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -39494,7 +39494,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"21193a67a6\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -39755,7 +39755,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"8f84ce2d90\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -40538,7 +40538,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"b8326d6273\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"1f16c0ed1c\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -40799,7 +40799,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -41463,7 +41463,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d0b1132213\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -42232,7 +42232,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -42480,7 +42480,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"68088cf04e\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -43002,7 +43002,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -43257,7 +43257,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d8aacba72b\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -43518,7 +43518,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"8f84ce2d90\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2b922bfb51\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -44430,7 +44430,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"68088cf04e\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"1f16c0ed1c\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -44691,7 +44691,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -44946,7 +44946,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -45207,7 +45207,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"07a2d7440a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -46230,7 +46230,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"07a2d7440a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2b922bfb51\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -46491,7 +46491,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -47000,7 +47000,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d0b1132213\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -47247,7 +47247,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"21193a67a6\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -47508,7 +47508,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"21193a67a6\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d0b1132213\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -47769,7 +47769,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"68088cf04e\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d8aacba72b\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -48277,7 +48277,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d0b1132213\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -48531,7 +48531,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d0b1132213\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -48785,7 +48785,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"3918d9c64a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"1f16c0ed1c\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -50728,7 +50728,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -51139,7 +51139,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -51550,7 +51550,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -51953,7 +51953,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"8f84ce2d90\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -52356,7 +52356,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"68088cf04e\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -53210,7 +53210,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -53620,7 +53620,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -53874,7 +53874,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -54572,7 +54572,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -54826,7 +54826,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -55080,7 +55080,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -55877,7 +55877,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -56131,7 +56131,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -56829,7 +56829,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -57224,7 +57224,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"21193a67a6\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d0b1132213\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -57485,7 +57485,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"21193a67a6\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -58176,7 +58176,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"8f84ce2d90\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d8aacba72b\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -58430,7 +58430,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"21193a67a6\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d0b1132213\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -58839,7 +58839,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -59241,7 +59241,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -59636,7 +59636,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"60ae3994a5\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2b922bfb51\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -59883,7 +59883,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"cad91c69d4\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -60137,7 +60137,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"21193a67a6\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -60687,7 +60687,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -60934,7 +60934,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"07a2d7440a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d8aacba72b\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -61188,7 +61188,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d8aacba72b\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -61442,7 +61442,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"07a2d7440a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"cad91c69d4\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -61950,7 +61950,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2b922bfb51\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -62648,7 +62648,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -63346,7 +63346,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -63877,7 +63877,7 @@
   },
   {
     "id": 14403,
-    "count": 44,
+    "count": 45,
     "description": "",
     "link": "https://adaymagazine.com/category/life/culture/past-forward/",
     "name": "past forward",
@@ -64044,7 +64044,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -64749,7 +64749,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"730343c9ae\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -65701,7 +65701,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -66392,7 +66392,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"68088cf04e\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -67083,7 +67083,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -67781,7 +67781,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d0b1132213\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -68479,7 +68479,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"07a2d7440a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -68733,7 +68733,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -69431,7 +69431,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"68088cf04e\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d8aacba72b\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -70129,7 +70129,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -70834,7 +70834,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -71088,7 +71088,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -75430,7 +75430,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -75684,7 +75684,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"68088cf04e\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -75938,7 +75938,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"21193a67a6\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d8aacba72b\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -76636,7 +76636,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"8f84ce2d90\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -78944,7 +78944,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"21193a67a6\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -79346,7 +79346,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"68088cf04e\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -79748,7 +79748,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"21193a67a6\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -80453,7 +80453,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"21193a67a6\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -81151,7 +81151,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -82554,7 +82554,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"21193a67a6\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -83393,7 +83393,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"68088cf04e\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -84091,7 +84091,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"07a2d7440a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -84937,7 +84937,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"07a2d7440a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -85783,7 +85783,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"21193a67a6\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"cad91c69d4\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -86030,7 +86030,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -86278,7 +86278,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -86519,7 +86519,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"21193a67a6\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d8aacba72b\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -87156,7 +87156,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"07a2d7440a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -87696,7 +87696,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -88388,7 +88388,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -88635,7 +88635,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d0b1132213\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -88889,7 +88889,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -89405,7 +89405,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -89921,7 +89921,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"21193a67a6\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -90175,7 +90175,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"68088cf04e\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2b922bfb51\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -90436,7 +90436,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -90684,7 +90684,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"8f84ce2d90\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d8aacba72b\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -90945,7 +90945,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"07a2d7440a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -91728,7 +91728,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"8f84ce2d90\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d8aacba72b\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -93027,7 +93027,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -93275,7 +93275,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"8f84ce2d90\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -94291,7 +94291,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"3591407956\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -94545,7 +94545,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"c4dde0ba6a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -95053,7 +95053,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"113c5f5b9b\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"1f16c0ed1c\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -95575,7 +95575,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"98303fb6a4\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d8aacba72b\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -95829,7 +95829,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -96239,7 +96239,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -96493,7 +96493,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -96747,7 +96747,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -97396,7 +97396,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -97650,7 +97650,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -98045,7 +98045,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"21193a67a6\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d0b1132213\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -98306,7 +98306,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"21193a67a6\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -98997,7 +98997,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"8f84ce2d90\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d8aacba72b\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -99258,7 +99258,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -99493,7 +99493,7 @@
   },
   {
     "id": 14360,
-    "count": 903,
+    "count": 904,
     "description": "",
     "link": "https://adaymagazine.com/category/life/",
     "name": "Life",
@@ -99660,7 +99660,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -108054,7 +108054,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"cad91c69d4\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -108562,7 +108562,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -108816,7 +108816,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -109514,7 +109514,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -110045,7 +110045,7 @@
   },
   {
     "id": 14403,
-    "count": 44,
+    "count": 45,
     "description": "",
     "link": "https://adaymagazine.com/category/life/culture/past-forward/",
     "name": "past forward",
@@ -110212,7 +110212,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -110917,7 +110917,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"730343c9ae\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -111171,7 +111171,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -111869,7 +111869,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"07a2d7440a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -112123,7 +112123,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"68088cf04e\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d8aacba72b\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -112821,7 +112821,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"68088cf04e\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -113082,7 +113082,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -113632,7 +113632,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"68088cf04e\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -114034,7 +114034,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"21193a67a6\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -114732,7 +114732,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -115430,7 +115430,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"07a2d7440a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -116276,7 +116276,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"21193a67a6\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"cad91c69d4\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -116523,7 +116523,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -116764,7 +116764,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"21193a67a6\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d8aacba72b\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -117304,7 +117304,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -117565,7 +117565,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -117813,7 +117813,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"68088cf04e\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2b922bfb51\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -118074,7 +118074,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d8aacba72b\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -118335,7 +118335,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"ea8febbaf7\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -119874,7 +119874,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"3591407956\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"5aaeec8775\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -120128,7 +120128,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"2831bc0a8a\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"d0b1132213\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
@@ -120636,7 +120636,7 @@
           "type": "application/json",
           "id": "wpp-json"
         },
-        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"113c5f5b9b\",\"lang\":0,\"debug\":0}\n"
+        "content": "\n{\"sampling_active\":0,\"sampling_rate\":100,\"ajax_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\\/v1\\/popular-posts\",\"api_url\":\"https:\\/\\/adaymagazine.com\\/wp-json\\/wordpress-popular-posts\",\"ID\":0,\"token\":\"1f16c0ed1c\",\"lang\":0,\"debug\":0}\n"
       },
       {
         "tag": "link",
