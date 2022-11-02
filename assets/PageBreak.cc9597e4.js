@@ -1,1 +1,0 @@
-import{e}from"./index.e5dbeac3.js";function l(){return e("div",{className:"relative flex py-5 items-center",children:[e("div",{className:"flex-grow border-2 border-dull-black"}),e("div",{className:"flex-grow border-2 border-dull-black"})]})}export{l as default};
