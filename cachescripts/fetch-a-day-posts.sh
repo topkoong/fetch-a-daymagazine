@@ -1,45 +1,81 @@
-#!/bin/sh
+#!/usr/bin/env bash
 #
-# Scrape posts from a day and store JSON data on disk
-workdir="cachescripts"
-queryPerPage=100
-postsDir="${workdir}/posts-json"
-postsBaseUrl="https://adaymagazine.com/wp-json/wp/v2/posts"
-postFilename="post"
-outputDir="${postsDir}/merged"
-outputFilename="posts.json"
-mobileOutputFilename="mobile-posts.json"
-cachedDir="src/assets/cached"
+# Download posts from a day magazine into:
+#   - src/assets/cached/posts.json        (all fetched pages merged)
+#   - src/assets/cached/mobile-posts.json (first page only — smaller offline payload for narrow layouts)
+# Query params align with src/apis/posts.ts (orderby=date, order=desc).
+set -euo pipefail
 
-getTenPostPages() {
-    echo "Fetching a day posts"
-    headers=$(curl -I "${postsBaseUrl}?page=1&per_page=${queryPerPage}")
-    rawTotalPosts=$(echo "$headers" | grep -Fi X-WP-Total:)
-    rawTotalPages=$(echo "$headers" | grep -Fi X-WP-TotalPages:)
-    totalPosts=${rawTotalPosts//[!0-9]/}
-    totalPages=${rawTotalPages//[!0-9]/}
-    echo "totalPages: $totalPages"
-    echo "totalPosts: $totalPosts"
-    echo "queryPerPage: $queryPerPage"
-    for ((count = 1; count <= 3; count++)); do
-        if [ $count -le 10 ]; then
-            echo "Fetching a day posts page: $count"
-            curl -s "${postsBaseUrl}?page=${count}&per_page=${queryPerPage}" \
-                -H 'Accept: application/json' \
-                -H 'Content-Type: application/json' |
-                jq '.' >./${postsDir}/${postFilename}-${count}.json
-        fi
-    done
-}
-mergeJsonFiles() {
-    jq -s 'flatten' ./${postsDir}/${postFilename}*.json >./${outputDir}/${outputFilename}
-    jq -s 'flatten' ./${postsDir}/${postFilename}-1.json >./${outputDir}/${mobileOutputFilename}
-    echo "Copying cache file to static folder"
-    mv ./${outputDir}/${mobileOutputFilename} ${cachedDir}/${mobileOutputFilename}
-    mv ./${outputDir}/${outputFilename} ${cachedDir}/${outputFilename}
-    echo "Cleaning up cache folder"
-    rm ./${postsDir}/${postFilename}-*.json
+readonly ORIGIN="${ADAY_MAGAZINE_ORIGIN:-https://adaymagazine.com}"
+readonly BASE_URL="${ORIGIN}/wp-json/wp/v2/posts"
+readonly PER_PAGE=100
+readonly WORKDIR="cachescripts"
+readonly POSTS_DIR="${WORKDIR}/posts-json"
+readonly MERGED_DIR="${POSTS_DIR}/merged"
+readonly POST_PREFIX="post"
+readonly OUTPUT_NAME="posts.json"
+readonly MOBILE_NAME="mobile-posts.json"
+readonly CACHED_DIR="src/assets/cached"
+
+fetch_post_pages() {
+  echo "Fetching posts from ${BASE_URL}"
+  mkdir -p "${POSTS_DIR}" "${MERGED_DIR}"
+
+  local page=1
+  local fetched=0
+
+  while true; do
+    local url="${BASE_URL}?page=${page}&per_page=${PER_PAGE}&orderby=date&order=desc"
+    local out="${POSTS_DIR}/${POST_PREFIX}-${page}.json"
+    echo "  page ${page}..."
+    curl -fsS "$url" \
+      -H 'Accept: application/json' \
+      -H 'Content-Type: application/json' \
+      | jq '.' >"$out"
+
+    local count
+    count="$(jq 'length' "$out")"
+    if [[ "$count" -eq 0 ]]; then
+      rm -f "$out"
+      break
+    fi
+    fetched=$((fetched + count))
+    if [[ "$count" -lt "$PER_PAGE" ]]; then
+      break
+    fi
+    page=$((page + 1))
+  done
+
+  echo "  total post records fetched: ${fetched}"
 }
 
-getTenPostPages
-mergeJsonFiles
+merge_post_json() {
+  local pattern="${POSTS_DIR}/${POST_PREFIX}"-*.json
+  if ! compgen -G "$pattern" >/dev/null; then
+    echo "error: no post JSON files to merge" >&2
+    exit 1
+  fi
+
+  # Full offline feed: concatenate all pages (same order as API: newest first per page).
+  jq -s 'add' $pattern >"${MERGED_DIR}/${OUTPUT_NAME}"
+
+  # Mobile cache: first page only (matches previous script behaviour; keeps file smaller).
+  local first="${POSTS_DIR}/${POST_PREFIX}-1.json"
+  if [[ -f "$first" ]]; then
+    cp -f "$first" "${MERGED_DIR}/${MOBILE_NAME}"
+  else
+    echo "error: expected ${first}" >&2
+    exit 1
+  fi
+
+  echo "Copying ${OUTPUT_NAME} and ${MOBILE_NAME} -> ${CACHED_DIR}/"
+  mkdir -p "${CACHED_DIR}"
+  mv -f "${MERGED_DIR}/${OUTPUT_NAME}" "${CACHED_DIR}/${OUTPUT_NAME}"
+  mv -f "${MERGED_DIR}/${MOBILE_NAME}" "${CACHED_DIR}/${MOBILE_NAME}"
+  rm -f $pattern
+  echo "Done."
+}
+
+cd "$(dirname "$0")/.." || exit 1
+fetch_post_pages
+merge_post_json

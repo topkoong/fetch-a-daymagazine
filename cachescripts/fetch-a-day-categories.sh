@@ -1,52 +1,65 @@
-#!/bin/sh
+#!/usr/bin/env bash
 #
-# Scrape post categories from a day and store JSON data on disk
-workdir="cachescripts"
-categoriesBaseUrl="https://adaymagazine.com/wp-json/wp/v2/categories"
-queryPerPage=100
-categoriesDir="${workdir}/categories-json"
-categoriesGroupFilename="category-group"
-outputDir="${categoriesDir}/merged"
-outputFilename="categories.json"
-cachedDir="src/assets/cached"
+# Download all categories from a day magazine (WordPress REST) into src/assets/cached/categories.json
+# Query params align with src/apis/categories.ts (orderby=name, order=asc).
+set -euo pipefail
 
-getTotalCategoryPages() {
-    echo "Fetching a day categories"
-    headers=$(curl -I "${categoriesBaseUrl}?page=1&per_page=${queryPerPage}")
-    rawTotalPosts=$(echo "$headers" | grep -Fi X-WP-Total:)
-    rawTotalPages=$(echo "$headers" | grep -Fi X-WP-TotalPages:)
-    totalPosts=${rawTotalPosts//[!0-9]/}
-    totalPages=${rawTotalPages//[!0-9]/}
-    echo "totalPages: $totalPages"
-    echo "totalPosts: $totalPosts"
-    echo "queryPerPage: $queryPerPage"
-    for ((count = 1; count <= $totalPages; count++)); do
-        if [ $count -eq $totalPages ]; then
-            quriedPages=$((count - 1))
-            totalQueriedPages=$((queryPerPage * quriedPages))
-            remainingPosts=$((totalPosts - totalQueriedPages))
-            echo "remainingPosts: $remainingPosts"
-            echo "Fetching a day categories page: $count"
-            curl -s "${categoriesBaseUrl}?page=${count}&per_page=${remainingPosts}" \
-                -H 'Accept: application/json' \
-                -H 'Content-Type: application/json' |
-                jq '.' >./${categoriesDir}/${categoriesGroupFilename}-${count}.json
-        else
-            echo "Fetching a day categories page: $count"
-            curl -s "${categoriesBaseUrl}?page=${count}&per_page=${queryPerPage}" \
-                -H 'Accept: application/json' \
-                -H 'Content-Type: application/json' |
-                jq '.' >./${categoriesDir}/${categoriesGroupFilename}-${count}.json
-        fi
-    done
-}
-mergeJsonFiles() {
-    jq -s 'flatten' ./${categoriesDir}/${categoriesGroupFilename}-*.json >./${outputDir}/${outputFilename}
-    echo "Copying cache file to static folder"
-    mv ./${outputDir}/${outputFilename} ${cachedDir}/${outputFilename}
-    echo "Cleaning up cache folder"
-    rm ./${categoriesDir}/${categoriesGroupFilename}-*.json
+readonly ORIGIN="${ADAY_MAGAZINE_ORIGIN:-https://adaymagazine.com}"
+readonly BASE_URL="${ORIGIN}/wp-json/wp/v2/categories"
+readonly PER_PAGE=100
+readonly WORKDIR="cachescripts"
+readonly CATEGORIES_DIR="${WORKDIR}/categories-json"
+readonly MERGED_DIR="${CATEGORIES_DIR}/merged"
+readonly CATEGORIES_FILE="category-group"
+readonly OUTPUT_NAME="categories.json"
+readonly CACHED_DIR="src/assets/cached"
+
+fetch_category_pages() {
+  echo "Fetching categories from ${BASE_URL}"
+  mkdir -p "${CATEGORIES_DIR}" "${MERGED_DIR}"
+
+  local page=1
+  local fetched=0
+
+  while true; do
+    local url="${BASE_URL}?page=${page}&per_page=${PER_PAGE}&orderby=name&order=asc"
+    local out="${CATEGORIES_DIR}/${CATEGORIES_FILE}-${page}.json"
+    echo "  page ${page}..."
+    curl -fsS "$url" \
+      -H 'Accept: application/json' \
+      -H 'Content-Type: application/json' \
+      | jq '.' >"$out"
+
+    local count
+    count="$(jq 'length' "$out")"
+    if [[ "$count" -eq 0 ]]; then
+      rm -f "$out"
+      break
+    fi
+    fetched=$((fetched + count))
+    if [[ "$count" -lt "$PER_PAGE" ]]; then
+      break
+    fi
+    page=$((page + 1))
+  done
+
+  echo "  total category records fetched: ${fetched}"
 }
 
-getTotalCategoryPages
-mergeJsonFiles
+merge_category_json() {
+  local pattern="${CATEGORIES_DIR}/${CATEGORIES_FILE}"-*.json
+  if ! compgen -G "$pattern" >/dev/null; then
+    echo "error: no category JSON files to merge" >&2
+    exit 1
+  fi
+  jq -s 'add' $pattern >"${MERGED_DIR}/${OUTPUT_NAME}"
+  echo "Copying ${OUTPUT_NAME} -> ${CACHED_DIR}/"
+  mkdir -p "${CACHED_DIR}"
+  mv -f "${MERGED_DIR}/${OUTPUT_NAME}" "${CACHED_DIR}/${OUTPUT_NAME}"
+  rm -f $pattern
+  echo "Done."
+}
+
+cd "$(dirname "$0")/.." || exit 1
+fetch_category_pages
+merge_category_json
