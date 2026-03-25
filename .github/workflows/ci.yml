@@ -13,14 +13,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # pnpm must exist before setup-node cache: pnpm (see actions/setup-node docs).
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.11.1
+          run_install: false
+
       - name: Use Node.js from .nvmrc
         uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
           cache: 'pnpm'
-
-      - name: Enable Corepack
-        run: corepack enable
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
