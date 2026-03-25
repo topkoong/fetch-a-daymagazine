@@ -1,18 +1,16 @@
-name: Deploy to Github Pages
+name: CI
 
 on:
   push:
-    branches:
-      - master
-
-  workflow_dispatch:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
 
 jobs:
-  deployment:
+  lint-and-build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checking out the latest code
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Use Node.js from .nvmrc
@@ -32,12 +30,3 @@ jobs:
 
       - name: Build
         run: pnpm build
-
-      - name: Add .nojekyll file
-        run: touch ./dist/.nojekyll
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          publish_dir: ./dist
