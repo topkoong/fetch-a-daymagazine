@@ -1,7 +1,6 @@
 import { RefObject } from 'preact';
 import { useEffect, useState } from 'preact/hooks';
 
-// eslint-disable-next-line no-undef
 interface Args extends IntersectionObserverInit {
   freezeOnceVisible?: boolean;
 }

@@ -49,11 +49,7 @@ function resolveFeaturedImage(
   };
 }
 
-function PostCard({
-  post,
-  prioritizeMedia = false,
-  cachedPostsById,
-}: PostCardProps) {
+function PostCard({ post, prioritizeMedia = false, cachedPostsById }: PostCardProps) {
   const imageRef = useRef<HTMLImageElement | null>(null);
   const observerEntry = useIntersectionObserver(imageRef, {});
   const isInView = !!observerEntry?.isIntersecting;

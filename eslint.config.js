@@ -22,9 +22,7 @@ export default tseslint.config(
       '**/*.d.ts',
     ],
   },
-  ...preact.map((config, index) =>
-    index === 0 ? config : { ...config, files: jsOnly },
-  ),
+  ...preact.map((config, index) => (index === 0 ? config : { ...config, files: jsOnly })),
   ...tseslint.configs.recommended.map((config) => ({
     ...config,
     files: tsOnly,

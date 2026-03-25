@@ -10,9 +10,7 @@ function normalizeOrigin(raw: string | undefined): string {
  * Canonical origin for news from https://adaymagazine.com/ (WordPress REST).
  * Override at build time with VITE_ADAY_MAGAZINE_ORIGIN (no trailing slash).
  */
-export const A_DAY_HOSTNAME = normalizeOrigin(
-  import.meta.env.VITE_ADAY_MAGAZINE_ORIGIN,
-);
+export const A_DAY_HOSTNAME = normalizeOrigin(import.meta.env.VITE_ADAY_MAGAZINE_ORIGIN);
 
 export const A_DAY_POSTS_ENDPOINT = `${A_DAY_HOSTNAME}/wp-json/wp/v2/posts`;
 export const A_DAY_CATEGORIES_ENDPOINT = `${A_DAY_HOSTNAME}/wp-json/wp/v2/categories`;

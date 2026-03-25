@@ -1,12 +1,12 @@
 import { fetchCategoryPostsPage } from '@apis/posts';
 import { PAGE_SIZE, REFETCH_INTERVAL } from '@constants/index';
 import { queryKeys } from '@constants/query-keys';
-import type { WpPost } from 'types/wordpress';
 import { Fragment } from 'preact';
 import { lazy } from 'preact/compat';
 import { useMemo } from 'preact/hooks';
 import { useInfiniteQuery } from 'react-query';
 import { useLocation, useParams } from 'react-router-dom';
+import type { WpPost } from 'types/wordpress';
 
 interface CategoryRouteState {
   category?: string;
@@ -53,8 +53,7 @@ function Posts() {
   );
 
   const flattenedPosts = useMemo(
-    () =>
-      data?.pages.flatMap((page) => page.posts) ?? ([] as WpPost[]),
+    () => data?.pages.flatMap((page) => page.posts) ?? ([] as WpPost[]),
     [data?.pages],
   );
 

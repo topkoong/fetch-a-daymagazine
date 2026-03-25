@@ -9,23 +9,23 @@ importers:
   .:
     dependencies:
       preact:
-        specifier: ^10.10.1
+        specifier: ^10.26.0
         version: 10.29.0
       react-query:
-        specifier: latest
+        specifier: 3.39.3
         version: 3.39.3(react-dom@19.2.4(react@18.3.1))(react@18.3.1)
       react-router-dom:
-        specifier: '6'
+        specifier: ^6.30.0
         version: 6.30.3(react-dom@19.2.4(react@18.3.1))(react@18.3.1)
     devDependencies:
       '@preact/preset-vite':
         specifier: ^2.3.0
         version: 2.10.5(@babel/core@7.29.0)(preact@10.29.0)(rollup@4.60.0)(vite@6.4.1(jiti@1.21.7)(yaml@2.8.3))
       autoprefixer:
-        specifier: latest
+        specifier: ^10.4.20
         version: 10.4.27(postcss@8.5.8)
       axios:
-        specifier: latest
+        specifier: ^1.7.9
         version: 1.13.6
       eslint:
         specifier: ^10.1.0
