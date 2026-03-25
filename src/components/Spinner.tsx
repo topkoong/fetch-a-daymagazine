@@ -1,9 +1,22 @@
-function Spinner() {
+interface SpinnerProps {
+  /** Accessible status label for screen readers. */
+  label?: string;
+  className?: string;
+}
+
+function Spinner({ label = 'Loading', className = '' }: SpinnerProps) {
   return (
-    <div className='loader p-5 rounded-full flex space-x-3'>
-      <div className='w-5 h-5 bg-dull-black rounded-full animate-bounce' />
-      <div className='w-5 h-5 bg-dull-black rounded-full animate-bounce' />
-      <div className='w-5 h-5 bg-dull-black rounded-full animate-bounce' />
+    <div
+      className={`loader flex space-x-3 rounded-full p-5 ${className}`}
+      role='status'
+      aria-live='polite'
+      aria-busy
+      aria-label={label}
+    >
+      <span className='sr-only'>{label}</span>
+      <div className='h-5 w-5 animate-bounce rounded-full bg-dull-black' />
+      <div className='h-5 w-5 animate-bounce rounded-full bg-dull-black' />
+      <div className='h-5 w-5 animate-bounce rounded-full bg-dull-black' />
     </div>
   );
 }

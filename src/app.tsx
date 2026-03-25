@@ -1,5 +1,6 @@
 import './app.css';
 
+import { DEFAULT_STALE_TIME_MS } from '@constants/index';
 import Spinner from '@components/Spinner';
 import { lazy, Suspense } from 'preact/compat';
 import { QueryClient, QueryClientProvider } from 'react-query';
@@ -8,18 +9,27 @@ import { Route, Routes } from 'react-router-dom';
 const Navbar = lazy(() => import('@components/Navbar'));
 const Home = lazy(() => import('@pages/Home'));
 const Posts = lazy(() => import('@pages/Posts'));
-function App() {
-  // Create a client
-  const queryClient = new QueryClient({
-    defaultOptions: {
-      queries: {
-        refetchOnWindowFocus: false,
-      },
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+      staleTime: DEFAULT_STALE_TIME_MS,
+      retry: 2,
     },
-  });
+  },
+});
+
+function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Suspense fallback={<Spinner />}>
+      <Suspense
+        fallback={
+          <div className='flex min-h-[30vh] items-center justify-center'>
+            <Spinner label='Loading navigation' />
+          </div>
+        }
+      >
         <Navbar />
       </Suspense>
       <Routes>
@@ -28,8 +38,8 @@ function App() {
           element={
             <Suspense
               fallback={
-                <div className='spinner-wrapper'>
-                  <Spinner />
+                <div className='spinner-wrapper min-h-[50vh]'>
+                  <Spinner label='Loading home' />
                 </div>
               }
             >
@@ -42,8 +52,8 @@ function App() {
           element={
             <Suspense
               fallback={
-                <div className='spinner-wrapper'>
-                  <Spinner />
+                <div className='spinner-wrapper min-h-[50vh]'>
+                  <Spinner label='Loading category' />
                 </div>
               }
             >
