@@ -3,21 +3,18 @@ import fetchPosts from '@apis/posts';
 import cachedCategoriesData from '@assets/cached/categories.json';
 import cachedMobilePostsData from '@assets/cached/mobile-posts.json';
 import cachedPostsData from '@assets/cached/posts.json';
-import {
-  DEFAULT_STALE_TIME_MS,
-  REFETCH_INTERVAL,
-} from '@constants/index';
+import { DEFAULT_STALE_TIME_MS, REFETCH_INTERVAL } from '@constants/index';
 import { queryKeys } from '@constants/query-keys';
 import useBreakpoints from '@hooks/useBreakpoints';
+import { lazy } from 'preact/compat';
+import { useMemo } from 'preact/hooks';
+import { useQuery } from 'react-query';
 import type {
   CategoryFeedSection,
   WpCategory,
   WpPost,
   WpPostWithResolvedCategories,
 } from 'types/wordpress';
-import { lazy } from 'preact/compat';
-import { useMemo } from 'preact/hooks';
-import { useQuery } from 'react-query';
 
 const PageBreak = lazy(() => import('@components/PageBreak'));
 const PageHeader = lazy(() => import('@components/PageHeader'));
@@ -43,9 +40,7 @@ function buildCategoryFeedSections(
   const postsWithLabels: WpPostWithResolvedCategories[] = posts.map((post) => {
     const resolvedCategoryLabels =
       post.categories
-        ?.map((categoryId) =>
-          asciiCategoryIdToName.get(String(categoryId)),
-        )
+        ?.map((categoryId) => asciiCategoryIdToName.get(String(categoryId)))
         .filter((label): label is string => Boolean(label)) ?? [];
     return { ...post, resolvedCategoryLabels };
   });
@@ -127,8 +122,7 @@ function Home() {
 
   const isLoading = postsStatus === 'loading' || categoriesStatus === 'loading';
   const hasError = postsError ?? categoriesError;
-  const errorMessage =
-    hasError instanceof Error ? hasError.message : null;
+  const errorMessage = hasError instanceof Error ? hasError.message : null;
 
   return (
     <article className='home-page mx-auto w-full max-w-[1600px] pb-12'>
@@ -164,16 +158,14 @@ function Home() {
               />
               <PageBreak />
               <ul className='post-grid mt-10 grid grid-cols-1 gap-8 px-2 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-8 xl:grid-cols-4'>
-                {section.posts
-                  .slice(0, visiblePostCardCount)
-                  .map((post) => (
-                    <Post
-                      key={post.id}
-                      post={post}
-                      prioritizeMedia={sectionIndex === 0}
-                      cachedPostsById={cachedPostsById}
-                    />
-                  ))}
+                {section.posts.slice(0, visiblePostCardCount).map((post) => (
+                  <Post
+                    key={post.id}
+                    post={post}
+                    prioritizeMedia={sectionIndex === 0}
+                    cachedPostsById={cachedPostsById}
+                  />
+                ))}
               </ul>
             </section>
           ))}

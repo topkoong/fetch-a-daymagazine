@@ -8,10 +8,7 @@ function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const closeMobileMenu = useCallback(() => setIsMobileMenuOpen(false), []);
-  const toggleMobileMenu = useCallback(
-    () => setIsMobileMenuOpen((open) => !open),
-    [],
-  );
+  const toggleMobileMenu = useCallback(() => setIsMobileMenuOpen((open) => !open), []);
 
   return (
     <nav
@@ -71,20 +68,18 @@ function Navbar() {
         className={`${isMobileMenuOpen ? 'flex' : 'hidden'} flex-grow flex-col px-8 lg:flex lg:flex-row lg:items-center lg:px-3`}
       >
         <ul className='mt-2 flex list-none flex-col gap-1 lg:ml-auto lg:mt-0 lg:flex-row lg:gap-0'>
-          {Object.entries(PRIMARY_NAV_CATEGORIES).map(
-            ([categoryId, label]) => (
-              <li key={categoryId}>
-                <Link
-                  to={`/posts/categories/${categoryId}`}
-                  state={{ category: label }}
-                  className='block rounded px-2 py-3 text-sm font-bold uppercase text-white transition hover:bg-blue-700 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400 lg:mt-0 lg:inline-block lg:py-2'
-                  onClick={closeMobileMenu}
-                >
-                  {label}
-                </Link>
-              </li>
-            ),
-          )}
+          {Object.entries(PRIMARY_NAV_CATEGORIES).map(([categoryId, label]) => (
+            <li key={categoryId}>
+              <Link
+                to={`/posts/categories/${categoryId}`}
+                state={{ category: label }}
+                className='block rounded px-2 py-3 text-sm font-bold uppercase text-white transition hover:bg-blue-700 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400 lg:mt-0 lg:inline-block lg:py-2'
+                onClick={closeMobileMenu}
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>

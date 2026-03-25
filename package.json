@@ -31,14 +31,14 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "preact": "^10.10.1",
-    "react-query": "latest",
-    "react-router-dom": "6"
+    "preact": "^10.26.0",
+    "react-query": "3.39.3",
+    "react-router-dom": "^6.30.0"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.3.0",
-    "autoprefixer": "latest",
-    "axios": "latest",
+    "autoprefixer": "^10.4.20",
+    "axios": "^1.7.9",
     "eslint": "^10.1.0",
     "eslint-config-preact": "^2.0.0",
     "eslint-config-prettier": "^10.1.8",
@@ -70,6 +70,7 @@
     "peerDependencyRules": {
       "allowedVersions": {
         "eslint-config-preact>eslint": "10",
+        "eslint-plugin-import>eslint": "10",
         "typescript-eslint>typescript": "6"
       }
     }

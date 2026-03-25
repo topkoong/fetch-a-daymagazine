@@ -1,9 +1,6 @@
-import {
-  A_DAY_POSTS_ENDPOINT,
-  PAGE_SIZE,
-} from '@constants/index';
-import type { CategoryPostsPage, WpPost } from 'types/wordpress';
+import { A_DAY_POSTS_ENDPOINT, PAGE_SIZE } from '@constants/index';
 import axios from 'axios';
+import type { CategoryPostsPage, WpPost } from 'types/wordpress';
 
 const HOME_FEED_QUERY = new URLSearchParams({
   per_page: '60',
@@ -11,10 +8,7 @@ const HOME_FEED_QUERY = new URLSearchParams({
   order: 'desc',
 }).toString();
 
-export function buildCategoryPostsRequestUrl(
-  categoryId: string,
-  offset: number,
-): string {
+export function buildCategoryPostsRequestUrl(categoryId: string, offset: number): string {
   const params = new URLSearchParams({
     categories: categoryId,
     per_page: String(PAGE_SIZE),

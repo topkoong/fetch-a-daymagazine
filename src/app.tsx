@@ -1,7 +1,7 @@
 import './app.css';
 
-import { DEFAULT_STALE_TIME_MS } from '@constants/index';
 import Spinner from '@components/Spinner';
+import { DEFAULT_STALE_TIME_MS } from '@constants/index';
 import { lazy, Suspense } from 'preact/compat';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Route, Routes } from 'react-router-dom';
