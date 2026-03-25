@@ -1,9 +1,18 @@
 import { A_DAY_CATEGORIES_ENDPOINT } from '@constants/index';
+import type { WpCategory } from 'types/wordpress';
 import axios from 'axios';
 
-const fetchCategories = async (): Promise<any> => {
-  const { data } = await axios.get(`${A_DAY_CATEGORIES_ENDPOINT}?per_page=60`);
-  return data;
-};
+const CATEGORY_LIST_QUERY = new URLSearchParams({
+  per_page: '60',
+  orderby: 'name',
+  order: 'asc',
+}).toString();
+
+async function fetchCategories(): Promise<WpCategory[]> {
+  const { data } = await axios.get<WpCategory[]>(
+    `${A_DAY_CATEGORIES_ENDPOINT}?${CATEGORY_LIST_QUERY}`,
+  );
+  return Array.isArray(data) ? data : [];
+}
 
 export default fetchCategories;
