@@ -164,6 +164,45 @@ function Home() {
         title='Toppy × a day magazine'
         subtitle='Discover thoughtful stories across culture, work, design, and everyday life — updated from a day magazine with fast browsing and category-first exploration.'
       />
+      <section className='mx-auto mt-4 max-w-5xl rounded-2xl border-2 border-black/70 bg-white/85 p-5 shadow-sm sm:p-7'>
+        <p className='text-xs font-bold uppercase tracking-[0.14em] text-dull-black/80'>
+          Trusted source aggregation
+        </p>
+        <h2 className='mt-2 text-2xl font-extrabold leading-tight text-dull-black sm:text-3xl'>
+          Read the best stories from a day magazine in one fast, mobile-friendly feed.
+        </h2>
+        <p className='mt-3 text-sm leading-relaxed text-dull-black/80 sm:text-base'>
+          Curated categories, optimized cards, and smart pagination help you discover
+          meaningful articles without friction.
+        </p>
+        <div className='mt-5 flex flex-wrap gap-3'>
+          <a
+            href='#featured-categories'
+            className='rounded-md bg-black px-4 py-2 text-sm font-semibold text-white transition hover:bg-black/85 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
+          >
+            Explore featured categories
+          </a>
+          <a
+            href='https://adaymagazine.com/'
+            target='_blank'
+            rel='noreferrer'
+            className='rounded-md border border-black/70 px-4 py-2 text-sm font-semibold text-dull-black transition hover:bg-black/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
+          >
+            Visit original publisher
+          </a>
+        </div>
+        <ul className='mt-5 grid grid-cols-1 gap-2 text-xs font-semibold uppercase tracking-wide text-dull-black/75 sm:grid-cols-3 sm:text-sm'>
+          <li className='rounded-md border border-black/20 bg-white/70 px-3 py-2'>
+            Source: adaymagazine.com
+          </li>
+          <li className='rounded-md border border-black/20 bg-white/70 px-3 py-2'>
+            Network-first, cache-resilient
+          </li>
+          <li className='rounded-md border border-black/20 bg-white/70 px-3 py-2'>
+            Accessible and responsive UI
+          </li>
+        </ul>
+      </section>
       {isLoading ? (
         <div
           className='spinner-container min-h-[40vh]'
@@ -182,7 +221,7 @@ function Home() {
           <p className='text-sm'>{errorMessage}</p>
         </div>
       ) : (
-        <div className='feed-sections px-2 sm:px-4 md:px-6'>
+        <div id='featured-categories' className='feed-sections px-2 sm:px-4 md:px-6'>
           {categoryFeedSections.map((section, sectionIndex) => (
             <section
               key={section.categoryId}
