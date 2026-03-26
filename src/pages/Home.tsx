@@ -6,9 +6,9 @@ import cachedPostsData from '@assets/cached/posts.json';
 import { DEFAULT_STALE_TIME_MS, REFETCH_INTERVAL } from '@constants/index';
 import { queryKeys } from '@constants/query-keys';
 import useBreakpoints from '@hooks/useBreakpoints';
+import { useQuery } from '@tanstack/react-query';
 import { lazy } from 'preact/compat';
 import { useMemo } from 'preact/hooks';
-import { useQuery } from 'react-query';
 import type {
   CategoryFeedSection,
   WpCategory,
@@ -77,8 +77,10 @@ function Home() {
   const {
     data: posts,
     error: postsError,
-    status: postsStatus,
-  } = useQuery(queryKeys.allPosts, fetchPosts, {
+    isPending: postsPending,
+  } = useQuery({
+    queryKey: queryKeys.allPosts,
+    queryFn: fetchPosts,
     refetchInterval: REFETCH_INTERVAL,
     staleTime: DEFAULT_STALE_TIME_MS,
     initialData: initialPostsCache as WpPost[],
@@ -88,8 +90,10 @@ function Home() {
   const {
     data: categories,
     error: categoriesError,
-    status: categoriesStatus,
-  } = useQuery(queryKeys.allCategories, fetchCategories, {
+    isPending: categoriesPending,
+  } = useQuery({
+    queryKey: queryKeys.allCategories,
+    queryFn: fetchCategories,
     refetchInterval: REFETCH_INTERVAL,
     staleTime: DEFAULT_STALE_TIME_MS,
     initialData: cachedCategoriesData as WpCategory[],
@@ -120,7 +124,7 @@ function Home() {
     return 8;
   }, [isLg, isMd, isSm, isXl, isXs]);
 
-  const isLoading = postsStatus === 'loading' || categoriesStatus === 'loading';
+  const isLoading = postsPending || categoriesPending;
   const hasError = postsError ?? categoriesError;
   const errorMessage = hasError instanceof Error ? hasError.message : null;
 

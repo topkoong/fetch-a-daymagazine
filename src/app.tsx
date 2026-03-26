@@ -1,9 +1,7 @@
-import './app.css';
-
 import Spinner from '@components/Spinner';
 import { DEFAULT_STALE_TIME_MS } from '@constants/index';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { lazy, Suspense } from 'preact/compat';
-import { QueryClient, QueryClientProvider } from 'react-query';
 import { Route, Routes } from 'react-router-dom';
 
 const Navbar = lazy(() => import('@components/Navbar'));
