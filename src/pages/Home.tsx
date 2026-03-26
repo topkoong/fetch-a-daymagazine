@@ -1,14 +1,11 @@
 import fetchCategories from '@apis/categories';
 import fetchPosts from '@apis/posts';
-import cachedCategoriesData from '@assets/cached/categories.json';
-import cachedMobilePostsData from '@assets/cached/mobile-posts.json';
-import cachedPostsData from '@assets/cached/posts.json';
 import { DEFAULT_STALE_TIME_MS, REFETCH_INTERVAL } from '@constants/index';
 import { queryKeys } from '@constants/query-keys';
 import useBreakpoints from '@hooks/useBreakpoints';
 import { useQuery } from '@tanstack/react-query';
 import { lazy } from 'preact/compat';
-import { useMemo } from 'preact/hooks';
+import { useCallback, useMemo } from 'preact/hooks';
 import type {
   CategoryFeedSection,
   WpCategory,
@@ -31,6 +28,20 @@ const MAX_POSTS_BY_BREAKPOINT = {
   xl: 4,
   '2xl': 8,
 } as const;
+
+async function loadCachedPostsData(useMobileCache: boolean): Promise<WpPost[]> {
+  const module = useMobileCache
+    ? await import('@assets/cached/mobile-posts.json')
+    : await import('@assets/cached/posts.json');
+  const data = module.default;
+  return Array.isArray(data) ? (data as WpPost[]) : [];
+}
+
+async function loadCachedCategoriesData(): Promise<WpCategory[]> {
+  const module = await import('@assets/cached/categories.json');
+  const data = module.default;
+  return Array.isArray(data) ? (data as WpCategory[]) : [];
+}
 
 function buildCategoryFeedSections(
   categories: WpCategory[] | undefined,
@@ -88,9 +99,23 @@ function buildCategoryFeedSections(
 
 function Home() {
   const { active, isXs, isSm } = useBreakpoints();
+  const shouldUseMobileCache = isXs || isSm;
 
-  const initialPostsCache: WpPost[] =
-    isXs || isSm ? cachedMobilePostsData : cachedPostsData;
+  const fetchPostsWithFallback = useCallback(async () => {
+    try {
+      return await fetchPosts();
+    } catch {
+      return loadCachedPostsData(shouldUseMobileCache);
+    }
+  }, [shouldUseMobileCache]);
+
+  const fetchCategoriesWithFallback = useCallback(async () => {
+    try {
+      return await fetchCategories();
+    } catch {
+      return loadCachedCategoriesData();
+    }
+  }, []);
 
   const {
     data: posts,
@@ -98,11 +123,9 @@ function Home() {
     isPending: postsPending,
   } = useQuery({
     queryKey: queryKeys.allPosts,
-    queryFn: fetchPosts,
+    queryFn: fetchPostsWithFallback,
     refetchInterval: REFETCH_INTERVAL,
     staleTime: DEFAULT_STALE_TIME_MS,
-    initialData: initialPostsCache,
-    placeholderData: initialPostsCache,
   });
 
   const {
@@ -111,23 +134,18 @@ function Home() {
     isPending: categoriesPending,
   } = useQuery({
     queryKey: queryKeys.allCategories,
-    queryFn: fetchCategories,
+    queryFn: fetchCategoriesWithFallback,
     refetchInterval: REFETCH_INTERVAL,
     staleTime: DEFAULT_STALE_TIME_MS,
-    initialData: cachedCategoriesData as WpCategory[],
-    placeholderData: cachedCategoriesData as WpCategory[],
   });
 
   const cachedPostsById = useMemo(() => {
     const map = new Map<number, WpPost>();
-    for (const row of cachedPostsData as WpPost[]) {
-      map.set(row.id, row);
-    }
-    for (const row of cachedMobilePostsData as WpPost[]) {
+    for (const row of posts ?? []) {
       map.set(row.id, row);
     }
     return map;
-  }, []);
+  }, [posts]);
 
   const categoryFeedSections = useMemo(
     () => buildCategoryFeedSections(categories, posts),
