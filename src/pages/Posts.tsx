@@ -1,10 +1,10 @@
 import { fetchCategoryPostsPage } from '@apis/posts';
 import { PAGE_SIZE, REFETCH_INTERVAL } from '@constants/index';
 import { queryKeys } from '@constants/query-keys';
+import { useInfiniteQuery } from '@tanstack/react-query';
 import { Fragment } from 'preact';
 import { lazy } from 'preact/compat';
 import { useMemo } from 'preact/hooks';
-import { useInfiniteQuery } from 'react-query';
 import { useLocation, useParams } from 'react-router-dom';
 import type { WpPost } from 'types/wordpress';
 
@@ -24,7 +24,10 @@ function Posts() {
   const categoryTitle = routeState?.category ?? 'Category';
 
   const queryKey = useMemo(
-    () => (categoryId ? queryKeys.categoryPosts(categoryId) : ['categoryPosts', '']),
+    () =>
+      categoryId
+        ? queryKeys.categoryPosts(categoryId)
+        : (['posts', 'category', ''] as const),
     [categoryId],
   );
 
@@ -36,21 +39,19 @@ function Posts() {
     fetchNextPage,
     hasNextPage,
     isFetchingNextPage,
-  } = useInfiniteQuery(
+  } = useInfiniteQuery({
     queryKey,
-    ({ pageParam = 0 }) =>
-      fetchCategoryPostsPage(categoryId as string, pageParam as number),
-    {
-      enabled: Boolean(categoryId),
-      getNextPageParam: (lastPage, allPages) => {
-        const batchSize = lastPage.posts.length;
-        if (batchSize < PAGE_SIZE) return undefined;
-        return allPages.reduce((sum, page) => sum + page.posts.length, 0);
-      },
-      staleTime: REFETCH_INTERVAL,
-      refetchInterval: REFETCH_INTERVAL,
+    queryFn: ({ pageParam }) => fetchCategoryPostsPage(categoryId as string, pageParam),
+    initialPageParam: 0,
+    getNextPageParam: (lastPage, allPages) => {
+      const batchSize = lastPage.posts.length;
+      if (batchSize < PAGE_SIZE) return undefined;
+      return allPages.reduce((sum, page) => sum + page.posts.length, 0);
     },
-  );
+    enabled: Boolean(categoryId),
+    staleTime: REFETCH_INTERVAL,
+    refetchInterval: REFETCH_INTERVAL,
+  });
 
   const flattenedPosts = useMemo(
     () => data?.pages.flatMap((page) => page.posts) ?? ([] as WpPost[]),
