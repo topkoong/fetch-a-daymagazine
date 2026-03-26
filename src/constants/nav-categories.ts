@@ -7,4 +7,10 @@ export const PRIMARY_NAV_CATEGORIES: Readonly<Record<string, string>> = {
   '15299': 'Work',
   '15302': 'Culture',
   '15310': 'Fashion',
+  '299': 'News',
+  '300': 'Idea',
+  '301': 'Art & Design',
+  '302': 'Business',
+  '303': 'Movement',
+  '304': 'Happiness',
 } as const;

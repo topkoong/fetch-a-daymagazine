@@ -62,7 +62,10 @@ function Posts() {
 
   return (
     <article className='category-posts-page mx-auto w-full max-w-[1600px] py-8'>
-      <PageHeader title={categoryTitle} />
+      <PageHeader
+        title={categoryTitle}
+        subtitle='Browse editor-curated articles in this category and load more stories as you go.'
+      />
       <PageBreak />
       {!hasValidCategoryId ? (
         <div
