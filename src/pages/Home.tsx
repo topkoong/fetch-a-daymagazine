@@ -164,23 +164,23 @@ function Home() {
         title='Toppy × a day magazine'
         subtitle='Discover thoughtful stories across culture, work, design, and everyday life — updated from a day magazine with fast browsing and category-first exploration.'
       />
-      <section className='mx-auto mt-4 max-w-5xl rounded-2xl border-2 border-black/70 bg-white/85 p-5 shadow-sm sm:p-7'>
-        <p className='text-xs font-bold uppercase tracking-[0.14em] text-dull-black/80'>
-          Trusted source aggregation
+      <section className='mx-auto mt-5 max-w-5xl rounded-2xl border border-black/25 bg-white/90 p-5 shadow-sm sm:p-7'>
+        <p className='text-xs font-semibold uppercase tracking-[0.14em] text-dull-black/70'>
+          Editorial discovery, simplified
         </p>
         <h2 className='mt-2 text-2xl font-extrabold leading-tight text-dull-black sm:text-3xl'>
-          Read the best stories from a day magazine in one fast, mobile-friendly feed.
+          Browse a day magazine stories with cleaner navigation and faster reading flow.
         </h2>
-        <p className='mt-3 text-sm leading-relaxed text-dull-black/80 sm:text-base'>
-          Curated categories, optimized cards, and smart pagination help you discover
-          meaningful articles without friction.
+        <p className='mt-3 max-w-3xl text-sm leading-relaxed text-dull-black/80 sm:text-base'>
+          Explore by topic, jump straight into full articles, and keep loading more
+          without losing your place.
         </p>
-        <div className='mt-5 flex flex-wrap gap-3'>
+        <div className='mt-5 flex flex-wrap gap-2.5'>
           <a
             href='#featured-categories'
             className='rounded-md bg-black px-4 py-2 text-sm font-semibold text-white transition hover:bg-black/85 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
           >
-            Explore featured categories
+            Start exploring
           </a>
           <a
             href='https://adaymagazine.com/'
@@ -188,18 +188,18 @@ function Home() {
             rel='noreferrer'
             className='rounded-md border border-black/70 px-4 py-2 text-sm font-semibold text-dull-black transition hover:bg-black/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
           >
-            Visit original publisher
+            Read from source
           </a>
         </div>
-        <ul className='mt-5 grid grid-cols-1 gap-2 text-xs font-semibold uppercase tracking-wide text-dull-black/75 sm:grid-cols-3 sm:text-sm'>
-          <li className='rounded-md border border-black/20 bg-white/70 px-3 py-2'>
-            Source: adaymagazine.com
+        <ul className='mt-4 grid grid-cols-1 gap-2 text-xs font-semibold uppercase tracking-wide text-dull-black/70 sm:grid-cols-3 sm:text-sm'>
+          <li className='rounded-md border border-black/15 bg-white/70 px-3 py-2'>
+            Verified source
           </li>
-          <li className='rounded-md border border-black/20 bg-white/70 px-3 py-2'>
-            Network-first, cache-resilient
+          <li className='rounded-md border border-black/15 bg-white/70 px-3 py-2'>
+            Fast loading experience
           </li>
-          <li className='rounded-md border border-black/20 bg-white/70 px-3 py-2'>
-            Accessible and responsive UI
+          <li className='rounded-md border border-black/15 bg-white/70 px-3 py-2'>
+            Mobile-first layout
           </li>
         </ul>
       </section>
