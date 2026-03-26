@@ -12,19 +12,27 @@ function Navbar() {
 
   return (
     <nav
-      className='border-t-2 border-blue-700 bg-black/95 py-4 shadow-md backdrop-blur lg:px-10'
+      className='border-t-2 border-blue-700 bg-black/95 py-3 shadow-md backdrop-blur'
       aria-label='Primary'
     >
-      <div className='mx-auto flex w-full max-w-[1600px] flex-wrap items-center justify-between border-b border-white/20 pb-4 pl-4 pr-2 lg:border-b-0 lg:pb-0'>
-        <div className='mr-6 flex flex-shrink-0 items-center lg:mr-10'>
+      <div className='mx-auto flex w-full max-w-[1600px] items-center justify-between px-4 pb-3 sm:px-6'>
+        <div className='flex flex-shrink-0 items-center'>
           <Link
             to='/'
-            className='text-2xl font-semibold uppercase tracking-tight text-white transition hover:text-blue-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-400 sm:text-3xl'
+            className='text-xl font-semibold uppercase tracking-tight text-white transition hover:text-blue-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-400 sm:text-2xl'
             onClick={closeMobileMenu}
           >
             Lazy News
           </Link>
         </div>
+        <a
+          href='https://adaymagazine.com/'
+          target='_blank'
+          rel='noreferrer'
+          className='hidden rounded border border-white/40 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-white transition hover:border-white hover:bg-white/10 md:block'
+        >
+          Visit a day source
+        </a>
         <div className='block lg:hidden'>
           <button
             type='button'
@@ -63,17 +71,35 @@ function Navbar() {
           </button>
         </div>
       </div>
+      <div className='border-y border-white/15 px-2 py-2 sm:px-4'>
+        <div className='mx-auto max-w-[1600px] overflow-x-auto'>
+          <ul className='flex min-w-max list-none items-center gap-1 pb-1'>
+            {Object.entries(PRIMARY_NAV_CATEGORIES).map(([categoryId, label]) => (
+              <li key={categoryId}>
+                <Link
+                  to={`/posts/categories/${categoryId}`}
+                  state={{ category: label }}
+                  className='block rounded px-3 py-2 text-xs font-semibold uppercase tracking-wide text-white/90 transition hover:bg-blue-700 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400'
+                  onClick={closeMobileMenu}
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
       <div
         id={MOBILE_NAV_PANEL_ID}
-        className={`${isMobileMenuOpen ? 'flex' : 'hidden'} mx-auto w-full max-w-[1600px] flex-grow flex-col px-4 lg:flex lg:flex-row lg:items-center lg:px-2`}
+        className={`${isMobileMenuOpen ? 'flex' : 'hidden'} mx-auto w-full max-w-[1600px] flex-grow flex-col px-4 pt-3 lg:hidden`}
       >
-        <ul className='mt-2 grid list-none grid-cols-2 gap-1 sm:grid-cols-3 lg:ml-auto lg:mt-0 lg:flex lg:flex-row lg:gap-0'>
+        <ul className='grid list-none grid-cols-2 gap-1 sm:grid-cols-3'>
           {Object.entries(PRIMARY_NAV_CATEGORIES).map(([categoryId, label]) => (
             <li key={categoryId}>
               <Link
                 to={`/posts/categories/${categoryId}`}
                 state={{ category: label }}
-                className='block rounded px-2 py-2 text-xs font-bold uppercase text-white transition hover:bg-blue-700 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400 sm:text-sm lg:mt-0 lg:inline-block lg:px-3 lg:py-2'
+                className='block rounded px-2 py-2 text-xs font-semibold uppercase tracking-wide text-white transition hover:bg-blue-700 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400 sm:text-sm'
                 onClick={closeMobileMenu}
               >
                 {label}
@@ -85,7 +111,7 @@ function Navbar() {
           href='https://adaymagazine.com/'
           target='_blank'
           rel='noreferrer'
-          className='mt-3 rounded border border-white/40 px-3 py-2 text-center text-xs font-semibold uppercase tracking-wide text-white transition hover:border-white hover:bg-white/10 lg:mt-0 lg:ml-3 lg:text-sm'
+          className='mt-3 rounded border border-white/40 px-3 py-2 text-center text-xs font-semibold uppercase tracking-wide text-white transition hover:border-white hover:bg-white/10'
         >
           Visit a day source
         </a>
