@@ -1,0 +1,1 @@
+import{t as e}from"./jsxRuntime.module-CKKWO3Nq.js";function t({title:t,subtitle:n}){return e(`header`,{className:`mx-auto max-w-5xl px-4 text-center`,children:[e(`h1`,{className:`page-title`,children:t}),n?e(`p`,{className:`mx-auto max-w-3xl text-sm font-medium leading-relaxed text-dull-black/80 sm:text-base`,children:n}):null]})}export{t as default};
