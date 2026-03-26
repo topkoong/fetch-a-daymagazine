@@ -1,0 +1,1 @@
+import{t as e}from"./jsxRuntime.module-CKKWO3Nq.js";function t(){return e(`div`,{className:`relative flex py-5 items-center`,children:[e(`div`,{className:`flex-grow border-2 border-dull-black`}),e(`div`,{className:`flex-grow border-2 border-dull-black`})]})}export{t as default};
