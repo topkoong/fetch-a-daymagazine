@@ -4,7 +4,7 @@ import { queryKeys } from '@constants/query-keys';
 import { useInfiniteQuery } from '@tanstack/react-query';
 import { Fragment } from 'preact';
 import { lazy } from 'preact/compat';
-import { useMemo } from 'preact/hooks';
+import { useEffect, useMemo, useState } from 'preact/hooks';
 import { useLocation, useParams } from 'react-router-dom';
 import type { WpPost } from 'types/wordpress';
 
@@ -16,6 +16,7 @@ const PageBreak = lazy(() => import('@components/PageBreak'));
 const PageHeader = lazy(() => import('@components/PageHeader'));
 const Post = lazy(() => import('@components/Post'));
 const Spinner = lazy(() => import('@components/Spinner'));
+const BASE_VISIBLE_POST_COUNT = 8;
 
 function Posts() {
   const { id: categoryId } = useParams();
@@ -23,6 +24,9 @@ function Posts() {
   const routeState = location.state as CategoryRouteState | null;
   const categoryTitle = routeState?.category ?? 'Category';
   const hasValidCategoryId = typeof categoryId === 'string' && categoryId.length > 0;
+  const savedVisibleCountKey = hasValidCategoryId
+    ? `category-visible-count-${categoryId}`
+    : null;
 
   const queryKey = useMemo(
     () =>
@@ -53,10 +57,50 @@ function Posts() {
     refetchInterval: REFETCH_INTERVAL,
   });
 
+  const [desiredVisibleCount, setDesiredVisibleCount] = useState<number>(() => {
+    if (typeof window === 'undefined' || !savedVisibleCountKey) {
+      return BASE_VISIBLE_POST_COUNT;
+    }
+    const parsed = Number(window.sessionStorage.getItem(savedVisibleCountKey));
+    return Number.isFinite(parsed) && parsed > BASE_VISIBLE_POST_COUNT
+      ? parsed
+      : BASE_VISIBLE_POST_COUNT;
+  });
+
   const flattenedPosts = useMemo(
     () => data?.pages.flatMap((page) => page.posts) ?? ([] as WpPost[]),
     [data?.pages],
   );
+
+  useEffect(() => {
+    if (!savedVisibleCountKey) return;
+    window.sessionStorage.setItem(savedVisibleCountKey, String(desiredVisibleCount));
+  }, [desiredVisibleCount, savedVisibleCountKey]);
+
+  useEffect(() => {
+    if (!savedVisibleCountKey) return;
+    const parsed = Number(window.sessionStorage.getItem(savedVisibleCountKey));
+    if (Number.isFinite(parsed) && parsed > BASE_VISIBLE_POST_COUNT) {
+      setDesiredVisibleCount(parsed);
+      return;
+    }
+    setDesiredVisibleCount(BASE_VISIBLE_POST_COUNT);
+  }, [savedVisibleCountKey]);
+
+  useEffect(() => {
+    if (!hasValidCategoryId) return;
+    if (!hasNextPage) return;
+    if (isFetchingNextPage) return;
+    if (flattenedPosts.length >= desiredVisibleCount) return;
+    void fetchNextPage();
+  }, [
+    desiredVisibleCount,
+    fetchNextPage,
+    flattenedPosts.length,
+    hasNextPage,
+    hasValidCategoryId,
+    isFetchingNextPage,
+  ]);
 
   const errorMessage = error instanceof Error ? error.message : null;
 
@@ -108,10 +152,13 @@ function Posts() {
               <button
                 type='button'
                 className='btn-primary min-w-[12rem] transition hover:bg-neutral-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black disabled:cursor-not-allowed disabled:opacity-60'
-                onClick={() => fetchNextPage()}
+                onClick={() => {
+                  setDesiredVisibleCount((prev) => prev + BASE_VISIBLE_POST_COUNT);
+                  void fetchNextPage();
+                }}
                 disabled={isFetchingNextPage}
               >
-                <span className='btn-secondary text-lg'>Load more</span>
+                <span className='btn-secondary text-lg'>Load 8 more stories</span>
               </button>
             ) : flattenedPosts.length > 0 ? (
               <p className='end-of-feed text-center text-sm font-semibold uppercase tracking-wide text-dull-black'>
