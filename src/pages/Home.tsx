@@ -28,6 +28,30 @@ const MAX_POSTS_BY_BREAKPOINT = {
   xl: 4,
   '2xl': 8,
 } as const;
+const BENEFIT_POINTS = [
+  'Category-first discovery so you can jump straight to what matters.',
+  'Network-first delivery with cache fallback for reliable reading.',
+  'Responsive card layout designed for mobile, tablet, and desktop sessions.',
+] as const;
+const FEATURE_PILLARS = [
+  {
+    title: 'Editorial Focus',
+    detail: 'Culture, business, design, and life coverage from a trusted source.',
+  },
+  {
+    title: 'Fast Navigation',
+    detail: 'Primary categories stay accessible at the top for one-tap routing.',
+  },
+  {
+    title: 'Readable Cards',
+    detail: 'Clear title, excerpt, date, and CTA to help decision-making quickly.',
+  },
+] as const;
+const SUCCESS_INDICATORS = [
+  'Verified source: adaymagazine.com',
+  'Fast loading experience',
+  'Mobile-first layout',
+] as const;
 
 async function loadCachedPostsData(useMobileCache: boolean): Promise<WpPost[]> {
   const module = useMobileCache
@@ -166,21 +190,21 @@ function Home() {
       />
       <section className='mx-auto mt-5 max-w-5xl rounded-2xl border border-black/25 bg-white/90 p-5 shadow-sm sm:p-7'>
         <p className='text-xs font-semibold uppercase tracking-[0.14em] text-dull-black/70'>
-          Editorial discovery, simplified
+          Headline
         </p>
         <h2 className='mt-2 text-2xl font-extrabold leading-tight text-dull-black sm:text-3xl'>
-          Browse a day magazine stories with cleaner navigation and faster reading flow.
+          Your high-signal reading dashboard for a day magazine.
         </h2>
         <p className='mt-3 max-w-3xl text-sm leading-relaxed text-dull-black/80 sm:text-base'>
-          Explore by topic, jump straight into full articles, and keep loading more
-          without losing your place.
+          Skip noisy scrolling. Get a cleaner, faster path to stories worth your time,
+          with curated categories and intuitive navigation.
         </p>
-        <div className='mt-5 flex flex-wrap gap-2.5'>
+        <div className='mt-5 flex flex-wrap gap-2.5' aria-label='Primary calls to action'>
           <a
             href='#featured-categories'
             className='rounded-md bg-black px-4 py-2 text-sm font-semibold text-white transition hover:bg-black/85 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
           >
-            Start exploring
+            Start reading now
           </a>
           <a
             href='https://adaymagazine.com/'
@@ -188,20 +212,85 @@ function Home() {
             rel='noreferrer'
             className='rounded-md border border-black/70 px-4 py-2 text-sm font-semibold text-dull-black transition hover:bg-black/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
           >
-            Read from source
+            Browse the original publisher
           </a>
         </div>
-        <ul className='mt-4 grid grid-cols-1 gap-2 text-xs font-semibold uppercase tracking-wide text-dull-black/70 sm:grid-cols-3 sm:text-sm'>
-          <li className='rounded-md border border-black/15 bg-white/70 px-3 py-2'>
-            Verified source
-          </li>
-          <li className='rounded-md border border-black/15 bg-white/70 px-3 py-2'>
-            Fast loading experience
-          </li>
-          <li className='rounded-md border border-black/15 bg-white/70 px-3 py-2'>
-            Mobile-first layout
-          </li>
+        <h3 className='mt-6 text-base font-extrabold uppercase tracking-wide text-dull-black sm:text-lg'>
+          Benefits
+        </h3>
+        <ul className='mt-3 space-y-2 text-sm leading-relaxed text-dull-black/85 sm:text-base'>
+          {BENEFIT_POINTS.map((benefit) => (
+            <li
+              key={benefit}
+              className='rounded-md border border-black/10 bg-white/70 px-3 py-2'
+            >
+              {benefit}
+            </li>
+          ))}
         </ul>
+        <h3 className='mt-6 text-base font-extrabold uppercase tracking-wide text-dull-black sm:text-lg'>
+          Social proof
+        </h3>
+        <p className='mt-2 text-sm text-dull-black/80 sm:text-base'>
+          Built around stories from the established editorial team at a day magazine, with
+          a reading experience optimized for repeat visits.
+        </p>
+        <h3 className='mt-6 text-base font-extrabold uppercase tracking-wide text-dull-black sm:text-lg'>
+          Features
+        </h3>
+        <div className='mt-3 grid grid-cols-1 gap-2 sm:grid-cols-3'>
+          {FEATURE_PILLARS.map((feature) => (
+            <article
+              key={feature.title}
+              className='rounded-md border border-black/15 bg-white/70 px-3 py-3'
+            >
+              <h4 className='text-sm font-bold uppercase tracking-wide text-dull-black'>
+                {feature.title}
+              </h4>
+              <p className='mt-1 text-xs leading-relaxed text-dull-black/80 sm:text-sm'>
+                {feature.detail}
+              </p>
+            </article>
+          ))}
+        </div>
+        <h3 className='mt-6 text-base font-extrabold uppercase tracking-wide text-dull-black sm:text-lg'>
+          Success indicators
+        </h3>
+        <ul className='mt-3 grid grid-cols-1 gap-2 text-xs font-semibold uppercase tracking-wide text-dull-black/70 sm:grid-cols-3 sm:text-sm'>
+          {SUCCESS_INDICATORS.map((indicator) => (
+            <li
+              key={indicator}
+              className='rounded-md border border-black/15 bg-white/70 px-3 py-2'
+            >
+              {indicator}
+            </li>
+          ))}
+        </ul>
+        <div className='mt-6 rounded-lg border border-black/15 bg-white/75 px-4 py-3'>
+          <h3 className='text-sm font-extrabold uppercase tracking-wide text-dull-black sm:text-base'>
+            Content offer
+          </h3>
+          <p className='mt-1 text-sm leading-relaxed text-dull-black/80'>
+            Pick a category above and start with the top stories. Use “Load more” inside
+            each category to keep your reading momentum.
+          </p>
+          <div className='mt-3 flex flex-wrap gap-2'>
+            <a
+              href='#featured-categories'
+              className='rounded-md bg-black px-3 py-2 text-xs font-semibold uppercase tracking-wide text-white transition hover:bg-black/85 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black sm:text-sm'
+            >
+              Explore categories
+            </a>
+            <a
+              href='https://adaymagazine.com/'
+              target='_blank'
+              rel='noreferrer'
+              className='rounded-md border border-black/70 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-dull-black transition hover:bg-black/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black sm:text-sm'
+            >
+              Secondary CTA: source archive
+            </a>
+          </div>
+        </div>
       </section>
       {isLoading ? (
         <div
