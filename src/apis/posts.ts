@@ -1,4 +1,5 @@
 import { A_DAY_POSTS_ENDPOINT, PAGE_SIZE } from '@constants/index';
+import { normalizeWpPosts } from '@utils/normalize-wp-post';
 import axios from 'axios';
 import type { CategoryPostsPage, WpPost } from 'types/wordpress';
 
@@ -20,10 +21,8 @@ export function buildCategoryPostsRequestUrl(categoryId: string, offset: number)
 }
 
 export async function fetchPosts(): Promise<WpPost[]> {
-  const { data } = await axios.get<WpPost[]>(
-    `${A_DAY_POSTS_ENDPOINT}?${HOME_FEED_QUERY}`,
-  );
-  return Array.isArray(data) ? data : [];
+  const { data } = await axios.get(`${A_DAY_POSTS_ENDPOINT}?${HOME_FEED_QUERY}`);
+  return normalizeWpPosts(data);
 }
 
 export async function fetchCategoryPostsPage(
@@ -31,8 +30,8 @@ export async function fetchCategoryPostsPage(
   offset: number,
 ): Promise<CategoryPostsPage> {
   const url = buildCategoryPostsRequestUrl(categoryId, offset);
-  const response = await axios.get<WpPost[]>(url);
-  const posts = Array.isArray(response.data) ? response.data : [];
+  const response = await axios.get(url);
+  const posts = normalizeWpPosts(response.data);
   const totalPagesHeader = Number(response.headers['x-wp-totalpages']);
   const totalItemsHeader = Number(response.headers['x-wp-total']);
   const hasValidTotals =
