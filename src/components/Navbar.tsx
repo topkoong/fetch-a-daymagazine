@@ -71,9 +71,9 @@ function Navbar() {
           </button>
         </div>
       </div>
-      <div className='border-y border-white/15 px-2 py-2 sm:px-4'>
-        <div className='mx-auto max-w-[1600px] overflow-x-auto'>
-          <ul className='flex min-w-max list-none items-center gap-1 pb-1'>
+      <div className='hidden border-y border-white/15 px-2 py-2 sm:px-4 lg:block'>
+        <div className='mx-auto max-w-[1600px]'>
+          <ul className='flex list-none flex-wrap items-center justify-center gap-1 pb-1'>
             {Object.entries(PRIMARY_NAV_CATEGORIES).map(([categoryId, label]) => (
               <li key={categoryId}>
                 <Link
@@ -91,7 +91,7 @@ function Navbar() {
       </div>
       <div
         id={MOBILE_NAV_PANEL_ID}
-        className={`${isMobileMenuOpen ? 'flex' : 'hidden'} mx-auto w-full max-w-[1600px] flex-grow flex-col px-4 pt-3 lg:hidden`}
+        className={`${isMobileMenuOpen ? 'flex' : 'hidden'} mx-auto w-full max-w-[1600px] flex-grow flex-col border-t border-white/15 px-4 pt-3 lg:hidden`}
       >
         <ul className='grid list-none grid-cols-2 gap-1 sm:grid-cols-3'>
           {Object.entries(PRIMARY_NAV_CATEGORIES).map(([categoryId, label]) => (
