@@ -31,8 +31,22 @@ export async function fetchCategoryPostsPage(
   offset: number,
 ): Promise<CategoryPostsPage> {
   const url = buildCategoryPostsRequestUrl(categoryId, offset);
-  const { data } = await axios.get<WpPost[]>(url);
-  return { posts: Array.isArray(data) ? data : [] };
+  const response = await axios.get<WpPost[]>(url);
+  const posts = Array.isArray(response.data) ? response.data : [];
+  const totalPagesHeader = Number(response.headers['x-wp-totalpages']);
+  const totalItemsHeader = Number(response.headers['x-wp-total']);
+  const hasValidTotals =
+    Number.isFinite(totalPagesHeader) &&
+    totalPagesHeader > 0 &&
+    Number.isFinite(totalItemsHeader) &&
+    totalItemsHeader >= 0;
+
+  const nextOffset = offset + posts.length;
+  const hasMore = hasValidTotals
+    ? nextOffset < totalItemsHeader
+    : posts.length >= PAGE_SIZE;
+
+  return { posts, hasMore, nextOffset };
 }
 
 export default fetchPosts;

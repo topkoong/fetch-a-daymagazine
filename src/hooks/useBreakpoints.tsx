@@ -1,12 +1,24 @@
 import useMediaQuery from '@hooks/useMediaQuery';
+
+type BreakpointName = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
+
+export interface BreakpointState {
+  isXs: boolean;
+  isSm: boolean;
+  isMd: boolean;
+  isLg: boolean;
+  isXl: boolean;
+  is2Xl: boolean;
+  active: BreakpointName;
+}
 /**
  * Get a set of boolean representing which breakpoint is active
  * and which breakpoints are inactive.
  * It can be used like this:
  * const {isXs, isSm, isMd, isLg, active} = useBreakpoints();
  */
-export default function useBreakpoints() {
-  const breakpoints = {
+export default function useBreakpoints(): BreakpointState {
+  const breakpoints: BreakpointState = {
     isXs: useMediaQuery('(max-width: 640px)'),
     isSm: useMediaQuery('(min-width: 641px) and (max-width: 768px)'),
     isMd: useMediaQuery('(min-width: 769px) and (max-width: 1024px)'),

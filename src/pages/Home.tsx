@@ -23,6 +23,14 @@ const Spinner = lazy(() => import('@components/Spinner'));
 const CategoryHeader = lazy(() => import('@components/CategoryHeader'));
 
 const ASCII_CATEGORY_NAME = /^[A-Za-z0-9]+$/;
+const MAX_POSTS_BY_BREAKPOINT = {
+  xs: 1,
+  sm: 1,
+  md: 2,
+  lg: 3,
+  xl: 4,
+  '2xl': 8,
+} as const;
 
 function buildCategoryFeedSections(
   categories: WpCategory[] | undefined,
@@ -30,34 +38,43 @@ function buildCategoryFeedSections(
 ): CategoryFeedSection[] {
   if (!categories?.length || !posts?.length) return [];
 
-  const asciiCategoryIdToName = new Map<string, string>();
+  const categoryNameById = new Map<string, string>();
+  const postsByCategoryName = new Map<string, WpPostWithResolvedCategories[]>();
+
   for (const category of categories) {
     if (ASCII_CATEGORY_NAME.test(category.name)) {
-      asciiCategoryIdToName.set(String(category.id), category.name);
+      const categoryId = String(category.id);
+      categoryNameById.set(categoryId, category.name);
+      postsByCategoryName.set(category.name, []);
     }
   }
 
-  const postsWithLabels: WpPostWithResolvedCategories[] = posts.map((post) => {
+  for (const post of posts) {
     const resolvedCategoryLabels =
       post.categories
-        ?.map((categoryId) => asciiCategoryIdToName.get(String(categoryId)))
+        ?.map((categoryId) => categoryNameById.get(String(categoryId)))
         .filter((label): label is string => Boolean(label)) ?? [];
-    return { ...post, resolvedCategoryLabels };
-  });
 
-  const postsInFeed = postsWithLabels.filter(
-    (post) => post.resolvedCategoryLabels.length > 0,
-  );
+    if (!resolvedCategoryLabels.length) continue;
 
-  const sortedPairs = [...asciiCategoryIdToName.entries()].sort((a, b) =>
+    const postWithLabels: WpPostWithResolvedCategories = {
+      ...post,
+      resolvedCategoryLabels,
+    };
+
+    for (const label of resolvedCategoryLabels) {
+      const currentPosts = postsByCategoryName.get(label);
+      if (currentPosts) currentPosts.push(postWithLabels);
+    }
+  }
+
+  const sortedPairs = [...categoryNameById.entries()].sort((a, b) =>
     a[1].localeCompare(b[1], 'en'),
   );
 
   const sections: CategoryFeedSection[] = [];
   for (const [categoryId, displayName] of sortedPairs) {
-    const sectionPosts = postsInFeed.filter((post) =>
-      post.resolvedCategoryLabels.includes(displayName),
-    );
+    const sectionPosts = postsByCategoryName.get(displayName) ?? [];
     if (sectionPosts.length > 0) {
       sections.push({
         categoryId,
@@ -70,9 +87,10 @@ function buildCategoryFeedSections(
 }
 
 function Home() {
-  const { isXs, isSm, isMd, isLg, isXl } = useBreakpoints();
+  const { active, isXs, isSm } = useBreakpoints();
 
-  const initialPostsCache = isXs || isSm ? cachedMobilePostsData : cachedPostsData;
+  const initialPostsCache: WpPost[] =
+    isXs || isSm ? cachedMobilePostsData : cachedPostsData;
 
   const {
     data: posts,
@@ -83,8 +101,8 @@ function Home() {
     queryFn: fetchPosts,
     refetchInterval: REFETCH_INTERVAL,
     staleTime: DEFAULT_STALE_TIME_MS,
-    initialData: initialPostsCache as WpPost[],
-    placeholderData: initialPostsCache as WpPost[],
+    initialData: initialPostsCache,
+    placeholderData: initialPostsCache,
   });
 
   const {
@@ -116,20 +134,14 @@ function Home() {
     [categories, posts],
   );
 
-  const visiblePostCardCount = useMemo(() => {
-    if (isXs || isSm) return 1;
-    if (isMd) return 2;
-    if (isLg) return 3;
-    if (isXl) return 4;
-    return 8;
-  }, [isLg, isMd, isSm, isXl, isXs]);
+  const visiblePostCardCount = MAX_POSTS_BY_BREAKPOINT[active];
 
   const isLoading = postsPending || categoriesPending;
   const hasError = postsError ?? categoriesError;
   const errorMessage = hasError instanceof Error ? hasError.message : null;
 
   return (
-    <article className='home-page mx-auto w-full max-w-[1600px] pb-12'>
+    <article className='home-page mx-auto w-full max-w-[1600px] px-2 pb-12 sm:px-4'>
       <PageHeader title='Toppy × a day magazine' />
       {isLoading ? (
         <div
@@ -149,7 +161,7 @@ function Home() {
           <p className='text-sm'>{errorMessage}</p>
         </div>
       ) : (
-        <div className='feed-sections px-4 sm:px-6'>
+        <div className='feed-sections px-2 sm:px-4 md:px-6'>
           {categoryFeedSections.map((section, sectionIndex) => (
             <section
               key={section.categoryId}

@@ -1,5 +1,5 @@
 import { fetchCategoryPostsPage } from '@apis/posts';
-import { PAGE_SIZE, REFETCH_INTERVAL } from '@constants/index';
+import { REFETCH_INTERVAL } from '@constants/index';
 import { queryKeys } from '@constants/query-keys';
 import { useInfiniteQuery } from '@tanstack/react-query';
 import { Fragment } from 'preact';
@@ -22,33 +22,33 @@ function Posts() {
   const location = useLocation();
   const routeState = location.state as CategoryRouteState | null;
   const categoryTitle = routeState?.category ?? 'Category';
+  const hasValidCategoryId = typeof categoryId === 'string' && categoryId.length > 0;
 
   const queryKey = useMemo(
     () =>
-      categoryId
+      hasValidCategoryId
         ? queryKeys.categoryPosts(categoryId)
         : (['posts', 'category', ''] as const),
-    [categoryId],
+    [categoryId, hasValidCategoryId],
   );
 
   const {
     data,
     error,
-    isLoading,
+    isPending,
     isError,
     fetchNextPage,
     hasNextPage,
     isFetchingNextPage,
   } = useInfiniteQuery({
     queryKey,
-    queryFn: ({ pageParam }) => fetchCategoryPostsPage(categoryId as string, pageParam),
+    queryFn: ({ pageParam }) => fetchCategoryPostsPage(categoryId ?? '', pageParam),
     initialPageParam: 0,
-    getNextPageParam: (lastPage, allPages) => {
-      const batchSize = lastPage.posts.length;
-      if (batchSize < PAGE_SIZE) return undefined;
-      return allPages.reduce((sum, page) => sum + page.posts.length, 0);
+    getNextPageParam: (lastPage) => {
+      if (!lastPage.hasMore) return undefined;
+      return lastPage.nextOffset;
     },
-    enabled: Boolean(categoryId),
+    enabled: hasValidCategoryId,
     staleTime: REFETCH_INTERVAL,
     refetchInterval: REFETCH_INTERVAL,
   });
@@ -64,7 +64,15 @@ function Posts() {
     <article className='category-posts-page mx-auto w-full max-w-[1600px] py-8'>
       <PageHeader title={categoryTitle} />
       <PageBreak />
-      {isLoading ? (
+      {!hasValidCategoryId ? (
+        <div
+          className='error-banner mx-6 rounded-lg border-2 border-red-800 bg-red-100 px-4 py-3 text-red-900'
+          role='alert'
+        >
+          <p className='font-semibold'>Invalid category route</p>
+          <p className='text-sm'>The category id is missing in the URL.</p>
+        </div>
+      ) : isPending ? (
         <div
           className='spinner-container min-h-[40vh]'
           role='status'

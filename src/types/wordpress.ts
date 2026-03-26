@@ -43,4 +43,6 @@ export interface CategoryFeedSection {
 
 export interface CategoryPostsPage {
   posts: WpPost[];
+  hasMore: boolean;
+  nextOffset: number;
 }
