@@ -142,7 +142,10 @@ function Home() {
 
   return (
     <article className='home-page mx-auto w-full max-w-[1600px] px-2 pb-12 sm:px-4'>
-      <PageHeader title='Toppy × a day magazine' />
+      <PageHeader
+        title='Toppy × a day magazine'
+        subtitle='Discover thoughtful stories across culture, work, design, and everyday life — updated from a day magazine with fast browsing and category-first exploration.'
+      />
       {isLoading ? (
         <div
           className='spinner-container min-h-[40vh]'
@@ -173,7 +176,7 @@ function Home() {
                 title={section.displayName}
               />
               <PageBreak />
-              <ul className='post-grid mt-10 grid grid-cols-1 gap-8 px-2 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-8 xl:grid-cols-4'>
+              <ul className='post-grid mt-8 grid grid-cols-1 gap-8 px-1 sm:px-2 md:mt-10 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-8 xl:grid-cols-4'>
                 {section.posts.slice(0, visiblePostCardCount).map((post) => (
                   <Post
                     key={post.id}

@@ -4,6 +4,10 @@ export interface WpRenderedField {
   rendered: string;
 }
 
+export interface WpNullableRenderedField {
+  rendered: string | null;
+}
+
 export interface WpImageSize {
   id: number;
   width: number;
@@ -21,6 +25,8 @@ export interface WpPost {
   id: number;
   link: string;
   title: WpRenderedField;
+  excerpt?: WpNullableRenderedField;
+  date?: string;
   categories: number[];
   featured_image?: WpFeaturedImage;
 }

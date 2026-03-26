@@ -49,6 +49,12 @@ function resolveFeaturedImage(
   };
 }
 
+function createExcerptPreview(post: WpPost): string {
+  const rawExcerpt = stripHtmlTags(post.excerpt?.rendered ?? '');
+  if (!rawExcerpt) return 'A curated story from a day magazine.';
+  return rawExcerpt.length > 160 ? `${rawExcerpt.slice(0, 157)}...` : rawExcerpt;
+}
+
 function PostCard({ post, prioritizeMedia = false, cachedPostsById }: PostCardProps) {
   const imageRef = useRef<HTMLImageElement | null>(null);
   const observerEntry = useIntersectionObserver(imageRef, {});
@@ -63,6 +69,14 @@ function PostCard({ post, prioritizeMedia = false, cachedPostsById }: PostCardPr
 
   const displaySrc = shouldDeferThumbnail ? placeholderImage : image.src;
   const headingText = stripHtmlTags(post.title?.rendered ?? '');
+  const excerptPreview = createExcerptPreview(post);
+  const publishedDate = post.date
+    ? new Date(post.date).toLocaleDateString('en-GB', {
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric',
+      })
+    : null;
 
   const openArticle = () => {
     window.open(post.link, '_blank', 'noopener,noreferrer');
@@ -75,6 +89,14 @@ function PostCard({ post, prioritizeMedia = false, cachedPostsById }: PostCardPr
           <h2 className='post-title line-clamp-3 min-h-[4.5rem] leading-snug'>
             {headingText}
           </h2>
+          <p className='mt-2 line-clamp-3 min-h-[4.2rem] text-sm leading-relaxed text-dull-black/80'>
+            {excerptPreview}
+          </p>
+          {publishedDate ? (
+            <p className='mt-3 text-xs font-semibold uppercase tracking-wide text-dull-black/70'>
+              Published {publishedDate}
+            </p>
+          ) : null}
         </header>
         <div className='post-card__media flex flex-1 justify-center bg-black/5 px-4 py-6'>
           <div
@@ -104,7 +126,9 @@ function PostCard({ post, prioritizeMedia = false, cachedPostsById }: PostCardPr
             onClick={openArticle}
             aria-label={`Open article: ${headingText || 'post'}`}
           >
-            <span className='btn-secondary text-lg'>Read article</span>
+            <span className='btn-secondary text-base sm:text-lg'>
+              Read the full story
+            </span>
           </button>
         </footer>
       </article>
