@@ -1,9 +1,12 @@
 import { fetchCategoryPostsPage } from '@apis/posts';
+import PageBreak from '@components/PageBreak';
+import PageHeader from '@components/PageHeader';
+import Post from '@components/Post';
+import Spinner from '@components/Spinner';
 import { REFETCH_INTERVAL } from '@constants/index';
 import { queryKeys } from '@constants/query-keys';
 import { useInfiniteQuery } from '@tanstack/react-query';
 import { Fragment } from 'preact';
-import { lazy } from 'preact/compat';
 import { useEffect, useMemo, useState } from 'preact/hooks';
 import { useLocation, useParams } from 'react-router-dom';
 import type { WpPost } from 'types/wordpress';
@@ -12,10 +15,6 @@ interface CategoryRouteState {
   category?: string;
 }
 
-const PageBreak = lazy(() => import('@components/PageBreak'));
-const PageHeader = lazy(() => import('@components/PageHeader'));
-const Post = lazy(() => import('@components/Post'));
-const Spinner = lazy(() => import('@components/Spinner'));
 const BASE_VISIBLE_POST_COUNT = 8;
 
 function Posts() {
