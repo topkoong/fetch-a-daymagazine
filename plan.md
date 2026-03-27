@@ -190,6 +190,7 @@ Pre-fetch article detail payloads during CI/cache update pipelines so detail pag
 
 ## Achievement 6 - Conversion Copy Upgrade (High-End Content Creator Pass)
 
+**Status:** Completed and merged  
 **Goal:** Improve perceived quality and action clarity by upgrading button and CTA language across the product.
 
 ### Scope
@@ -303,8 +304,6 @@ Pre-fetch article detail payloads during CI/cache update pipelines so detail pag
 
 ## Execution Order (from now)
 
-1. Achievement 5 (multi-page + route SEO)
-2. Achievement 6 (CTA copy upgrade)
-3. Achievement 7 (build-time detail cache)
-4. Achievement 8 (crawlability hardening)
-5. Achievement 9 (content depth and trust signals)
+1. Achievement 7 (build-time detail cache)
+2. Achievement 8 (crawlability hardening)
+3. Achievement 9 (content depth and trust signals)

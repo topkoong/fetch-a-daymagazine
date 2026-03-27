@@ -236,7 +236,7 @@ function Home() {
             href='#featured-categories'
             className='inline-flex min-h-11 items-center rounded-md bg-black px-4 py-2 text-sm font-semibold text-white transition hover:bg-black/85 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
           >
-            Explore curated stories now
+            Start reading high-signal stories
           </a>
           <a
             href='https://adaymagazine.com/'
@@ -244,13 +244,13 @@ function Home() {
             rel='noreferrer'
             className='inline-flex min-h-11 items-center rounded-md border border-black/60 px-4 py-2 text-sm font-semibold text-dull-black transition hover:bg-black/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
           >
-            Visit the original publisher
+            Access the source newsroom
           </a>
           <Link
             to='/topics/business'
             className='inline-flex min-h-11 items-center rounded-md border border-black/60 bg-white px-4 py-2 text-sm font-semibold text-dull-black transition hover:bg-black hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
           >
-            Enter the business topic hub
+            Explore business intelligence
           </Link>
         </div>
         <h3 className='mt-8 text-sm font-extrabold tracking-wide text-dull-black sm:text-base'>
@@ -317,7 +317,7 @@ function Home() {
               href='#featured-categories'
               className='inline-flex min-h-10 items-center rounded-md bg-black px-3 py-2 text-xs font-semibold tracking-wide text-white transition hover:bg-black/85 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black sm:text-sm'
             >
-              Open premium collections
+              Explore premium collections
             </a>
             <a
               href='https://adaymagazine.com/'
@@ -325,7 +325,7 @@ function Home() {
               rel='noreferrer'
               className='inline-flex min-h-10 items-center rounded-md border border-black/60 px-3 py-2 text-xs font-semibold tracking-wide text-dull-black transition hover:bg-black/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black sm:text-sm'
             >
-              View full source archive
+              Open the full source archive
             </a>
           </div>
         </div>

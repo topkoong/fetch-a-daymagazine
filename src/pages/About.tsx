@@ -65,13 +65,13 @@ function About() {
           to='/'
           className='inline-flex min-h-11 items-center rounded-md bg-black px-4 py-2 text-sm font-semibold text-white transition hover:bg-black/85'
         >
-          Explore today&apos;s featured stories
+          Explore today&apos;s lead stories
         </Link>
         <Link
           to='/insights'
           className='inline-flex min-h-11 items-center rounded-md border border-black/60 bg-white px-4 py-2 text-sm font-semibold text-dull-black transition hover:bg-black/5'
         >
-          Read our editorial approach
+          Review our editorial strategy
         </Link>
       </div>
     </article>
