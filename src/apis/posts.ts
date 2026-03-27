@@ -9,6 +9,24 @@ const HOME_FEED_QUERY = new URLSearchParams({
   order: 'desc',
 }).toString();
 
+type PostDetailsCache = Readonly<Record<string, unknown>>;
+
+let cachedPostDetailsPromise: Promise<PostDetailsCache> | null = null;
+
+async function loadPostDetailsCache(): Promise<PostDetailsCache> {
+  if (!cachedPostDetailsPromise) {
+    cachedPostDetailsPromise = import('@assets/cached/post-details.json')
+      .then((module) => {
+        const data = module.default;
+        return data && typeof data === 'object' && !Array.isArray(data)
+          ? (data as PostDetailsCache)
+          : {};
+      })
+      .catch(() => ({}));
+  }
+  return cachedPostDetailsPromise;
+}
+
 export function buildCategoryPostsRequestUrl(categoryId: string, offset: number): string {
   const params = new URLSearchParams({
     categories: categoryId,
@@ -26,6 +44,12 @@ export async function fetchPosts(): Promise<WpPost[]> {
 }
 
 export async function fetchPostById(postId: string): Promise<WpPost> {
+  const cachedMap = await loadPostDetailsCache();
+  const cached = normalizeWpPost(cachedMap[postId]);
+  if (cached) {
+    return cached;
+  }
+
   const { data } = await axios.get(`${A_DAY_POSTS_ENDPOINT}/${postId}`);
   const normalized = normalizeWpPost(data);
   if (!normalized) {

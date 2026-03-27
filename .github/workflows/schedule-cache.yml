@@ -45,6 +45,9 @@ jobs:
 
     - name: Running fetch-a-day-posts script file
       run: bash ./cachescripts/fetch-a-day-posts.sh
+
+    - name: Running fetch-a-day-post-details script file
+      run: bash ./cachescripts/fetch-a-day-post-details.sh
       
 
     - name: Committing to fetch-a-day-news repository
@@ -56,4 +59,5 @@ jobs:
         file_pattern: |
           src/assets/cached/posts.json
           src/assets/cached/mobile-posts.json
+          src/assets/cached/post-details.json
         repository: .

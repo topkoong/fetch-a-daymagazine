@@ -5,6 +5,7 @@ import Post from '@components/Post';
 import Spinner from '@components/Spinner';
 import { REFETCH_INTERVAL } from '@constants/index';
 import { queryKeys } from '@constants/query-keys';
+import useSeo from '@hooks/useSeo';
 import { useInfiniteQuery } from '@tanstack/react-query';
 import { Fragment } from 'preact';
 import { useEffect, useMemo, useState } from 'preact/hooks';
@@ -22,6 +23,11 @@ function Posts() {
   const location = useLocation();
   const routeState = location.state as CategoryRouteState | null;
   const categoryTitle = routeState?.category ?? 'Category';
+  useSeo({
+    title: `${categoryTitle} stories`,
+    description: `Read curated ${categoryTitle.toLowerCase()} stories from a day magazine with fast load-more browsing.`,
+    path: `/posts/categories/${categoryId ?? ''}`,
+  });
   const hasValidCategoryId = typeof categoryId === 'string' && categoryId.length > 0;
   const savedVisibleCountKey = hasValidCategoryId
     ? `category-visible-count-${categoryId}`
@@ -157,7 +163,9 @@ function Posts() {
                 }}
                 disabled={isFetchingNextPage}
               >
-                <span className='btn-secondary text-lg'>Load 8 more stories</span>
+                <span className='btn-secondary text-lg'>
+                  Reveal 8 more standout stories
+                </span>
               </button>
             ) : flattenedPosts.length > 0 ? (
               <p className='end-of-feed text-center text-sm font-semibold uppercase tracking-wide text-dull-black'>

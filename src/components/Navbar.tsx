@@ -25,13 +25,42 @@ function Navbar() {
             Lazy News
           </Link>
         </div>
+        <ul className='hidden list-none items-center gap-2 md:flex lg:gap-3'>
+          <li>
+            <Link
+              to='/about'
+              className='rounded px-2 py-1 text-xs font-semibold tracking-wide text-white/85 transition hover:text-white'
+              onClick={closeMobileMenu}
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              to='/collections'
+              className='rounded px-2 py-1 text-xs font-semibold tracking-wide text-white/85 transition hover:text-white'
+              onClick={closeMobileMenu}
+            >
+              Collections
+            </Link>
+          </li>
+          <li>
+            <Link
+              to='/insights'
+              className='rounded px-2 py-1 text-xs font-semibold tracking-wide text-white/85 transition hover:text-white'
+              onClick={closeMobileMenu}
+            >
+              Insights
+            </Link>
+          </li>
+        </ul>
         <a
           href='https://adaymagazine.com/'
           target='_blank'
           rel='noreferrer'
           className='hidden rounded border border-white/40 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-white transition hover:border-white hover:bg-white/10 lg:block'
         >
-          Visit a day source
+          Visit source newsroom
         </a>
         <div className='block lg:hidden'>
           <button
@@ -94,6 +123,33 @@ function Navbar() {
         className={`${isMobileMenuOpen ? 'flex' : 'hidden'} mx-auto w-full max-w-[1600px] flex-grow flex-col border-t border-white/15 bg-black px-4 pb-4 pt-3 lg:hidden`}
       >
         <ul className='grid list-none grid-cols-2 gap-1 sm:grid-cols-3'>
+          <li>
+            <Link
+              to='/about'
+              className='block rounded px-2 py-2 text-xs font-semibold uppercase tracking-wide text-white transition hover:bg-blue-700 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400 sm:text-sm'
+              onClick={closeMobileMenu}
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              to='/collections'
+              className='block rounded px-2 py-2 text-xs font-semibold uppercase tracking-wide text-white transition hover:bg-blue-700 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400 sm:text-sm'
+              onClick={closeMobileMenu}
+            >
+              Collections
+            </Link>
+          </li>
+          <li>
+            <Link
+              to='/insights'
+              className='block rounded px-2 py-2 text-xs font-semibold uppercase tracking-wide text-white transition hover:bg-blue-700 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400 sm:text-sm'
+              onClick={closeMobileMenu}
+            >
+              Insights
+            </Link>
+          </li>
           {Object.entries(PRIMARY_NAV_CATEGORIES).map(([categoryId, label]) => (
             <li key={categoryId}>
               <Link
@@ -113,7 +169,7 @@ function Navbar() {
           rel='noreferrer'
           className='mt-3 rounded border border-white/40 px-3 py-2 text-center text-xs font-semibold uppercase tracking-wide text-white transition hover:border-white hover:bg-white/10'
         >
-          Visit a day source
+          Visit source newsroom
         </a>
       </div>
     </nav>
