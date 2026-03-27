@@ -11,19 +11,19 @@
 
 @layer components {
   .page-title {
-    @apply py-8 text-center text-3xl font-extrabold uppercase leading-tight text-black md:text-5xl;
+    @apply py-6 text-center text-3xl font-extrabold uppercase leading-tight tracking-tight text-black sm:py-7 md:text-5xl;
   }
   .category-title {
-    @apply text-3xl font-semibold uppercase text-dull-black md:text-4xl;
+    @apply text-2xl font-semibold uppercase tracking-tight text-dull-black sm:text-3xl md:text-4xl;
   }
   .post-title {
-    @apply text-xl font-bold text-dull-black;
+    @apply text-lg font-bold leading-snug text-dull-black sm:text-xl;
   }
   .btn-primary {
-    @apply relative w-56 cursor-pointer border-4 border-black bg-white p-8 shadow-sm;
+    @apply relative inline-flex min-h-11 items-center justify-center rounded-md border-2 border-black bg-white px-4 py-2.5 shadow-sm;
   }
   .btn-secondary {
-    @apply relative z-20 h-full w-full text-2xl font-bold uppercase text-black;
+    @apply relative z-20 text-sm font-bold uppercase tracking-wide text-black sm:text-base;
   }
   .btn-terinary {
     @apply py-8 text-center text-5xl font-extrabold uppercase text-white;
@@ -42,6 +42,10 @@ body {
   width: 100%;
   font-family: 'FA Sysfont C', Krungthep, monospace !important;
   @apply min-h-full bg-bright-green;
+}
+
+#app {
+  @apply min-h-full;
 }
 
 .loader div {
