@@ -1,5 +1,5 @@
 import { A_DAY_POSTS_ENDPOINT, PAGE_SIZE } from '@constants/index';
-import { normalizeWpPosts } from '@utils/normalize-wp-post';
+import { normalizeWpPost, normalizeWpPosts } from '@utils/normalize-wp-post';
 import axios from 'axios';
 import type { CategoryPostsPage, WpPost } from 'types/wordpress';
 
@@ -23,6 +23,15 @@ export function buildCategoryPostsRequestUrl(categoryId: string, offset: number)
 export async function fetchPosts(): Promise<WpPost[]> {
   const { data } = await axios.get(`${A_DAY_POSTS_ENDPOINT}?${HOME_FEED_QUERY}`);
   return normalizeWpPosts(data);
+}
+
+export async function fetchPostById(postId: string): Promise<WpPost> {
+  const { data } = await axios.get(`${A_DAY_POSTS_ENDPOINT}/${postId}`);
+  const normalized = normalizeWpPost(data);
+  if (!normalized) {
+    throw new Error('Unable to load this article right now.');
+  }
+  return normalized;
 }
 
 export async function fetchCategoryPostsPage(

@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 
 const Navbar = lazy(() => import('@components/Navbar'));
 const Home = lazy(() => import('@pages/Home'));
+const PostDetails = lazy(() => import('@pages/PostDetails'));
 const Posts = lazy(() => import('@pages/Posts'));
 
 const queryClient = new QueryClient({
@@ -42,6 +43,20 @@ function App() {
               }
             >
               <Home />
+            </Suspense>
+          }
+        />
+        <Route
+          path='posts/:id'
+          element={
+            <Suspense
+              fallback={
+                <div className='spinner-wrapper min-h-[50vh]'>
+                  <Spinner label='Loading article' />
+                </div>
+              }
+            >
+              <PostDetails />
             </Suspense>
           }
         />

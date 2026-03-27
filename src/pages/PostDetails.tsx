@@ -1,0 +1,91 @@
+import { fetchPostById } from '@apis/posts';
+import PageBreak from '@components/PageBreak';
+import PageHeader from '@components/PageHeader';
+import Spinner from '@components/Spinner';
+import { queryKeys } from '@constants/query-keys';
+import { useQuery } from '@tanstack/react-query';
+import { stripHtmlTags } from '@utils/format-content';
+import { useLocation, useParams } from 'react-router-dom';
+
+interface PostDetailsRouteState {
+  sourceUrl?: string;
+  title?: string;
+}
+
+function PostDetails() {
+  const { id: postId } = useParams();
+  const location = useLocation();
+  const routeState = location.state as PostDetailsRouteState | null;
+  const hasValidPostId = typeof postId === 'string' && /^\d+$/.test(postId);
+
+  const { data, isPending, isError, error } = useQuery({
+    queryKey: [...queryKeys.allPosts, 'detail', postId ?? ''],
+    queryFn: () => fetchPostById(postId ?? ''),
+    enabled: hasValidPostId,
+  });
+
+  const errorMessage = error instanceof Error ? error.message : null;
+  const pageTitle = stripHtmlTags(
+    data?.title?.rendered ?? routeState?.title ?? 'Article',
+  );
+  const sourceUrl = data?.link ?? routeState?.sourceUrl ?? null;
+  const articleBody = stripHtmlTags(data?.content?.rendered ?? '').trim();
+
+  return (
+    <article className='mx-auto w-full max-w-4xl px-4 py-8 sm:px-6'>
+      <PageHeader
+        title={pageTitle}
+        subtitle='Read the article details inside Toppy, sourced from a day magazine.'
+      />
+      <PageBreak />
+
+      {!hasValidPostId ? (
+        <div
+          className='mt-6 rounded-lg border-2 border-red-800 bg-red-100 px-4 py-3 text-red-900'
+          role='alert'
+        >
+          <p className='font-semibold'>Invalid article route</p>
+          <p className='text-sm'>The article id is missing or invalid.</p>
+        </div>
+      ) : isPending ? (
+        <div className='mt-10 flex min-h-[30vh] items-center justify-center'>
+          <Spinner label='Loading article details' />
+        </div>
+      ) : isError ? (
+        <div
+          className='mt-6 rounded-lg border-2 border-red-800 bg-red-100 px-4 py-3 text-red-900'
+          role='alert'
+        >
+          <p className='font-semibold'>Could not load this article</p>
+          <p className='text-sm'>{errorMessage ?? 'Please try again in a moment.'}</p>
+        </div>
+      ) : (
+        <section className='mt-6 rounded-xl border border-black/15 bg-white/90 p-4 shadow-sm sm:p-6'>
+          {articleBody ? (
+            <div className='space-y-4 text-sm leading-7 text-dull-black/90 sm:text-base'>
+              {articleBody.split(/\n{2,}/).map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+          ) : (
+            <p className='rounded-md border border-black/10 bg-black/5 px-3 py-2 text-sm text-dull-black/80'>
+              No article body is currently available from the source feed.
+            </p>
+          )}
+          {sourceUrl ? (
+            <a
+              href={sourceUrl}
+              target='_blank'
+              rel='noreferrer'
+              className='mt-6 inline-flex rounded-md border border-black/70 px-4 py-2 text-sm font-semibold text-dull-black transition hover:bg-black/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
+            >
+              View original on a day magazine
+            </a>
+          ) : null}
+        </section>
+      )}
+    </article>
+  );
+}
+
+export default PostDetails;

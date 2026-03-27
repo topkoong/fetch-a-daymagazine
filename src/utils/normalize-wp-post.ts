@@ -28,12 +28,17 @@ export function normalizeWpPost(raw: unknown): WpPost | null {
     ?.rendered;
   const excerptRendered =
     typeof excerptRenderedRaw === 'string' ? excerptRenderedRaw : null;
+  const contentRenderedRaw = (source.content as Record<string, unknown> | undefined)
+    ?.rendered;
+  const contentRendered =
+    typeof contentRenderedRaw === 'string' ? contentRenderedRaw : null;
 
   const normalized: WpPost = {
     id,
     link,
     title: { rendered: titleRendered },
     excerpt: { rendered: excerptRendered },
+    content: { rendered: contentRendered },
     date: typeof source.date === 'string' ? source.date : undefined,
     categories: normalizeCategoryIds(source.categories),
     featured_image:
