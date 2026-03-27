@@ -11,6 +11,7 @@ const Collections = lazy(() => import('@pages/Collections'));
 const Insights = lazy(() => import('@pages/Insights'));
 const PostDetails = lazy(() => import('@pages/PostDetails'));
 const Posts = lazy(() => import('@pages/Posts'));
+const TopicLanding = lazy(() => import('@pages/TopicLanding'));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -80,6 +81,20 @@ function App() {
               }
             >
               <Insights />
+            </Suspense>
+          }
+        />
+        <Route
+          path='topics/:slug'
+          element={
+            <Suspense
+              fallback={
+                <div className='spinner-wrapper min-h-[50vh]'>
+                  <Spinner label='Loading topic stories' />
+                </div>
+              }
+            >
+              <TopicLanding />
             </Suspense>
           }
         />

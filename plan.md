@@ -133,6 +133,7 @@ Pre-fetch article detail payloads during CI/cache update pipelines so detail pag
 
 ## Achievement 5 - Multi-Page Editorial Expansion + Route SEO
 
+**Status:** Completed and merged  
 **Goal:** Increase indexable content surface and trust through evergreen pages.
 
 ### Scope
@@ -154,6 +155,36 @@ Pre-fetch article detail payloads during CI/cache update pipelines so detail pag
 
 - **Commit:** `feat(seo): add editorial content pages with route-level metadata`
 - **PR title:** `feat(seo): add editorial content pages with route-level metadata`
+
+---
+
+## Achievement 5.1 - Topic Landing Depth + Per-Story Share Metadata
+
+**Status:** In progress  
+**Goal:** Expand SEO depth with intent-based topic landing pages and improve story share consistency.
+
+### Scope
+
+- Add topic-specific routes such as:
+  - `/topics/business`
+  - `/topics/world`
+  - `/topics/culture`
+  - `/topics/design`
+  - `/topics/lifestyle`
+- Create topic copy blocks and curated post lists per mapped categories.
+- Improve `useSeo` for per-story share metadata (OG type, image, keywords, Twitter card consistency).
+- Apply richer metadata on post detail pages for better social previews.
+
+### Acceptance criteria
+
+- Topic routes are indexable and navigable from core UI surfaces.
+- Story detail pages expose consistent title/description/image metadata.
+- CTA copy guides users into topic hubs with intent-led language.
+
+### Commit / PR
+
+- **Commit:** `feat(seo): add topic landing pages and enrich per-story share metadata`
+- **PR title:** `feat(seo): add topic landing pages and enrich per-story share metadata`
 
 ---
 
