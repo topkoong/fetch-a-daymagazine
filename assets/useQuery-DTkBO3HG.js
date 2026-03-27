@@ -1,0 +1,1 @@
+import{o as e,s as t}from"./query-keys-swakWBV2.js";function n(n,r){return e(n,t,r)}export{n as t};
