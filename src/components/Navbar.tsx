@@ -78,7 +78,7 @@ function Navbar() {
           rel='noreferrer'
           className='hidden rounded border border-white/40 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-white transition hover:border-white hover:bg-white/10 lg:block'
         >
-          Visit source newsroom
+          Open source newsroom
         </a>
         <div className='block lg:hidden'>
           <button
@@ -205,7 +205,7 @@ function Navbar() {
           rel='noreferrer'
           className='mt-3 rounded border border-white/40 px-3 py-2 text-center text-xs font-semibold uppercase tracking-wide text-white transition hover:border-white hover:bg-white/10'
         >
-          Visit source newsroom
+          Open source newsroom
         </a>
       </div>
     </nav>

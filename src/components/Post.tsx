@@ -137,7 +137,7 @@ function PostCard({ post, prioritizeMedia = false, cachedPostsById }: PostCardPr
             aria-label={`Read article details: ${headingText || 'post'}`}
           >
             <span className='btn-secondary text-base sm:text-lg'>
-              Read the full editorial story
+              Read the complete story brief
             </span>
           </Link>
         </footer>

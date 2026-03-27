@@ -113,7 +113,7 @@ function Posts() {
     <article className='category-posts-page mx-auto w-full max-w-[1600px] py-8'>
       <PageHeader
         title={categoryTitle}
-        subtitle='Browse editor-curated articles in this category and load more stories as you go.'
+        subtitle='Dive into editor-curated stories in this category and continuously expand your reading list.'
       />
       <PageBreak />
       {!hasValidCategoryId ? (
@@ -164,7 +164,7 @@ function Posts() {
                 disabled={isFetchingNextPage}
               >
                 <span className='btn-secondary text-lg'>
-                  Reveal 8 more standout stories
+                  Unlock 8 more curated stories
                 </span>
               </button>
             ) : flattenedPosts.length > 0 ? (

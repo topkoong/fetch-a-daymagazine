@@ -53,13 +53,13 @@ function Insights() {
           to='/'
           className='inline-flex min-h-11 items-center rounded-md bg-black px-4 py-2 text-sm font-semibold text-white transition hover:bg-black/85'
         >
-          Return to the live story feed
+          Return to the live story desk
         </Link>
         <Link
           to='/about'
           className='inline-flex min-h-11 items-center rounded-md border border-black/60 bg-white px-4 py-2 text-sm font-semibold text-dull-black transition hover:bg-black/5'
         >
-          View product positioning
+          See product positioning
         </Link>
       </div>
     </article>

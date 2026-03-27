@@ -52,7 +52,7 @@ function PostDetails() {
     <article className='mx-auto w-full max-w-4xl px-4 py-8 sm:px-6'>
       <PageHeader
         title={pageTitle}
-        subtitle='Read the full story in a clean, immersive layout sourced from a day magazine.'
+        subtitle='Experience the full story in a focused editorial layout sourced from a day magazine.'
       />
       <PageBreak />
 
@@ -96,7 +96,7 @@ function PostDetails() {
               rel='noreferrer'
               className='mt-6 inline-flex rounded-md border border-black/70 px-4 py-2 text-sm font-semibold text-dull-black transition hover:bg-black/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
             >
-              Continue to the original article
+              Open the original source article
             </a>
           ) : null}
         </section>
