@@ -1,1 +1,0 @@
-function e(e){return e.replace(/<[^>]+>/g,` `).replace(/\s+/g,` `).trim()}export{e as t};
