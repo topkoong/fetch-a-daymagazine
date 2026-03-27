@@ -26,6 +26,7 @@ export interface WpPost {
   link: string;
   title: WpRenderedField;
   excerpt?: WpNullableRenderedField;
+  content?: WpNullableRenderedField;
   date?: string;
   categories: number[];
   featured_image?: WpFeaturedImage;

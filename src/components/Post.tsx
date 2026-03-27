@@ -1,7 +1,8 @@
 import placeholderImage from '@assets/images/placeholder.png';
 import useIntersectionObserver from '@hooks/useIntersectionObserver';
 import { stripHtmlTags } from '@utils/format-content';
-import { useMemo, useRef } from 'preact/hooks';
+import { useMemo, useRef, useState } from 'preact/hooks';
+import { Link } from 'react-router-dom';
 import type { WpImageSize, WpPost } from 'types/wordpress';
 
 export interface PostCardProps {
@@ -59,6 +60,7 @@ function PostCard({ post, prioritizeMedia = false, cachedPostsById }: PostCardPr
   const imageRef = useRef<HTMLImageElement | null>(null);
   const observerEntry = useIntersectionObserver(imageRef, {});
   const isInView = !!observerEntry?.isIntersecting;
+  const [hasImageLoadFailed, setHasImageLoadFailed] = useState(false);
 
   const shouldDeferThumbnail = !prioritizeMedia && !isInView;
 
@@ -66,8 +68,10 @@ function PostCard({ post, prioritizeMedia = false, cachedPostsById }: PostCardPr
     () => resolveFeaturedImage(post, cachedPostsById),
     [post, cachedPostsById],
   );
+  const hasSourceImage = image.src !== placeholderImage;
 
-  const displaySrc = shouldDeferThumbnail ? placeholderImage : image.src;
+  const displaySrc =
+    hasImageLoadFailed || shouldDeferThumbnail ? placeholderImage : image.src;
   const headingText = stripHtmlTags(post.title?.rendered ?? '');
   const excerptPreview = createExcerptPreview(post);
   const publishedDate = post.date
@@ -77,10 +81,6 @@ function PostCard({ post, prioritizeMedia = false, cachedPostsById }: PostCardPr
         year: 'numeric',
       })
     : null;
-
-  const openArticle = () => {
-    window.open(post.link, '_blank', 'noopener,noreferrer');
-  };
 
   return (
     <li className='post-card list-none'>
@@ -116,20 +116,28 @@ function PostCard({ post, prioritizeMedia = false, cachedPostsById }: PostCardPr
               height={image.height}
               loading={prioritizeMedia ? 'eager' : 'lazy'}
               decoding='async'
+              onError={(event) => {
+                if (event.currentTarget.src.includes('placeholder.png')) return;
+                event.currentTarget.src = placeholderImage;
+                setHasImageLoadFailed(true);
+              }}
             />
+            {hasImageLoadFailed || !hasSourceImage ? (
+              <p className='absolute bottom-2 left-2 right-2 rounded bg-black/70 px-2 py-1 text-center text-xs font-medium text-white'>
+                Image unavailable from source. Showing a placeholder.
+              </p>
+            ) : null}
           </div>
         </div>
         <footer className='post-card__footer px-6 pb-6 pt-2'>
-          <button
-            type='button'
+          <Link
+            to={`/posts/${post.id}`}
+            state={{ sourceUrl: post.link, title: headingText }}
             className='btn-primary w-full max-w-xs transition hover:bg-neutral-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
-            onClick={openArticle}
-            aria-label={`Open article: ${headingText || 'post'}`}
+            aria-label={`Read article details: ${headingText || 'post'}`}
           >
-            <span className='btn-secondary text-base sm:text-lg'>
-              Read the full story
-            </span>
-          </button>
+            <span className='btn-secondary text-base sm:text-lg'>Read on Toppy</span>
+          </Link>
         </footer>
       </article>
     </li>
