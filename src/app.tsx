@@ -1,10 +1,10 @@
+import Navbar from '@components/Navbar';
 import Spinner from '@components/Spinner';
 import { DEFAULT_STALE_TIME_MS } from '@constants/index';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { lazy, Suspense } from 'preact/compat';
 import { Route, Routes } from 'react-router-dom';
 
-const Navbar = lazy(() => import('@components/Navbar'));
 const Home = lazy(() => import('@pages/Home'));
 const PostDetails = lazy(() => import('@pages/PostDetails'));
 const Posts = lazy(() => import('@pages/Posts'));
@@ -22,15 +22,7 @@ const queryClient = new QueryClient({
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Suspense
-        fallback={
-          <div className='flex min-h-[30vh] items-center justify-center'>
-            <Spinner label='Loading navigation' />
-          </div>
-        }
-      >
-        <Navbar />
-      </Suspense>
+      <Navbar />
       <Routes>
         <Route
           path='/'
