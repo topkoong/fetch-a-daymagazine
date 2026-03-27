@@ -3,6 +3,7 @@ import PageBreak from '@components/PageBreak';
 import PageHeader from '@components/PageHeader';
 import Spinner from '@components/Spinner';
 import { queryKeys } from '@constants/query-keys';
+import useSeo from '@hooks/useSeo';
 import { useQuery } from '@tanstack/react-query';
 import { stripHtmlTags } from '@utils/format-content';
 import { useLocation, useParams } from 'react-router-dom';
@@ -30,12 +31,18 @@ function PostDetails() {
   );
   const sourceUrl = data?.link ?? routeState?.sourceUrl ?? null;
   const articleBody = stripHtmlTags(data?.content?.rendered ?? '').trim();
+  useSeo({
+    title: pageTitle,
+    description:
+      'Read the full article in a focused layout, with source-backed content and minimal visual distraction.',
+    path: `/posts/${postId ?? ''}`,
+  });
 
   return (
     <article className='mx-auto w-full max-w-4xl px-4 py-8 sm:px-6'>
       <PageHeader
         title={pageTitle}
-        subtitle='Read the article details inside Toppy, sourced from a day magazine.'
+        subtitle='Read the full story in a clean, immersive layout sourced from a day magazine.'
       />
       <PageBreak />
 
@@ -79,7 +86,7 @@ function PostDetails() {
               rel='noreferrer'
               className='mt-6 inline-flex rounded-md border border-black/70 px-4 py-2 text-sm font-semibold text-dull-black transition hover:bg-black/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
             >
-              View original on a day magazine
+              Continue to the original article
             </a>
           ) : null}
         </section>

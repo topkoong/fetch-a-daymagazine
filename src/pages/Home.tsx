@@ -8,6 +8,7 @@ import Spinner from '@components/Spinner';
 import { DEFAULT_STALE_TIME_MS, REFETCH_INTERVAL } from '@constants/index';
 import { queryKeys } from '@constants/query-keys';
 import useBreakpoints from '@hooks/useBreakpoints';
+import useSeo from '@hooks/useSeo';
 import { useQuery } from '@tanstack/react-query';
 import { useCallback, useMemo } from 'preact/hooks';
 import type {
@@ -49,6 +50,28 @@ const SUCCESS_INDICATORS = [
   'Verified source: adaymagazine.com',
   'Fast loading experience',
   'Mobile-first layout',
+] as const;
+const READER_PROMISES = [
+  'We prioritize quality over volume so your reading time delivers higher value.',
+  'Each section is curated for intent-first exploration, not random endless scroll.',
+  'Story details remain available through resilient fallback and structured caching.',
+] as const;
+const FAQ_ITEMS = [
+  {
+    question: 'Where do these stories come from?',
+    answer:
+      'All stories are sourced from a day magazine and presented in a cleaner reading interface.',
+  },
+  {
+    question: 'Why does this feel faster than typical feeds?',
+    answer:
+      'The interface is optimized for category-first navigation, tighter card hierarchy, and resilient cache behavior.',
+  },
+  {
+    question: 'Can I still open the original source?',
+    answer:
+      'Yes. Every story detail page includes a direct path to the original article on a day magazine.',
+  },
 ] as const;
 
 async function loadCachedPostsData(useMobileCache: boolean): Promise<WpPost[]> {
@@ -120,6 +143,13 @@ function buildCategoryFeedSections(
 }
 
 function Home() {
+  useSeo({
+    title: 'Home',
+    description:
+      'Discover curated stories from a day magazine with category-first navigation, refined editorial cards, and a premium reading flow.',
+    path: '/',
+  });
+
   const { active, isXs, isSm } = useBreakpoints();
   const shouldUseMobileCache = isXs || isSm;
 
@@ -205,7 +235,7 @@ function Home() {
             href='#featured-categories'
             className='inline-flex min-h-11 items-center rounded-md bg-black px-4 py-2 text-sm font-semibold text-white transition hover:bg-black/85 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
           >
-            Start reading now
+            Explore curated stories now
           </a>
           <a
             href='https://adaymagazine.com/'
@@ -213,7 +243,7 @@ function Home() {
             rel='noreferrer'
             className='inline-flex min-h-11 items-center rounded-md border border-black/60 px-4 py-2 text-sm font-semibold text-dull-black transition hover:bg-black/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
           >
-            Browse the original publisher
+            Visit the original publisher
           </a>
         </div>
         <h3 className='mt-8 text-sm font-extrabold tracking-wide text-dull-black sm:text-base'>
@@ -280,7 +310,7 @@ function Home() {
               href='#featured-categories'
               className='inline-flex min-h-10 items-center rounded-md bg-black px-3 py-2 text-xs font-semibold tracking-wide text-white transition hover:bg-black/85 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black sm:text-sm'
             >
-              Explore categories
+              Open premium collections
             </a>
             <a
               href='https://adaymagazine.com/'
@@ -288,8 +318,43 @@ function Home() {
               rel='noreferrer'
               className='inline-flex min-h-10 items-center rounded-md border border-black/60 px-3 py-2 text-xs font-semibold tracking-wide text-dull-black transition hover:bg-black/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black sm:text-sm'
             >
-              Browse source archive
+              View full source archive
             </a>
+          </div>
+        </div>
+        <div className='mt-7 rounded-lg border border-black/12 bg-white/85 px-4 py-4'>
+          <h3 className='text-sm font-extrabold tracking-wide text-dull-black sm:text-base'>
+            Reader Promise
+          </h3>
+          <ul className='mt-2 space-y-2 text-sm leading-relaxed text-dull-black/85'>
+            {READER_PROMISES.map((promise) => (
+              <li
+                key={promise}
+                className='rounded-md border border-black/10 bg-white/80 px-3 py-2'
+              >
+                {promise}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className='mt-7 rounded-lg border border-black/12 bg-white/85 px-4 py-4'>
+          <h3 className='text-sm font-extrabold tracking-wide text-dull-black sm:text-base'>
+            Frequently Asked Questions
+          </h3>
+          <div className='mt-3 space-y-3'>
+            {FAQ_ITEMS.map((item) => (
+              <article
+                key={item.question}
+                className='rounded-md border border-black/10 bg-white/80 px-3 py-3'
+              >
+                <h4 className='text-sm font-bold tracking-wide text-dull-black'>
+                  {item.question}
+                </h4>
+                <p className='mt-1 text-sm leading-relaxed text-dull-black/80'>
+                  {item.answer}
+                </p>
+              </article>
+            ))}
           </div>
         </div>
       </section>

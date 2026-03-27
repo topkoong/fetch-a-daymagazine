@@ -22,6 +22,7 @@
   ],
   "scripts": {
     "dev": "vite",
+    "cache:build": "bash ./cachescripts/fetch-a-day-posts.sh && bash ./cachescripts/fetch-a-day-categories.sh && bash ./cachescripts/fetch-a-day-post-details.sh",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint:fix": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",

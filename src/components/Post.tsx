@@ -136,7 +136,9 @@ function PostCard({ post, prioritizeMedia = false, cachedPostsById }: PostCardPr
             className='btn-primary w-full max-w-xs transition hover:bg-neutral-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
             aria-label={`Read article details: ${headingText || 'post'}`}
           >
-            <span className='btn-secondary text-base sm:text-lg'>Read on Toppy</span>
+            <span className='btn-secondary text-base sm:text-lg'>
+              Read the full editorial story
+            </span>
           </Link>
         </footer>
       </article>
