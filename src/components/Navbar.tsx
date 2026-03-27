@@ -12,10 +12,10 @@ function Navbar() {
 
   return (
     <nav
-      className='border-t-2 border-blue-700 bg-black/95 py-3 shadow-md backdrop-blur'
+      className='sticky top-0 z-50 border-t-2 border-blue-700 bg-black shadow-md'
       aria-label='Primary'
     >
-      <div className='mx-auto flex w-full max-w-[1600px] items-center justify-between px-4 pb-3 sm:px-6'>
+      <div className='mx-auto flex min-h-16 w-full max-w-[1600px] items-center justify-between px-4 sm:px-6'>
         <div className='flex flex-shrink-0 items-center'>
           <Link
             to='/'
@@ -29,7 +29,7 @@ function Navbar() {
           href='https://adaymagazine.com/'
           target='_blank'
           rel='noreferrer'
-          className='hidden rounded border border-white/40 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-white transition hover:border-white hover:bg-white/10 md:block'
+          className='hidden rounded border border-white/40 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-white transition hover:border-white hover:bg-white/10 lg:block'
         >
           Visit a day source
         </a>
@@ -72,8 +72,8 @@ function Navbar() {
         </div>
       </div>
       <div className='hidden border-y border-white/15 px-2 py-2 sm:px-4 lg:block'>
-        <div className='mx-auto max-w-[1600px]'>
-          <ul className='flex list-none flex-wrap items-center justify-center gap-1 pb-1'>
+        <div className='mx-auto max-w-[1600px] overflow-x-auto'>
+          <ul className='flex min-w-max list-none items-center justify-center gap-1'>
             {Object.entries(PRIMARY_NAV_CATEGORIES).map(([categoryId, label]) => (
               <li key={categoryId}>
                 <Link
@@ -91,7 +91,7 @@ function Navbar() {
       </div>
       <div
         id={MOBILE_NAV_PANEL_ID}
-        className={`${isMobileMenuOpen ? 'flex' : 'hidden'} mx-auto w-full max-w-[1600px] flex-grow flex-col border-t border-white/15 px-4 pt-3 lg:hidden`}
+        className={`${isMobileMenuOpen ? 'flex' : 'hidden'} mx-auto w-full max-w-[1600px] flex-grow flex-col border-t border-white/15 bg-black px-4 pb-4 pt-3 lg:hidden`}
       >
         <ul className='grid list-none grid-cols-2 gap-1 sm:grid-cols-3'>
           {Object.entries(PRIMARY_NAV_CATEGORIES).map(([categoryId, label]) => (
