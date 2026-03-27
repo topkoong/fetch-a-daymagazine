@@ -7,6 +7,9 @@ interface UseSeoInput {
   title: string;
   description: string;
   path?: string;
+  imageUrl?: string;
+  keywords?: readonly string[];
+  type?: 'website' | 'article';
 }
 
 function upsertMeta(
@@ -24,7 +27,14 @@ function upsertMeta(
   element.setAttribute('content', value);
 }
 
-export default function useSeo({ title, description, path = '/' }: UseSeoInput) {
+export default function useSeo({
+  title,
+  description,
+  path = '/',
+  imageUrl,
+  keywords = [],
+  type = 'website',
+}: UseSeoInput) {
   useEffect(() => {
     const absoluteUrl = `${SITE_URL}${path}`;
     document.title = `${title} | ${SITE_NAME}`;
@@ -38,6 +48,7 @@ export default function useSeo({ title, description, path = '/' }: UseSeoInput) 
     canonical.setAttribute('href', absoluteUrl);
 
     upsertMeta('meta[name="description"]', 'name', 'description', description);
+    upsertMeta('meta[property="og:type"]', 'property', 'og:type', type);
     upsertMeta(
       'meta[property="og:title"]',
       'property',
@@ -63,5 +74,22 @@ export default function useSeo({ title, description, path = '/' }: UseSeoInput) 
       'twitter:description',
       description,
     );
-  }, [description, path, title]);
+
+    if (imageUrl) {
+      upsertMeta('meta[property="og:image"]', 'property', 'og:image', imageUrl);
+      upsertMeta(
+        'meta[name="twitter:card"]',
+        'name',
+        'twitter:card',
+        'summary_large_image',
+      );
+      upsertMeta('meta[name="twitter:image"]', 'name', 'twitter:image', imageUrl);
+    } else {
+      upsertMeta('meta[name="twitter:card"]', 'name', 'twitter:card', 'summary');
+    }
+
+    if (keywords.length > 0) {
+      upsertMeta('meta[name="keywords"]', 'name', 'keywords', keywords.join(', '));
+    }
+  }, [description, imageUrl, keywords, path, title, type]);
 }

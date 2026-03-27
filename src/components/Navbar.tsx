@@ -46,6 +46,24 @@ function Navbar() {
           </li>
           <li>
             <Link
+              to='/topics/business'
+              className='rounded px-2 py-1 text-xs font-semibold tracking-wide text-white/85 transition hover:text-white'
+              onClick={closeMobileMenu}
+            >
+              Business
+            </Link>
+          </li>
+          <li>
+            <Link
+              to='/topics/world'
+              className='rounded px-2 py-1 text-xs font-semibold tracking-wide text-white/85 transition hover:text-white'
+              onClick={closeMobileMenu}
+            >
+              World
+            </Link>
+          </li>
+          <li>
+            <Link
               to='/insights'
               className='rounded px-2 py-1 text-xs font-semibold tracking-wide text-white/85 transition hover:text-white'
               onClick={closeMobileMenu}
@@ -139,6 +157,24 @@ function Navbar() {
               onClick={closeMobileMenu}
             >
               Collections
+            </Link>
+          </li>
+          <li>
+            <Link
+              to='/topics/business'
+              className='block rounded px-2 py-2 text-xs font-semibold uppercase tracking-wide text-white transition hover:bg-blue-700 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400 sm:text-sm'
+              onClick={closeMobileMenu}
+            >
+              Business
+            </Link>
+          </li>
+          <li>
+            <Link
+              to='/topics/world'
+              className='block rounded px-2 py-2 text-xs font-semibold uppercase tracking-wide text-white transition hover:bg-blue-700 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400 sm:text-sm'
+              onClick={closeMobileMenu}
+            >
+              World
             </Link>
           </li>
           <li>

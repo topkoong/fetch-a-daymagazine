@@ -31,11 +31,21 @@ function PostDetails() {
   );
   const sourceUrl = data?.link ?? routeState?.sourceUrl ?? null;
   const articleBody = stripHtmlTags(data?.content?.rendered ?? '').trim();
+  const excerpt = stripHtmlTags(data?.excerpt?.rendered ?? '').trim();
+  const description = excerpt || articleBody.slice(0, 180);
+  const storyImage =
+    data?.featured_image?.sizes?.medium?.src ??
+    data?.featured_image?.sizes?.full?.src ??
+    undefined;
   useSeo({
     title: pageTitle,
     description:
+      description ||
       'Read the full article in a focused layout, with source-backed content and minimal visual distraction.',
     path: `/posts/${postId ?? ''}`,
+    imageUrl: storyImage,
+    keywords: ['article', 'story', 'editorial', 'a day magazine'],
+    type: 'article',
   });
 
   return (

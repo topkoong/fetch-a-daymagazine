@@ -11,6 +11,7 @@ import useBreakpoints from '@hooks/useBreakpoints';
 import useSeo from '@hooks/useSeo';
 import { useQuery } from '@tanstack/react-query';
 import { useCallback, useMemo } from 'preact/hooks';
+import { Link } from 'react-router-dom';
 import type {
   CategoryFeedSection,
   WpCategory,
@@ -245,6 +246,12 @@ function Home() {
           >
             Visit the original publisher
           </a>
+          <Link
+            to='/topics/business'
+            className='inline-flex min-h-11 items-center rounded-md border border-black/60 bg-white px-4 py-2 text-sm font-semibold text-dull-black transition hover:bg-black hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
+          >
+            Enter the business topic hub
+          </Link>
         </div>
         <h3 className='mt-8 text-sm font-extrabold tracking-wide text-dull-black sm:text-base'>
           Benefits
