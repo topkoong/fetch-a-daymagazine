@@ -1,5 +1,11 @@
 /**
- * Produces plain text from WordPress `rendered` HTML for labels and alt text.
+ * Produces plain text from WordPress `rendered` HTML for card titles, excerpts, alt text, and SEO snippets.
+ *
+ * **Step 1 — Strip tags:** Removes HTML tags so we never inject markup into plain-text slots.
+ *
+ * **Step 2 — Decode entities:** WordPress often returns numeric/text entities (`&#8217;`, `&amp;`).
+ * - In the **browser**, we decode via a temporary `<textarea>` (handles the full entity range the DOM understands).
+ * - Under **SSR / Node** (no `document`), we apply a small manual map for the entities we see most in titles.
  */
 export function stripHtmlTags(raw: string): string {
   if (!raw) return '';

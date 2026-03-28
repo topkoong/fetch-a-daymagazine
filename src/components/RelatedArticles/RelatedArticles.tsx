@@ -1,3 +1,10 @@
+/**
+ * Horizontal “Related stories” strip on the article page.
+ *
+ * **Data contract:** `posts` is already filtered, sorted, and capped by the parent (typically
+ * `PostDetails` via `getRelatedPosts`). This component does not re-derive relatedness—it only
+ * renders title, optional thumbnail, and links to `/posts/:id`.
+ */
 import { ROUTES } from '@constants/routes';
 import { Link } from 'react-router-dom';
 

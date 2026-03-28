@@ -23,6 +23,10 @@ interface PostDetailsRouteState {
   title?: string;
 }
 
+/**
+ * Single-article reader: loads one post by id, reuses the **same magazine list query** as Home
+ * (`queryKeys.allPosts`) to compute related cards without a second bespoke endpoint.
+ */
 function PostDetails() {
   const { id: postId } = useParams();
   const location = useLocation();
@@ -31,12 +35,15 @@ function PostDetails() {
   const { isXs, isSm } = useBreakpoints();
   const shouldUseMobileCache = isXs || isSm;
 
+  // Detail query: independent key so invalidating the list does not drop the open article mid-read.
   const { data, isPending, isError, error } = useQuery({
     queryKey: [...queryKeys.allPosts, 'detail', postId ?? ''],
     queryFn: () => fetchPostById(postId ?? ''),
     enabled: hasValidPostId,
   });
 
+  // Feed query: shares cache with Home when keys match (same `queryKeys.allPosts` + mobile flag).
+  // That pool is mapped to `PostCardViewModel` and passed through `getRelatedPosts` (category overlap, date sort).
   const { data: feedPosts } = useQuery({
     queryKey: queryKeys.allPosts,
     queryFn: () => fetchMagazinePostsWithFallback(shouldUseMobileCache),
@@ -48,6 +55,7 @@ function PostDetails() {
     if (!data || !feedPosts?.length) return [];
     const currentVm = toPostCardViewModel(data, null);
     const allVms = feedPosts.map((p) => toPostCardViewModel(p, null));
+    // Excludes current id, keeps posts that share a category id, newest first, max 3 (see `getRelatedPosts`).
     return getRelatedPosts(currentVm, allVms, 3);
   }, [data, feedPosts]);
 
@@ -168,6 +176,7 @@ function PostDetails() {
               No article body is currently available from the source feed.
             </p>
           )}
+          {/* Related strip: `relatedCards` is pre-filtered/sorted in `useMemo`; this component only renders links. */}
           {data ? <RelatedArticles posts={relatedCards} currentPostId={data.id} /> : null}
           <div className='mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center'>
             {topicHub ? (

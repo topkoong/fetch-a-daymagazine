@@ -39,6 +39,10 @@
   }
 }
 
+/*
+ * Global shell: off-white page background (replaces legacy bright-green body).
+ * `overflow-x-hidden` on html/body reduces horizontal scroll from full-bleed children on small viewports.
+ */
 html,
 body {
   height: 100%;
@@ -48,6 +52,10 @@ body {
   background-color: var(--brand-white);
 }
 
+/*
+ * Preact mounts into #app (see main.tsx). Without the same background as body, sub-pixel gaps or
+ * overscroll can flash a different color behind fixed nav or during route transitions.
+ */
 #app {
   @apply min-h-full bg-brand-white;
   background-color: var(--brand-white);
