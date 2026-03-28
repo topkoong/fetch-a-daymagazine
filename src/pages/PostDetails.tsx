@@ -8,6 +8,7 @@ import { getPrimaryTopicLandingForPost } from '@constants/topic-landings';
 import useSeo from '@hooks/useSeo';
 import { useQuery } from '@tanstack/react-query';
 import { sanitizeArticleBodyHtml, stripHtmlTags } from '@utils/format-content';
+import { Fragment } from 'preact';
 import { useMemo } from 'preact/hooks';
 import { Link, useLocation, useParams } from 'react-router-dom';
 
@@ -132,14 +133,14 @@ function PostDetails() {
             </figure>
           ) : null}
           {articleHtml ? (
-            <>
+            <Fragment>
               {/* eslint-disable react/no-danger -- sanitized WordPress article HTML */}
               <div
                 className='article-body max-w-none text-sm leading-7 text-dull-black/90 sm:text-base [&_a]:text-black [&_a]:underline [&_blockquote]:border-l-4 [&_blockquote]:border-black/20 [&_blockquote]:pl-4 [&_figure]:my-6 [&_h2]:mt-8 [&_h2]:text-xl [&_h2]:font-bold [&_h3]:mt-6 [&_h3]:text-lg [&_h3]:font-semibold [&_img]:h-auto [&_img]:max-w-full [&_img]:rounded-md [&_p]:my-4 [&_p]:first:mt-0'
                 dangerouslySetInnerHTML={{ __html: articleHtml }}
               />
               {/* eslint-enable react/no-danger */}
-            </>
+            </Fragment>
           ) : (
             <p className='rounded-md border border-black/10 bg-black/5 px-3 py-2 text-sm text-dull-black/80'>
               No article body is currently available from the source feed.
