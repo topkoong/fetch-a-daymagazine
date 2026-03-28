@@ -1,14 +1,27 @@
 #!/usr/bin/env bash
 #
-# Build a structured article-detail cache for in-app post detail pages.
-# Source IDs come from src/assets/cached/posts.json; each detail is fetched from
-# WordPress POST /wp-json/wp/v2/posts/:id
+# fetch-a-day-post-details.sh
+# -----------------------------
+# Builds src/assets/cached/post-details.json — a JSON object keyed by post id whose values
+# are full WordPress post objects (including content.rendered) for the in-app reader.
 #
-# Hardening:
-# - curl timeouts + retries
-# - optional delay between requests (DETAIL_REQUEST_DELAY_SECS)
-# - merge with existing post-details.json: skip refetch when entry has usable content
-# - MAX_DETAILS caps network fetches per run (0 = unlimited; use in CI for PR speed)
+# Input:
+#   Requires src/assets/cached/posts.json (run fetch-a-day-posts.sh first).
+#   Reads unique .id values from that array.
+#
+# Flow:
+#   1. Optionally load existing post-details.json into a working merge file (when
+#      CACHE_MERGE_EXISTING=1) so reruns skip ids that already have non-empty body HTML.
+#   2. For each id, GET /wp-json/wp/v2/posts/:id with shared curl opts from aday-fetch-opts.sh.
+#   3. On success, merge the object under string key id.
+#   4. Writes final object to post-details.json. Fails if posts.json has rows but output is empty.
+#
+# Environment:
+#   MAX_DETAILS              — Max successful network fetches this run (0 = no cap).
+#   CACHE_MERGE_EXISTING     — 1 = merge and skip complete entries (default).
+#   DETAIL_REQUEST_DELAY_SECS — Sleep between requests (0 = none).
+#   ADAY_MAGAZINE_ORIGIN     — API host override.
+#
 set -euo pipefail
 
 readonly ORIGIN="${ADAY_MAGAZINE_ORIGIN:-https://adaymagazine.com}"
@@ -32,6 +45,7 @@ readonly CURL_COMMON=(
   "${ADAY_WP_REST_CURL_OPTS[@]}"
 )
 
+# Returns 0 if merge state already holds a full post with non-empty content.rendered for id.
 has_usable_cached_detail() {
   local id="$1"
   [[ -f "${MERGED_STATE}" ]] || return 1

@@ -1,5 +1,16 @@
 #!/usr/bin/env bash
-# Ensure committed JSON under src/assets/cached/ is valid for builds when remote fetch is skipped (e.g. CI blocked with HTTP 403).
+#
+# validate-committed-cache.sh
+# ---------------------------
+# Used when CACHE_FETCH_OFFLINE=1 (see cache-build.sh). Ensures the app can bundle without
+# hitting the network by checking that all expected cache files exist, parse as JSON, and
+# satisfy minimum shape:
+#
+#   posts.json, mobile-posts.json, categories.json — non-empty JSON arrays
+#   post-details.json                             — JSON object (may be empty {})
+#
+# Exits non-zero with a clear message if any check fails (missing file, invalid JSON, empty array).
+#
 set -euo pipefail
 
 cd "$(dirname "$0")/.." || exit 1
@@ -10,6 +21,7 @@ readonly MOBILE="${CACHED_DIR}/mobile-posts.json"
 readonly CATEGORIES="${CACHED_DIR}/categories.json"
 readonly DETAILS="${CACHED_DIR}/post-details.json"
 
+# Assert path exists and contains valid JSON (any top-level type).
 require_json_file() {
   local f="$1"
   local label="$2"

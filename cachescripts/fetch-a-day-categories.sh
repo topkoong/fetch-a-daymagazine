@@ -1,7 +1,23 @@
 #!/usr/bin/env bash
 #
-# Download all categories from a day magazine (WordPress REST) into src/assets/cached/categories.json
-# Query params align with src/apis/categories.ts (orderby=name, order=asc).
+# fetch-a-day-categories.sh
+# -------------------------
+# Fetches every category from the WordPress REST API and writes:
+#   src/assets/cached/categories.json
+#
+# Behaviour:
+#   - Paginates GET /wp-json/wp/v2/categories with per_page=100, orderby=name, order=asc
+#     (aligned with src/apis/categories.ts).
+#   - Merges all pages into one JSON array; temp files live under cachescripts/categories-json/.
+#
+# Dependencies:
+#   - aday-fetch-opts.sh for shared curl options.
+#   - jq for validation and merge.
+#
+# Environment:
+#   ADAY_MAGAZINE_ORIGIN — API host (default https://adaymagazine.com)
+#   MAX_PAGES            — Cap pagination (0 = unlimited)
+#
 set -euo pipefail
 
 readonly ORIGIN="${ADAY_MAGAZINE_ORIGIN:-https://adaymagazine.com}"
@@ -27,6 +43,7 @@ fetch_category_pages() {
   local page=1
   local fetched=0
 
+  # Same pagination pattern as posts: stop on short page or 400/404.
   while true; do
     if [[ "$MAX_PAGES" -gt 0 && "$page" -gt "$MAX_PAGES" ]]; then
       break
@@ -69,6 +86,7 @@ fetch_category_pages() {
 }
 
 merge_category_json() {
+  # jq -s 'add' concatenates page arrays into one categories list.
   local pattern="${CATEGORIES_DIR}/${CATEGORIES_FILE}"-*.json
   if ! compgen -G "$pattern" >/dev/null; then
     echo "error: no category JSON files to merge" >&2
