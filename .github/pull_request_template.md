@@ -1,42 +1,36 @@
-## Summary
+## What this PR does
+_One paragraph. What changed, which files, and why._
 
-<!-- What does this PR change and why? Link issues (e.g. Closes #123). -->
+## Achievement
+_Copy the achievement name and number from plan.md exactly._
 
-## Type of change
+## Files changed
+| File | Why it was touched |
+|------|--------------------|
+| | |
 
-<!-- Check all that apply. -->
+## Test steps
+_Numbered. Exact URLs, commands, and breakpoints. No "it should work"._
 
-- [ ] Feature / user-facing behavior
-- [ ] Bug fix
-- [ ] Chore (tooling, deps, CI, docs only)
-- [ ] Performance
-- [ ] Accessibility / UX
+1. Run `pnpm lint` — paste the output here
+2. Run `pnpm build` — paste the output here
+3.
+4.
 
-## Scope
+## Checkboxes — do not check unless you have actually verified each one
+- [ ] `pnpm lint` output is pasted above with 0 errors
+- [ ] `pnpm build` output is pasted above with 0 errors
+- [ ] No CTA text contains "click here", "read more", or "learn more"
+- [ ] Every new route loads without 404 on direct URL and page refresh
+- [ ] Tested on desktop Chrome
+- [ ] Tested on mobile 375px — no horizontal scroll, no clipped text
 
-<!-- APIs, pages, components, workflows, etc. -->
+## Before / After screenshots
+_Required for any PR that changes UI. Delete this section only for CI/config-only PRs._
 
--
+| Before | After |
+|--------|-------|
+| | |
 
-## Test plan
-
-<!-- How reviewers can verify this. -->
-
-- [ ] `pnpm install --frozen-lockfile` (Node per `.nvmrc` / `engines`)
-- [ ] `pnpm lint`
-- [ ] `pnpm build`
-- [ ] Manual: <!-- describe flows, URLs, breakpoints -->
-
-## Commits
-
-<!-- Use [Conventional Commits](https://www.conventionalcommits.org/) (e.g. feat:, fix:, chore:). Prefer 1–3 focused commits per PR. -->
-
--
-
-## Screenshots / recordings
-
-<!-- Optional: UI or before/after. -->
-
-## Notes for reviewers
-
-<!-- Risks, follow-ups, deployment or cache script impacts. -->
+## Risks and follow-ups
+_What could break. What was explicitly left out of this PR._

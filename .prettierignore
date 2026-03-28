@@ -2,3 +2,4 @@ node_modules
 yarn.lock
 dist
 assets
+.github/pull_request_template.md
