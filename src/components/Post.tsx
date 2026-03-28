@@ -2,11 +2,12 @@ import placeholderImage from '@assets/images/placeholder.png';
 import { COPY } from '@constants/copy.constants';
 import useIntersectionObserver from '@hooks/useIntersectionObserver';
 import { stripHtmlTags } from '@utils/format-content';
+import type { Attributes } from 'preact';
 import { useMemo, useRef, useState } from 'preact/hooks';
 import { Link } from 'react-router-dom';
 import type { WpImageSize, WpPost } from 'types/wordpress';
 
-export interface PostCardProps {
+export interface PostCardProps extends Attributes {
   post: WpPost;
   /** When true, featured image loads immediately (first home row). */
   prioritizeMedia?: boolean;
