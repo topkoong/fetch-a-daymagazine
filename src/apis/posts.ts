@@ -28,10 +28,49 @@ async function loadPostDetailsCache(): Promise<PostDetailsCache> {
   return cachedPostDetailsPromise;
 }
 
-function hasUsableDetailBody(post: WpPost): boolean {
+let bundledPostsByIdPromise: Promise<Map<number, WpPost>> | null = null;
+
+async function loadBundledPostsById(): Promise<Map<number, WpPost>> {
+  if (!bundledPostsByIdPromise) {
+    bundledPostsByIdPromise = import('@assets/cached/posts.json').then((module) => {
+      const list = Array.isArray(module.default) ? module.default : [];
+      const map = new Map<number, WpPost>();
+      for (const row of list) {
+        const p = normalizeWpPost(row);
+        if (p) map.set(p.id, p);
+      }
+      return map;
+    });
+  }
+  return bundledPostsByIdPromise;
+}
+
+/** True when the post has a non-empty body, including figure/image-only layouts. */
+function hasRenderableArticleContent(post: WpPost | null | undefined): post is WpPost {
+  if (!post) return false;
   const raw = post.content?.rendered;
   if (typeof raw !== 'string' || !raw.trim()) return false;
-  return stripHtmlTags(raw).trim().length > 0;
+  if (stripHtmlTags(raw).trim().length > 0) return true;
+  return /<(img|figure|iframe|video|blockquote)\b/i.test(raw);
+}
+
+function hasFeaturedImageSrc(post: WpPost): boolean {
+  const sizes = post.featured_image?.sizes;
+  return Boolean(sizes?.medium?.src || sizes?.full?.src);
+}
+
+async function mergeFeaturedImageFromBundledList(post: WpPost): Promise<WpPost> {
+  if (hasFeaturedImageSrc(post)) return post;
+  try {
+    const map = await loadBundledPostsById();
+    const fromList = map.get(post.id);
+    if (fromList?.featured_image && hasFeaturedImageSrc(fromList)) {
+      return { ...post, featured_image: fromList.featured_image };
+    }
+  } catch {
+    /* optional snapshot */
+  }
+  return post;
 }
 
 export function buildCategoryPostsRequestUrl(categoryId: string, offset: number): string {
@@ -52,17 +91,35 @@ export async function fetchPosts(): Promise<WpPost[]> {
 
 export async function fetchPostById(postId: string): Promise<WpPost> {
   const cachedMap = await loadPostDetailsCache();
-  const cached = normalizeWpPost(cachedMap[postId]);
-  if (cached && hasUsableDetailBody(cached)) {
-    return cached;
+  const fromDetails = normalizeWpPost(cachedMap[postId]);
+
+  if (fromDetails && hasRenderableArticleContent(fromDetails)) {
+    return mergeFeaturedImageFromBundledList(fromDetails);
   }
 
-  const { data } = await axios.get(`${A_DAY_POSTS_ENDPOINT}/${postId}`);
-  const normalized = normalizeWpPost(data);
-  if (!normalized) {
-    throw new Error('Unable to load this article right now.');
+  let fromNetwork: WpPost | null = null;
+  try {
+    const { data } = await axios.get(`${A_DAY_POSTS_ENDPOINT}/${postId}`);
+    fromNetwork = normalizeWpPost(data);
+  } catch {
+    fromNetwork = null;
   }
-  return normalized;
+
+  if (fromNetwork && hasRenderableArticleContent(fromNetwork)) {
+    return mergeFeaturedImageFromBundledList(fromNetwork);
+  }
+
+  try {
+    const map = await loadBundledPostsById();
+    const bundled = map.get(Number(postId));
+    if (bundled && hasRenderableArticleContent(bundled)) {
+      return mergeFeaturedImageFromBundledList(bundled);
+    }
+  } catch {
+    /* ignore */
+  }
+
+  throw new Error('Unable to load this article right now.');
 }
 
 export async function fetchCategoryPostsPage(
