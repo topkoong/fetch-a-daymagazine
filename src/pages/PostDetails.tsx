@@ -7,7 +7,7 @@ import { queryKeys } from '@constants/query-keys';
 import { getPrimaryTopicLandingForPost } from '@constants/topic-landings';
 import useSeo from '@hooks/useSeo';
 import { useQuery } from '@tanstack/react-query';
-import { stripHtmlTags } from '@utils/format-content';
+import { sanitizeArticleBodyHtml, stripHtmlTags } from '@utils/format-content';
 import { useMemo } from 'preact/hooks';
 import { Link, useLocation, useParams } from 'react-router-dom';
 
@@ -33,9 +33,11 @@ function PostDetails() {
     data?.title?.rendered ?? routeState?.title ?? 'Article',
   );
   const sourceUrl = data?.link ?? routeState?.sourceUrl ?? null;
-  const articleBody = stripHtmlTags(data?.content?.rendered ?? '').trim();
+  const rawArticleHtml = data?.content?.rendered ?? '';
+  const articleHtml = sanitizeArticleBodyHtml(rawArticleHtml).trim();
+  const articlePlain = stripHtmlTags(rawArticleHtml).trim();
   const excerpt = stripHtmlTags(data?.excerpt?.rendered ?? '').trim();
-  const description = excerpt || articleBody.slice(0, 180);
+  const description = excerpt || articlePlain.slice(0, 180);
   const storyImage =
     data?.featured_image?.sizes?.medium?.src ??
     data?.featured_image?.sizes?.full?.src ??
@@ -118,12 +120,26 @@ function PostDetails() {
         </div>
       ) : (
         <section className='mt-6 rounded-xl border border-black/15 bg-white/90 p-4 shadow-sm sm:p-6'>
-          {articleBody ? (
-            <div className='space-y-4 text-sm leading-7 text-dull-black/90 sm:text-base'>
-              {articleBody.split(/\n{2,}/).map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </div>
+          {storyImage ? (
+            <figure className='mb-6 overflow-hidden rounded-lg border border-black/10 bg-black/5'>
+              <img
+                src={storyImage}
+                alt={imageAlt ?? ''}
+                width={imageSize?.width}
+                height={imageSize?.height}
+                className='max-h-[min(70vh,32rem)] w-full object-cover'
+              />
+            </figure>
+          ) : null}
+          {articleHtml ? (
+            <>
+              {/* eslint-disable react/no-danger -- sanitized WordPress article HTML */}
+              <div
+                className='article-body max-w-none text-sm leading-7 text-dull-black/90 sm:text-base [&_a]:text-black [&_a]:underline [&_blockquote]:border-l-4 [&_blockquote]:border-black/20 [&_blockquote]:pl-4 [&_figure]:my-6 [&_h2]:mt-8 [&_h2]:text-xl [&_h2]:font-bold [&_h3]:mt-6 [&_h3]:text-lg [&_h3]:font-semibold [&_img]:h-auto [&_img]:max-w-full [&_img]:rounded-md [&_p]:my-4 [&_p]:first:mt-0'
+                dangerouslySetInnerHTML={{ __html: articleHtml }}
+              />
+              {/* eslint-enable react/no-danger */}
+            </>
           ) : (
             <p className='rounded-md border border-black/10 bg-black/5 px-3 py-2 text-sm text-dull-black/80'>
               No article body is currently available from the source feed.

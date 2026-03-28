@@ -3,6 +3,7 @@ import PageBreak from '@components/PageBreak';
 import PageHeader from '@components/PageHeader';
 import Post from '@components/Post';
 import Spinner from '@components/Spinner';
+import { COPY } from '@constants/copy.constants';
 import { REFETCH_INTERVAL } from '@constants/index';
 import { queryKeys } from '@constants/query-keys';
 import useSeo from '@hooks/useSeo';
@@ -163,8 +164,8 @@ function Posts() {
                 }}
                 disabled={isFetchingNextPage}
               >
-                <span className='btn-secondary text-lg'>
-                  Unlock 8 more curated stories
+                <span className='btn-secondary text-lg normal-case'>
+                  {COPY.POSTS_LOAD_MORE}
                 </span>
               </button>
             ) : flattenedPosts.length > 0 ? (

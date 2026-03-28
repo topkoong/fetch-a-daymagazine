@@ -1,4 +1,5 @@
 import placeholderImage from '@assets/images/placeholder.png';
+import { COPY } from '@constants/copy.constants';
 import { getPrimaryTopicLandingForPost } from '@constants/topic-landings';
 import useIntersectionObserver from '@hooks/useIntersectionObserver';
 import { stripHtmlTags } from '@utils/format-content';
@@ -139,8 +140,8 @@ function PostCard({ post, prioritizeMedia = false, cachedPostsById }: PostCardPr
             className='btn-primary w-full max-w-xs transition hover:bg-neutral-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
             aria-label={`Read article details: ${headingText || 'post'}`}
           >
-            <span className='btn-secondary text-base sm:text-lg'>
-              Read the complete story brief
+            <span className='btn-secondary text-base normal-case sm:text-lg'>
+              {COPY.CARD_CTA}
             </span>
           </Link>
           {topicHub ? (
