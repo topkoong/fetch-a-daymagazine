@@ -1,4 +1,7 @@
-import { PRIMARY_NAV_CATEGORIES } from '@constants/nav-categories';
+import {
+  NavbarDesktopCategoryStrip,
+  NavbarMobileCategoryLinks,
+} from '@components/NavbarCategoryRow';
 import { useCallback, useState } from 'preact/hooks';
 import { Link } from 'react-router-dom';
 
@@ -145,24 +148,7 @@ function Navbar() {
           </button>
         </div>
       </div>
-      <div className='hidden border-y border-white/15 px-2 py-2 sm:px-4 lg:block'>
-        <div className='mx-auto max-w-[1600px] overflow-x-auto'>
-          <ul className='flex min-w-max list-none items-center justify-center gap-1'>
-            {Object.entries(PRIMARY_NAV_CATEGORIES).map(([categoryId, label]) => (
-              <li key={categoryId}>
-                <Link
-                  to={`/posts/categories/${categoryId}`}
-                  state={{ category: label }}
-                  className='block rounded px-3 py-2 text-xs font-semibold uppercase tracking-wide text-white/90 transition hover:bg-blue-700 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400'
-                  onClick={closeMobileMenu}
-                >
-                  {label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
+      <NavbarDesktopCategoryStrip onNavigate={closeMobileMenu} />
       <div
         id={MOBILE_NAV_PANEL_ID}
         className={`${isMobileMenuOpen ? 'flex' : 'hidden'} mx-auto w-full max-w-[1600px] flex-grow flex-col border-t border-white/15 bg-black px-4 pb-4 pt-3 lg:hidden`}
@@ -240,18 +226,7 @@ function Navbar() {
               Insights
             </Link>
           </li>
-          {Object.entries(PRIMARY_NAV_CATEGORIES).map(([categoryId, label]) => (
-            <li key={categoryId}>
-              <Link
-                to={`/posts/categories/${categoryId}`}
-                state={{ category: label }}
-                className='block rounded px-2 py-2 text-xs font-semibold uppercase tracking-wide text-white transition hover:bg-blue-700 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400 sm:text-sm'
-                onClick={closeMobileMenu}
-              >
-                {label}
-              </Link>
-            </li>
-          ))}
+          <NavbarMobileCategoryLinks onNavigate={closeMobileMenu} />
         </ul>
         <a
           href='https://adaymagazine.com/'

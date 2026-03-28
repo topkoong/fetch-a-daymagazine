@@ -1,0 +1,10 @@
+/* Editorial design tokens — imported before Tailwind in index.css */
+:root {
+  --brand-red: #b91c1c;
+  --brand-white: #fafaf7;
+  --brand-cream: #f5f0e8;
+  --text-xs: 0.75rem;
+  --text-2xl: clamp(1.375rem, 3.5vw, 1.875rem);
+  --section-border: 3px solid #111;
+  --shadow-ink: 4px 4px 0 0 #111;
+}

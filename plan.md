@@ -736,13 +736,14 @@ stage it alongside the feature files before committing.
 
 ### What shipped in each PR
 
-| PR  | Branch                        | Achievement | What actually changed                                                               |
-| --- | ----------------------------- | ----------- | ----------------------------------------------------------------------------------- |
-| —   | —                             | 1           | Navbar sticky, z-index fixed, mobile breakpoints stable                             |
-| —   | —                             | 2           | Card CTA routes internally, image fallback message added                            |
-| —   | —                             | 3           | Type scale tightened, first-paint pop-in reduced                                    |
-| —   | —                             | 6           | All CTA copy upgraded, banned phrases removed                                       |
-| —   | fix/routing-gh-pages-404-html | 3.5         | `postbuild` copies `dist/index.html` to `dist/404.html` for GitHub Pages deep links |
+| PR  | Branch                                     | Achievement | What actually changed                                                                                                                          |
+| --- | ------------------------------------------ | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| —   | —                                          | 1           | Navbar sticky, z-index fixed, mobile breakpoints stable                                                                                        |
+| —   | —                                          | 2           | Card CTA routes internally, image fallback message added                                                                                       |
+| —   | —                                          | 3           | Type scale tightened, first-paint pop-in reduced                                                                                               |
+| —   | —                                          | 6           | All CTA copy upgraded, banned phrases removed                                                                                                  |
+| —   | fix/routing-gh-pages-404-html              | 3.5         | `postbuild` copies `dist/index.html` to `dist/404.html` for GitHub Pages deep links                                                            |
+| —   | hotfix/homepage-redesign-and-reader-polish | — (hotfix)  | Editorial featured hero, category chips, feed-only home; navbar category row owned by Navbar; cream page background; related stories on reader |
 
 ---
 
