@@ -22,15 +22,14 @@ readonly DETAIL_REQUEST_DELAY_SECS="${DETAIL_REQUEST_DELAY_SECS:-0}"
 readonly TMP_DIR="cachescripts/post-details-tmp"
 readonly MERGED_STATE="${TMP_DIR}/merged-state.json"
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck source=aday-fetch-opts.sh
+source "${SCRIPT_DIR}/aday-fetch-opts.sh"
+aday_wp_rest_curl_opts "${ORIGIN}"
+
 readonly CURL_COMMON=(
   -sS
-  --connect-timeout 15
-  --max-time 90
-  --retry 2
-  --retry-delay 2
-  --retry-connrefused
-  -H 'Accept: application/json'
-  -H 'Content-Type: application/json'
+  "${ADAY_WP_REST_CURL_OPTS[@]}"
 )
 
 has_usable_cached_detail() {

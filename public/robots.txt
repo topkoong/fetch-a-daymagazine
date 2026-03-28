@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://topkoong.github.io/fetch-a-daymagazine/sitemap.xml

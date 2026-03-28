@@ -1,7 +1,5 @@
+import { SITE_NAME, SITE_URL } from '@constants/site';
 import { useEffect } from 'preact/hooks';
-
-const SITE_NAME = 'Toppy x a day magazine';
-const SITE_URL = 'https://topkoong.github.io/fetch-a-daymagazine';
 
 interface UseSeoInput {
   title: string;

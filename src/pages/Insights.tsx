@@ -1,5 +1,7 @@
+import JsonLd from '@components/JsonLd';
 import PageHeader from '@components/PageHeader';
 import useSeo from '@hooks/useSeo';
+import { buildEvergreenWebPageStructuredData } from '@utils/structured-data';
 import { Link } from 'react-router-dom';
 
 const INSIGHT_SECTIONS = [
@@ -27,6 +29,9 @@ function Insights() {
 
   return (
     <article className='mx-auto w-full max-w-5xl px-4 py-8 sm:px-6'>
+      <JsonLd
+        data={buildEvergreenWebPageStructuredData('/insights', 'Editorial Insights')}
+      />
       <PageHeader
         title='Editorial Insights'
         subtitle='How we structure content, interfaces, and performance to feel like a high-end publication product.'

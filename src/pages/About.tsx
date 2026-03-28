@@ -1,5 +1,7 @@
+import JsonLd from '@components/JsonLd';
 import PageHeader from '@components/PageHeader';
 import useSeo from '@hooks/useSeo';
+import { buildEvergreenWebPageStructuredData } from '@utils/structured-data';
 import { Link } from 'react-router-dom';
 
 function About() {
@@ -12,6 +14,7 @@ function About() {
 
   return (
     <article className='mx-auto w-full max-w-5xl px-4 py-8 sm:px-6'>
+      <JsonLd data={buildEvergreenWebPageStructuredData('/about', 'About')} />
       <PageHeader
         title='About Toppy'
         subtitle='A premium reading layer designed for focused discovery, strong editorial context, and better reading flow.'
