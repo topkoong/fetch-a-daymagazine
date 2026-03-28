@@ -1,7 +1,8 @@
 import type { FunctionComponent } from 'preact';
+import type { JsonLdDocument } from 'types/seo.types';
 
 interface JsonLdProps {
-  data: Record<string, unknown>;
+  data: JsonLdDocument;
 }
 
 const JsonLd: FunctionComponent<JsonLdProps> = ({ data }) => (
