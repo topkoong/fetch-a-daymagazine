@@ -1,3 +1,8 @@
+/**
+ * Renders the **stacked category sections** on Home: each `CategoryFeedSection` is a desk title
+ * (`CategoryHeader`) plus a grid of {@link Post} cards. **Visibility cap** (`visiblePostCardCount`)
+ * comes from breakpoint rules in `Home.tsx`; first section may prioritize media loading for LCP.
+ */
 import CategoryHeader from '@components/CategoryHeader';
 import PageBreak from '@components/PageBreak';
 import Post from '@components/Post';

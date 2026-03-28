@@ -1,3 +1,7 @@
+/**
+ * Injects a **schema.org JSON-LD** graph built by `structured-data.ts`. Typed as {@link JsonLdDocument}
+ * so home vs evergreen shapes stay consistent with `seo.types.ts`.
+ */
 import type { FunctionComponent } from 'preact';
 import type { JsonLdDocument } from 'types/seo.types';
 

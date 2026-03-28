@@ -1,3 +1,12 @@
+/**
+ * Root layout: **TanStack Query** wraps the whole tree so any page can share cache keys
+ * (e.g. `queryKeys.allPosts` on Home and PostDetails). Each route is **lazy-loaded** to keep
+ * the initial JS small; paths are **relative to** `BrowserRouter` basename in `main.tsx`.
+ *
+ * **Route order:** `posts/categories/:id` is registered **before** `posts/:id` so three-segment
+ * category URLs never compete with the numeric article pattern (React Router already ranks
+ * static segments, but explicit ordering documents intent).
+ */
 import Navbar from '@components/Navbar';
 import Spinner from '@components/Spinner';
 import { DEFAULT_STALE_TIME_MS } from '@constants/index';
@@ -13,6 +22,7 @@ const PostDetails = lazy(() => import('@pages/PostDetails'));
 const Posts = lazy(() => import('@pages/Posts'));
 const TopicLanding = lazy(() => import('@pages/TopicLanding'));
 
+/** Global query defaults: editorial cadence `staleTime` matches `REFETCH_INTERVAL` in constants. */
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {

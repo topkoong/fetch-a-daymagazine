@@ -1,3 +1,9 @@
+/**
+ * Site chrome: fixed top **primary nav** (brand, evergreen links, topic hubs, Insights),
+ * external link to the publisher, and **WordPress category desks** via
+ * {@link NavbarDesktopCategoryStrip} (lg+) / {@link NavbarMobileCategoryLinks} (sheet).
+ * Mobile uses a disclosure panel (`aria-expanded` / `aria-controls`) for keyboard/screen readers.
+ */
 import {
   NavbarDesktopCategoryStrip,
   NavbarMobileCategoryLinks,

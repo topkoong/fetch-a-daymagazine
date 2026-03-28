@@ -1,3 +1,7 @@
+/**
+ * **About** — product positioning, editorial standards, source transparency, FAQ. Emits
+ * {@link JsonLd} WebPage graph for this path; meta via `useSeo`.
+ */
 import JsonLd from '@components/JsonLd';
 import PageHeader from '@components/PageHeader';
 import useSeo from '@hooks/useSeo';
