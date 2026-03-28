@@ -27,106 +27,108 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <Navbar />
-      <Routes>
-        <Route
-          path='/'
-          element={
-            <Suspense
-              fallback={
-                <div className='spinner-wrapper min-h-[50vh]'>
-                  <Spinner label='Loading home' />
-                </div>
-              }
-            >
-              <Home />
-            </Suspense>
-          }
-        />
-        <Route
-          path='about'
-          element={
-            <Suspense
-              fallback={
-                <div className='spinner-wrapper min-h-[50vh]'>
-                  <Spinner label='Loading about page' />
-                </div>
-              }
-            >
-              <About />
-            </Suspense>
-          }
-        />
-        <Route
-          path='collections'
-          element={
-            <Suspense
-              fallback={
-                <div className='spinner-wrapper min-h-[50vh]'>
-                  <Spinner label='Loading collections page' />
-                </div>
-              }
-            >
-              <Collections />
-            </Suspense>
-          }
-        />
-        <Route
-          path='insights'
-          element={
-            <Suspense
-              fallback={
-                <div className='spinner-wrapper min-h-[50vh]'>
-                  <Spinner label='Loading insights page' />
-                </div>
-              }
-            >
-              <Insights />
-            </Suspense>
-          }
-        />
-        <Route
-          path='topics/:slug'
-          element={
-            <Suspense
-              fallback={
-                <div className='spinner-wrapper min-h-[50vh]'>
-                  <Spinner label='Loading topic stories' />
-                </div>
-              }
-            >
-              <TopicLanding />
-            </Suspense>
-          }
-        />
-        <Route
-          path='posts/:id'
-          element={
-            <Suspense
-              fallback={
-                <div className='spinner-wrapper min-h-[50vh]'>
-                  <Spinner label='Loading article' />
-                </div>
-              }
-            >
-              <PostDetails />
-            </Suspense>
-          }
-        />
-        <Route
-          path='posts/categories/:id'
-          element={
-            <Suspense
-              fallback={
-                <div className='spinner-wrapper min-h-[50vh]'>
-                  <Spinner label='Loading category' />
-                </div>
-              }
-            >
-              <Posts />
-            </Suspense>
-          }
-        />
-      </Routes>
+      <main className='min-h-0 pt-16 lg:pt-[7.75rem]'>
+        <Routes>
+          <Route
+            path='/'
+            element={
+              <Suspense
+                fallback={
+                  <div className='spinner-wrapper min-h-[50vh]'>
+                    <Spinner label='Loading home' />
+                  </div>
+                }
+              >
+                <Home />
+              </Suspense>
+            }
+          />
+          <Route
+            path='about'
+            element={
+              <Suspense
+                fallback={
+                  <div className='spinner-wrapper min-h-[50vh]'>
+                    <Spinner label='Loading about page' />
+                  </div>
+                }
+              >
+                <About />
+              </Suspense>
+            }
+          />
+          <Route
+            path='collections'
+            element={
+              <Suspense
+                fallback={
+                  <div className='spinner-wrapper min-h-[50vh]'>
+                    <Spinner label='Loading collections page' />
+                  </div>
+                }
+              >
+                <Collections />
+              </Suspense>
+            }
+          />
+          <Route
+            path='insights'
+            element={
+              <Suspense
+                fallback={
+                  <div className='spinner-wrapper min-h-[50vh]'>
+                    <Spinner label='Loading insights page' />
+                  </div>
+                }
+              >
+                <Insights />
+              </Suspense>
+            }
+          />
+          <Route
+            path='topics/:slug'
+            element={
+              <Suspense
+                fallback={
+                  <div className='spinner-wrapper min-h-[50vh]'>
+                    <Spinner label='Loading topic stories' />
+                  </div>
+                }
+              >
+                <TopicLanding />
+              </Suspense>
+            }
+          />
+          <Route
+            path='posts/:id'
+            element={
+              <Suspense
+                fallback={
+                  <div className='spinner-wrapper min-h-[50vh]'>
+                    <Spinner label='Loading article' />
+                  </div>
+                }
+              >
+                <PostDetails />
+              </Suspense>
+            }
+          />
+          <Route
+            path='posts/categories/:id'
+            element={
+              <Suspense
+                fallback={
+                  <div className='spinner-wrapper min-h-[50vh]'>
+                    <Spinner label='Loading category' />
+                  </div>
+                }
+              >
+                <Posts />
+              </Suspense>
+            }
+          />
+        </Routes>
+      </main>
     </QueryClientProvider>
   );
 }

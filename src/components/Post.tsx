@@ -74,6 +74,8 @@ function PostCard({ post, prioritizeMedia = false, cachedPostsById }: PostCardPr
 
   const displaySrc =
     hasImageLoadFailed || shouldDeferThumbnail ? placeholderImage : image.src;
+  const showImagePlaceholder =
+    !hasSourceImage || hasImageLoadFailed || shouldDeferThumbnail;
   const headingText = stripHtmlTags(post.title?.rendered ?? '');
   const excerptPreview = createExcerptPreview(post);
   const publishedDate = post.date
@@ -88,7 +90,7 @@ function PostCard({ post, prioritizeMedia = false, cachedPostsById }: PostCardPr
 
   return (
     <li className='post-card list-none'>
-      <article className='post-card__inner flex h-full flex-col overflow-hidden rounded-lg border-2 border-black bg-bright-yellow shadow-sm transition-shadow duration-300 hover:shadow-md'>
+      <article className='post-card__inner flex h-full flex-col overflow-hidden rounded-lg border-2 border-black bg-white shadow-sm transition-shadow duration-300 hover:shadow-md'>
         <header className='post-card__header border-b border-black/10 px-6 pb-4 pt-6'>
           <h2 className='post-title line-clamp-3 min-h-[4.5rem] leading-snug'>
             {headingText}
@@ -102,10 +104,14 @@ function PostCard({ post, prioritizeMedia = false, cachedPostsById }: PostCardPr
             </p>
           ) : null}
         </header>
-        <div className='post-card__media flex flex-1 justify-center bg-black/5 px-4 py-6'>
+        <div
+          className={`post-card__media flex flex-1 items-center justify-center px-4 py-6 ${
+            showImagePlaceholder ? 'bg-brand-cream' : 'bg-black/5'
+          }`}
+        >
           <div
             className='relative w-full max-w-md overflow-hidden rounded-md'
-            style={{ aspectRatio: `${image.width} / ${image.height}` }}
+            style={{ aspectRatio: '16 / 9' }}
           >
             <img
               ref={imageRef}
@@ -126,7 +132,7 @@ function PostCard({ post, prioritizeMedia = false, cachedPostsById }: PostCardPr
                 setHasImageLoadFailed(true);
               }}
             />
-            {hasImageLoadFailed || !hasSourceImage ? (
+            {showImagePlaceholder ? (
               <p className='absolute bottom-2 left-2 right-2 rounded bg-black/70 px-2 py-1 text-center text-xs font-medium text-white'>
                 Image unavailable from source. Showing a placeholder.
               </p>
@@ -138,7 +144,7 @@ function PostCard({ post, prioritizeMedia = false, cachedPostsById }: PostCardPr
             to={`/posts/${post.id}`}
             state={{ sourceUrl: post.link, title: headingText }}
             className='btn-primary w-full max-w-xs transition hover:bg-neutral-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
-            aria-label={`Read article details: ${headingText || 'post'}`}
+            aria-label={`${COPY.CARD_CTA}: ${headingText || 'post'}`}
           >
             <span className='btn-secondary text-base normal-case sm:text-lg'>
               {COPY.CARD_CTA}

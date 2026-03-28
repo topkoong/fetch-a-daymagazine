@@ -6,6 +6,7 @@ import PageBreak from '@components/PageBreak';
 import PageHeader from '@components/PageHeader';
 import Post from '@components/Post';
 import Spinner from '@components/Spinner';
+import { COPY } from '@constants/copy.constants';
 import { DEFAULT_STALE_TIME_MS, REFETCH_INTERVAL } from '@constants/index';
 import { queryKeys } from '@constants/query-keys';
 import useBreakpoints from '@hooks/useBreakpoints';
@@ -13,7 +14,6 @@ import useSeo from '@hooks/useSeo';
 import { useQuery } from '@tanstack/react-query';
 import { buildHomeStructuredData } from '@utils/structured-data';
 import { useCallback, useMemo } from 'preact/hooks';
-import { Link } from 'react-router-dom';
 import type {
   CategoryFeedSection,
   WpCategory,
@@ -238,11 +238,24 @@ function Home() {
   return (
     <article className='home-page mx-auto w-full max-w-[1600px] px-3 pb-12 sm:px-4'>
       <JsonLd data={buildHomeStructuredData()} />
-      <PageHeader
-        title='Toppy × a day magazine'
-        subtitle='Discover thoughtful stories across culture, work, design, and everyday life — updated from a day magazine with fast browsing and category-first exploration.'
-      />
-      <section className='mx-auto mt-5 max-w-5xl rounded-2xl border border-black/15 bg-white/92 p-5 shadow-sm sm:mt-6 sm:p-8'>
+      <section
+        className='hero mx-auto max-w-5xl px-1 py-6 text-center sm:px-4 sm:py-8'
+        aria-label='Home hero'
+      >
+        <PageHeader
+          title='Toppy × a day magazine'
+          subtitle='Discover thoughtful stories across culture, work, design, and everyday life — updated from a day magazine with fast browsing and category-first exploration.'
+        />
+        <div className='mt-8 flex flex-wrap justify-center gap-3'>
+          <a
+            href='#featured-categories'
+            className='inline-flex min-h-11 items-center rounded-md bg-black px-6 py-2 text-sm font-semibold text-white transition hover:bg-black/85 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
+          >
+            {COPY.HERO_CTA_PRIMARY}
+          </a>
+        </div>
+      </section>
+      <section className='mx-auto mt-8 max-w-5xl rounded-2xl border border-black/15 bg-white/92 p-5 shadow-sm sm:mt-10 sm:p-8'>
         <p className='text-xs font-semibold tracking-[0.1em] text-dull-black/60'>
           Trusted source, cleaner experience
         </p>
@@ -253,31 +266,6 @@ function Home() {
           Skip noisy scrolling. Get a cleaner, faster path to stories worth your time,
           with curated categories and intuitive navigation.
         </p>
-        <div
-          className='mt-5 flex flex-wrap items-center gap-2.5'
-          aria-label='Primary calls to action'
-        >
-          <a
-            href='#featured-categories'
-            className='inline-flex min-h-11 items-center rounded-md bg-black px-4 py-2 text-sm font-semibold text-white transition hover:bg-black/85 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
-          >
-            Start reading high-signal stories
-          </a>
-          <a
-            href='https://adaymagazine.com/'
-            target='_blank'
-            rel='noreferrer'
-            className='inline-flex min-h-11 items-center rounded-md border border-black/60 px-4 py-2 text-sm font-semibold text-dull-black transition hover:bg-black/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
-          >
-            Access the source newsroom
-          </a>
-          <Link
-            to='/topics/business'
-            className='inline-flex min-h-11 items-center rounded-md border border-black/60 bg-white px-4 py-2 text-sm font-semibold text-dull-black transition hover:bg-black hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
-          >
-            Explore business intelligence
-          </Link>
-        </div>
         <h3 className='mt-8 text-sm font-extrabold tracking-wide text-dull-black sm:text-base'>
           Benefits
         </h3>
@@ -462,7 +450,9 @@ function Home() {
           {categoryFeedSections.map((section, sectionIndex) => (
             <section
               key={section.categoryId}
-              className='feed-section mb-20 scroll-mt-4'
+              className={`feed-section scroll-mt-4 border-t-[3px] border-black pt-6 ${
+                sectionIndex === 0 ? 'mt-16' : 'mt-12'
+              } mb-16 md:mb-20`}
               aria-labelledby={`category-heading-${section.categoryId}`}
             >
               <CategoryHeader
