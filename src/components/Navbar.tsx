@@ -15,7 +15,7 @@ function Navbar() {
 
   return (
     <nav
-      className='fixed left-0 right-0 top-0 z-[100] w-full border-t-2 border-blue-700 bg-black shadow-md'
+      className='fixed left-0 right-0 top-0 z-[100] w-full border-t-2 border-blue-700 bg-black'
       aria-label='Primary'
     >
       <div className='mx-auto flex min-h-16 w-full max-w-[1600px] items-center justify-between px-4 sm:px-6'>
