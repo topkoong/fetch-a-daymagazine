@@ -2,11 +2,14 @@ import { fetchPostById } from '@apis/posts';
 import PageBreak from '@components/PageBreak';
 import PageHeader from '@components/PageHeader';
 import Spinner from '@components/Spinner';
+import { PRIMARY_NAV_CATEGORIES } from '@constants/nav-categories';
 import { queryKeys } from '@constants/query-keys';
+import { getPrimaryTopicLandingForPost } from '@constants/topic-landings';
 import useSeo from '@hooks/useSeo';
 import { useQuery } from '@tanstack/react-query';
 import { stripHtmlTags } from '@utils/format-content';
-import { useLocation, useParams } from 'react-router-dom';
+import { useMemo } from 'preact/hooks';
+import { Link, useLocation, useParams } from 'react-router-dom';
 
 interface PostDetailsRouteState {
   sourceUrl?: string;
@@ -37,6 +40,37 @@ function PostDetails() {
     data?.featured_image?.sizes?.medium?.src ??
     data?.featured_image?.sizes?.full?.src ??
     undefined;
+  const imageSize =
+    data?.featured_image?.sizes?.medium?.src && data.featured_image.sizes.medium
+      ? data.featured_image.sizes.medium
+      : data?.featured_image?.sizes?.full;
+  const imageAlt =
+    data?.featured_image?.alt?.trim() ||
+    (pageTitle ? `Featured image: ${pageTitle}` : undefined);
+
+  const topicHub = data ? getPrimaryTopicLandingForPost(data) : null;
+  const shareKeywords = useMemo(() => {
+    if (!data) return ['article', 'story', 'editorial', 'a day magazine'] as string[];
+    const labels = data.categories
+      .map((cid) => PRIMARY_NAV_CATEGORIES[String(cid)])
+      .filter((label): label is string => Boolean(label));
+    const merged = new Set<string>([
+      ...labels,
+      ...(topicHub?.keywords ?? []),
+      'a day magazine',
+      'editorial',
+      'article',
+    ]);
+    return [...merged];
+  }, [data, topicHub?.keywords]);
+
+  const articleSection =
+    topicHub?.title ??
+    data?.categories
+      .map((cid) => PRIMARY_NAV_CATEGORIES[String(cid)])
+      .filter(Boolean)
+      .at(0);
+
   useSeo({
     title: pageTitle,
     description:
@@ -44,8 +78,14 @@ function PostDetails() {
       'Read the full article in a focused layout, with source-backed content and minimal visual distraction.',
     path: `/posts/${postId ?? ''}`,
     imageUrl: storyImage,
-    keywords: ['article', 'story', 'editorial', 'a day magazine'],
+    imageAlt,
+    imageWidth: imageSize?.width,
+    imageHeight: imageSize?.height,
+    keywords: shareKeywords,
     type: 'article',
+    publishedTime: data?.date,
+    modifiedTime: data?.modified,
+    articleSection,
   });
 
   return (
@@ -89,16 +129,26 @@ function PostDetails() {
               No article body is currently available from the source feed.
             </p>
           )}
-          {sourceUrl ? (
-            <a
-              href={sourceUrl}
-              target='_blank'
-              rel='noreferrer'
-              className='mt-6 inline-flex rounded-md border border-black/70 px-4 py-2 text-sm font-semibold text-dull-black transition hover:bg-black/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
-            >
-              Open the original source article
-            </a>
-          ) : null}
+          <div className='mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center'>
+            {topicHub ? (
+              <Link
+                to={`/topics/${topicHub.slug}`}
+                className='inline-flex rounded-md bg-black px-4 py-2 text-sm font-semibold text-white transition hover:bg-black/85 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
+              >
+                Continue in the {topicHub.title} hub
+              </Link>
+            ) : null}
+            {sourceUrl ? (
+              <a
+                href={sourceUrl}
+                target='_blank'
+                rel='noreferrer'
+                className='inline-flex rounded-md border border-black/70 px-4 py-2 text-sm font-semibold text-dull-black transition hover:bg-black/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
+              >
+                Open the original source article
+              </a>
+            ) : null}
+          </div>
         </section>
       )}
     </article>

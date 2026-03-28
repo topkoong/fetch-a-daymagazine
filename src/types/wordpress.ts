@@ -28,6 +28,8 @@ export interface WpPost {
   excerpt?: WpNullableRenderedField;
   content?: WpNullableRenderedField;
   date?: string;
+  /** WordPress `modified` — used for article social metadata when present. */
+  modified?: string;
   categories: number[];
   featured_image?: WpFeaturedImage;
 }
