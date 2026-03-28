@@ -1,1 +1,0 @@
-import{l as e,u as t}from"./query-keys-DSL6FXXC.js";function n(n,r){return e(n,t,r)}export{n as t};
