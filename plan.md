@@ -749,6 +749,7 @@ stage it alongside the feature files before committing.
 | —   | fix/related-posts-app-shell                | —           | Related stories ordered by newest date; `#app` uses brand-white like `body`; plan documents A4/A5 overlap with merged homepage/reader work                                     |
 | #32 | chore/docs-developer-comments              | —           | JSDoc/comments for related posts, magazine feed fallback, PostDetails queries + related strip, RelatedArticles data contract, `stripHtmlTags`, post-card VM, `index.css` shell |
 | —   | chore/plan-closeout-seo-types              | —           | `plan.md` achievements marked complete vs shipped tree; `src/types/seo.types.ts` + typed JSON-LD graph in `structured-data.ts` / `JsonLd`                                      |
+| —   | fix/category-feed-bundled-fallback         | —           | Navbar category `/posts/categories/:id` uses bundled `posts.json` when live WP request fails or returns non-JSON; `posts/categories` route ordered before `posts/:id`          |
 
 ---
 
