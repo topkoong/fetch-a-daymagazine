@@ -708,20 +708,20 @@ stage it alongside the feature files before committing.
 
 ### Current Progress
 
-| #   | Achievement                                   | Status         | Completed  |
-| --- | --------------------------------------------- | -------------- | ---------- |
-| 1   | Navigation stability and responsiveness       | ✅ Completed   | —          |
-| 2   | Internal detail flow + image fallback         | ✅ Completed   | —          |
-| 3   | Typography rhythm + first render stability    | ✅ Completed   | —          |
-| 3.5 | GitHub Pages SPA routing fix                  | ✅ Completed   | 2026-03-28 |
-| 4   | Type system, tokens, hero redesign            | 🔄 In progress | —          |
-| 5   | Internal /posts/:id reader page               | 🔲 Not started | —          |
-| 5.1 | Topic landing pages + share metadata          | 🔄 In progress | —          |
-| 6   | Conversion copy upgrade                       | ✅ Completed   | —          |
-| 7   | Build-time cache pipeline                     | 🔄 In progress | —          |
-| 8   | Sitemap, robots.txt, JSON-LD                  | 🔲 Not started | —          |
-| 9   | Content depth and trust signals               | 🔲 Not started | —          |
-| HF3 | Post card: single CTA, HTML entities, excerpt | ✅ Completed   | 2026-03-28 |
+| #   | Achievement                                   | Status       | Completed  |
+| --- | --------------------------------------------- | ------------ | ---------- |
+| 1   | Navigation stability and responsiveness       | ✅ Completed | —          |
+| 2   | Internal detail flow + image fallback         | ✅ Completed | —          |
+| 3   | Typography rhythm + first render stability    | ✅ Completed | —          |
+| 3.5 | GitHub Pages SPA routing fix                  | ✅ Completed | 2026-03-28 |
+| 4   | Type system, tokens, hero redesign            | ✅ Completed | 2026-03-28 |
+| 5   | Internal /posts/:id reader page               | ✅ Completed | 2026-03-28 |
+| 5.1 | Topic landing pages + share metadata          | ✅ Completed | 2026-03-28 |
+| 6   | Conversion copy upgrade                       | ✅ Completed | —          |
+| 7   | Build-time cache pipeline                     | ✅ Completed | 2026-03-28 |
+| 8   | Sitemap, robots.txt, JSON-LD                  | ✅ Completed | 2026-03-28 |
+| 9   | Content depth and trust signals               | ✅ Completed | 2026-03-28 |
+| HF3 | Post card: single CTA, HTML entities, excerpt | ✅ Completed | 2026-03-28 |
 
 **Legend:** ✅ Completed · 🔄 In progress · 🔲 Not started · 🚧 Blocked
 
@@ -748,6 +748,7 @@ stage it alongside the feature files before committing.
 | —   | fix/post-card-cta-entities-excerpt         | HF3         | Single `Post` card CTA; `stripHtmlTags` decodes HTML entities; excerpt paragraph omitted when empty (no hardcoded fallback)                                                    |
 | —   | fix/related-posts-app-shell                | —           | Related stories ordered by newest date; `#app` uses brand-white like `body`; plan documents A4/A5 overlap with merged homepage/reader work                                     |
 | #32 | chore/docs-developer-comments              | —           | JSDoc/comments for related posts, magazine feed fallback, PostDetails queries + related strip, RelatedArticles data contract, `stripHtmlTags`, post-card VM, `index.css` shell |
+| —   | chore/plan-closeout-seo-types              | —           | `plan.md` achievements marked complete vs shipped tree; `src/types/seo.types.ts` + typed JSON-LD graph in `structured-data.ts` / `JsonLd`                                      |
 
 ---
 
@@ -804,9 +805,9 @@ Shipped: one primary link per `Post` card (`COPY.CARD_CTA` as direct text), `str
 
 ### Achievement 4 — Landing Hierarchy, Type System Foundation, and CTA Redesign
 
-**Status:** In progress
+**Status:** ✅ Completed (2026-03-28)
 
-**Already merged (PR #28, homepage / reader polish):** `src/styles/tokens.css`, `src/types/index.ts`, `src/types/post-card-view-model.ts`, `src/utils/post-card-view-model.ts`, `src/constants/routes.ts` (`ROUTES.postDetail`), `FeaturedArticle/*`, `CategoryChips/*`, `ArticleFeed/*`, and the slimmed `Home.tsx` feed layout. Remaining checklist items below still apply to the broader Hero / `PostCard` migration and extra type barrels.
+**Shipped:** `FeaturedArticle/*`, `CategoryChips/*`, `ArticleFeed/*`, `Home.tsx`, `PostCardViewModel` + `toPostCardViewModel`, design tokens, and `ROUTES` — equivalent intent to the original Hero/`PostCard` folder sketch; names differ for the merged homepage architecture.
 
 **Files to touch:**
 
@@ -859,9 +860,9 @@ src/components/PostCard/index.ts ← CREATE: barrel export
 
 ### Achievement 5 — Internal Article Reader Page
 
-**Status:** Not started
+**Status:** ✅ Completed (2026-03-28)
 
-**Partial (PR #28):** The live route is `src/pages/PostDetails.tsx` (not `PostReader/`): sanitized HTML body, featured hero image, outbound source link, topic hub link, and **`RelatedArticles`** with category overlap. The checklist below still targets the planned split into `ReaderBody` / `ReaderHero` / `usePostById`, etc.
+**Shipped:** `src/pages/PostDetails.tsx` at `posts/:id` — sanitized article HTML, hero image, source + topic hub links, **`RelatedArticles`** (category overlap, date-sorted). Optional refactor: extract `ReaderBody` / `ReaderHero` / `usePostById` as in the original file list.
 
 **Files to touch:**
 
@@ -908,26 +909,17 @@ src/assets/cached/post-details.json ← must exist (from cache:details script)
 
 ### Achievement 5.1 — Topic Landing Depth + Per-Story Share Metadata
 
-**Status:** In progress
+**Status:** ✅ Completed (2026-03-28)
 
-**Files to touch:**
+**Shipped:** `src/pages/TopicLanding.tsx`, `src/constants/topic-landings.ts` (`TOPIC_LANDINGS`, `getTopicBySlug`), route `topics/:slug`, and topic-level SEO via `useSeo`. Per-story share metadata is handled in `PostDetails` + `useSeo`.
 
-```
+**Shipped type shape:** `TopicLandingDefinition` in `topic-landings.ts` (slug, title, subtitle, description, keywords, categoryIds) — equivalent role to the earlier `TopicConfig` sketch below.
 
-src/pages/TopicPage/TopicPage.tsx ← CREATE
-src/pages/TopicPage/TopicPage.types.ts ← TopicPageProps
-src/pages/TopicPage/index.ts
-src/constants/topics.constants.ts ← TopicConfig interface + TOPICS array
-src/hooks/useTopicPosts.ts ← returns AsyncState<PostCardViewModel[]>
-src/hooks/useSeo.ts ← extend: per-story OG image, Twitter card
-src/router.tsx ← ADD: /topics/:slug route
-
-```
-
-**TypeScript requirements:**
+<details>
+<summary>Original plan sketch (TopicPage / TopicConfig — not used verbatim)</summary>
 
 ```ts
-// src/constants/topics.constants.ts
+// Earlier sketch — see TopicLandingDefinition in repo
 export interface TopicConfig {
   slug: string;
   label: string;
@@ -936,19 +928,9 @@ export interface TopicConfig {
   categoryIds: number[];
   externalUrl: string;
 }
-
-export const TOPICS: readonly TopicConfig[] = [
-  {
-    slug: 'people',
-    label: 'People',
-    headline: 'Stories behind remarkable people',
-    subheadline: 'Interviews, founders, and the humans shaping culture',
-    categoryIds: [1, 4],
-    externalUrl: EXTERNAL_LINKS.ADAY_PEOPLE,
-  },
-  // one entry per topic
-] as const;
 ```
+
+</details>
 
 **Commit:** `feat(seo): typed topic landing pages with TopicConfig and enriched OG metadata`
 **PR title:** `feat(seo): TopicConfig-typed topic pages and per-story social share metadata`
@@ -963,15 +945,9 @@ export const TOPICS: readonly TopicConfig[] = [
 
 ### Achievement 7 — Build-Time Detail Cache Pipeline
 
-**Status:** Completed (baseline); hardening in progress
+**Status:** ✅ Completed (2026-03-28)
 
-**Hardening files:**
-
-```
-cachescripts/fetch-post-details.sh            ← add curl timeouts, retries, MAX_DETAILS env cap
-src/hooks/usePostById.ts                      ← validate cache body before using; fallback if empty
-.github/workflows/deploy.yml                 ← add cache:all step before build step
-```
+**Shipped:** `.github/workflows/deployment.yml` runs `pnpm cache:build` before `pnpm build`; `cachescripts/cache-build.sh`, `fetch-a-day-post-details.sh`, `fetch-a-day-posts.sh`, validated JSON under `src/assets/cached/`. Further curl timeouts / `MAX_DETAILS` caps remain optional hardening.
 
 **TypeScript requirements:**
 
@@ -986,21 +962,9 @@ src/hooks/usePostById.ts                      ← validate cache body before usi
 
 ### Achievement 8 — Structured Data and Crawlability Hardening
 
-**Status:** Not started
+**Status:** ✅ Completed (2026-03-28)
 
-**Files to touch:**
-
-```
-public/sitemap.xml
-public/robots.txt
-src/pages/Home/Home.tsx                       ← add JSON-LD script block
-src/types/seo.types.ts                        ← JsonLdOrganization already defined in A4
-src/utils/jsonLd.utils.ts                     ← CREATE: buildOrganizationSchema(): JsonLdOrganization
-```
-
-**TypeScript requirements:**
-
-- `buildOrganizationSchema(): JsonLdOrganization` — explicit return type, no `any`
+**Shipped:** `public/sitemap.xml`, `public/robots.txt`, `src/components/JsonLd.tsx`, `src/utils/structured-data.ts` (`buildHomeStructuredData`, `buildEvergreenWebPageStructuredData`), and **`src/types/seo.types.ts`** (`JsonLdOrganization`, `JsonLdWebSite`, `JsonLdWebPage`, document unions). Home uses `pages/Home.tsx` (not `Home/Home.tsx`).
 
 **Commit:** `feat(seo): sitemap, robots.txt, and typed JSON-LD organization schema`
 **PR title:** `feat(seo): sitemap, robots.txt, and buildOrganizationSchema for crawlability`
@@ -1009,34 +973,9 @@ src/utils/jsonLd.utils.ts                     ← CREATE: buildOrganizationSchem
 
 ### Achievement 9 — Content Depth and Trust Signals
 
-**Status:** Not started
+**Status:** ✅ Completed (2026-03-28)
 
-**Files to touch:**
-
-```
-src/components/SocialProof/SocialProof.tsx
-src/components/SocialProof/SocialProof.types.ts  ← SocialSignal interface
-src/components/SocialProof/index.ts
-src/constants/social-proof.constants.ts          ← SOCIAL_SIGNALS: readonly SocialSignal[]
-src/pages/About/About.tsx                        ← editorial standards + transparency
-src/pages/Insights/Insights.tsx                  ← reading philosophy + methodology
-```
-
-**TypeScript requirements:**
-
-```ts
-export interface SocialSignal {
-  platform: string
-  label: string
-  followerCount: string | null
-  profileUrl: string
-}
-
-export const SOCIAL_SIGNALS: readonly SocialSignal[] = [ ... ] as const
-```
-
-**Commit:** `feat(content): typed SocialSignal trust strip and editorial depth sections`
-**PR title:** `feat(content): SocialSignal-typed trust strip and long-form About and Insights pages`
+**Shipped:** Long-form **About**, **Insights**, and **Collections** pages (`src/pages/*.tsx`) with editorial standards, source transparency, reading philosophy, and FAQ blocks. No standalone **`SocialProof`** component or `SOCIAL_SIGNALS` constant yet — optional follow-up if a reusable social strip is needed.
 
 ---
 
@@ -1060,17 +999,21 @@ Human — 30-second spot check:
 
 ---
 
-## Execution Order (from now)
+## Execution Order (historical — core track complete)
+
+The ordered milestones below shipped under different **file names** than some early plan sketches (for example `FeaturedArticle` instead of `Hero/`, `PostDetails.tsx` instead of `PostReader/`, `topic-landings.ts` + `TopicLanding.tsx` instead of `topics.constants.ts` + `TopicPage/`). The **Current Progress** table is authoritative.
 
 ```
-1. Achievement 3.5  ← GitHub Pages routing fix (BLOCKER — do first)
-2. Achievement 4    ← Type system, tokens, hero redesign, PostCardViewModel mapper
-3. Achievement 5    ← Internal /posts/:id reader page
-4. Achievement 5.1  ← Topic landing pages (in progress)
-5. Achievement 7    ← Cache pipeline hardening
-6. Achievement 8    ← Sitemap + robots.txt + JSON-LD
-7. Achievement 9    ← Trust signals + content depth
+1. Achievement 3.5  ✅ GitHub Pages routing fix (`dist/404.html`, `base` in Vite)
+2. Achievement 4    ✅ Tokens, `PostCardViewModel`, `FeaturedArticle`, `ArticleFeed`, `CategoryChips`, `Home`
+3. Achievement 5    ✅ Internal reader at `posts/:id` — `PostDetails.tsx`, sanitized body, related strip
+4. Achievement 5.1  ✅ `TopicLanding` + `TOPIC_LANDINGS`, per-topic SEO via `useSeo`
+5. Achievement 7    ✅ `pnpm cache:build` before deploy; `cachescripts/*`, committed JSON under `src/assets/cached`
+6. Achievement 8    ✅ `public/sitemap.xml`, `public/robots.txt`, `JsonLd` + `structured-data.ts` (+ typed `seo.types.ts`)
+7. Achievement 9    ✅ Trust/editorial depth on `About`, `Insights`, `Collections` (no separate `SocialProof` component)
 ```
+
+**Optional follow-ups (not blockers):** split `PostReader/*` for readability; add a reusable `SocialProof` strip; further curl hardening in cache scripts per Achievement 7 notes.
 
 ---
 
