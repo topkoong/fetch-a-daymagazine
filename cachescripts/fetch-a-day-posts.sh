@@ -18,6 +18,11 @@ readonly OUTPUT_NAME="posts.json"
 readonly MOBILE_NAME="mobile-posts.json"
 readonly CACHED_DIR="src/assets/cached"
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck source=aday-fetch-opts.sh
+source "${SCRIPT_DIR}/aday-fetch-opts.sh"
+aday_wp_rest_curl_opts "${ORIGIN}"
+
 fetch_post_pages() {
   echo "Fetching posts from ${BASE_URL}"
   mkdir -p "${POSTS_DIR}" "${MERGED_DIR}"
@@ -33,9 +38,9 @@ fetch_post_pages() {
     local out="${POSTS_DIR}/${POST_PREFIX}-${page}.json"
     echo "  page ${page}..."
     local status_code
-    status_code="$(curl -sS -o "$out" -w "%{http_code}" "$url" \
-      -H 'Accept: application/json' \
-      -H 'Content-Type: application/json')"
+    status_code="$(curl -sS -o "$out" -w "%{http_code}" \
+      "${ADAY_WP_REST_CURL_OPTS[@]}" \
+      "$url")"
 
     if [[ "$status_code" == "400" || "$status_code" == "404" ]]; then
       rm -f "$out"
