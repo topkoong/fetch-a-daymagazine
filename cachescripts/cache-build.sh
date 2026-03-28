@@ -1,6 +1,20 @@
 #!/usr/bin/env bash
-# Runs WordPress cache fetch scripts, or validates committed cache only when CACHE_FETCH_OFFLINE=1.
-# GitHub-hosted runners often get HTTP 403 from adaymagazine.com (edge/WAF); offline mode keeps CI green.
+#
+# cache-build.sh
+# --------------
+# Invoked by `pnpm cache:build` from the repository root.
+#
+# Two modes:
+#   CACHE_FETCH_OFFLINE=1
+#       Does not call the WordPress API. Runs validate-committed-cache.sh so CI/deploy
+#       can build using JSON already committed under src/assets/cached/.
+#
+#   (variable unset or not 1)
+#       Runs the three fetch scripts in order: posts → categories → post-details
+#       (details depend on posts.json existing).
+#
+# Working directory: always changes to repo root (parent of cachescripts/).
+#
 set -euo pipefail
 
 cd "$(dirname "$0")/.." || exit 1

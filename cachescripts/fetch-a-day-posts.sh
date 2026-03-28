@@ -1,9 +1,29 @@
 #!/usr/bin/env bash
 #
-# Download posts from a day magazine into:
-#   - src/assets/cached/posts.json        (all fetched pages merged)
-#   - src/assets/cached/mobile-posts.json (first page only — smaller offline payload for narrow layouts)
-# Query params align with src/apis/posts.ts (orderby=date, order=desc).
+# fetch-a-day-posts.sh
+# ---------------------
+# Fetches the public WordPress REST post list from a day magazine and writes two artifacts:
+#
+#   src/assets/cached/posts.json
+#       Merged array of all pages (newest-first ordering matches the API per page).
+#
+#   src/assets/cached/mobile-posts.json
+#       Copy of page 1 only — smaller payload for code paths that import mobile cache.
+#
+# Behaviour:
+#   - Paginates GET /wp-json/wp/v2/posts with per_page=100, orderby=date, order=desc
+#     (aligned with src/apis/posts.ts).
+#   - Stops when a page returns fewer than PER_PAGE items, or HTTP 400/404 on a page.
+#   - Temporary page files live under cachescripts/posts-json/ and are deleted after merge.
+#
+# Dependencies:
+#   - aday-fetch-opts.sh (browser-like curl headers; reduces some edge 403s outside CI).
+#   - jq for JSON validation and merge.
+#
+# Environment:
+#   ADAY_MAGAZINE_ORIGIN — API host (default https://adaymagazine.com)
+#   MAX_PAGES            — Stop after N pages (0 = no cap)
+#
 set -euo pipefail
 
 readonly ORIGIN="${ADAY_MAGAZINE_ORIGIN:-https://adaymagazine.com}"
@@ -30,6 +50,7 @@ fetch_post_pages() {
   local page=1
   local fetched=0
 
+  # Walk WordPress pagination until a short page, HTTP 400/404, or MAX_PAGES.
   while true; do
     if [[ "$MAX_PAGES" -gt 0 && "$page" -gt "$MAX_PAGES" ]]; then
       break
@@ -72,6 +93,7 @@ fetch_post_pages() {
 }
 
 merge_post_json() {
+  # Concatenate every post-*.json page file into one array; promote first page to mobile cache.
   local pattern="${POSTS_DIR}/${POST_PREFIX}"-*.json
   if ! compgen -G "$pattern" >/dev/null; then
     echo "error: no post JSON files to merge" >&2

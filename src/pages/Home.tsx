@@ -75,6 +75,28 @@ const FAQ_ITEMS = [
     answer:
       'Yes. Every story detail page includes a direct path to the original article on a day magazine.',
   },
+  {
+    question: 'What editorial standards does this surface follow?',
+    answer:
+      'We surface titles, excerpts, and metadata without altering the underlying reporting. The goal is faithful presentation with a calmer layout, not editorial rewrite.',
+  },
+  {
+    question: 'What happens when the network or source is slow?',
+    answer:
+      'The app tries the live API first, then falls back to bundled cache where available so you can still scan and open many stories.',
+  },
+] as const;
+
+const EDITORIAL_STANDARD_POINTS = [
+  'Headlines and excerpts stay aligned with the source article; we do not fabricate context.',
+  'Category groupings follow the publisher taxonomy so intent-based browsing stays honest.',
+  'Imagery and attribution flow through the same API fields the editorial team published.',
+] as const;
+
+const SOURCE_TRANSPARENCY_POINTS = [
+  'Story payloads are retrieved from the public WordPress REST API at adaymagazine.com.',
+  'Build and deploy pipelines may refresh JSON snapshots; CI often validates committed files without calling the API.',
+  'When you open a story in this app, you can still reach the canonical page on a day magazine in one action.',
 ] as const;
 
 async function loadCachedPostsData(useMobileCache: boolean): Promise<WpPost[]> {
@@ -346,6 +368,56 @@ function Home() {
               </li>
             ))}
           </ul>
+        </div>
+        <div className='mt-7 rounded-lg border border-black/12 bg-white/85 px-4 py-4'>
+          <h3 className='text-sm font-extrabold tracking-wide text-dull-black sm:text-base'>
+            Editorial standards
+          </h3>
+          <p className='mt-2 text-sm leading-relaxed text-dull-black/85'>
+            Toppy is a reading layer: typography, spacing, and navigation change; the
+            editorial substance remains the work of a day magazine. These standards keep
+            the contract with readers explicit.
+          </p>
+          <ul className='mt-3 space-y-2 text-sm leading-relaxed text-dull-black/85'>
+            {EDITORIAL_STANDARD_POINTS.map((point) => (
+              <li
+                key={point}
+                className='rounded-md border border-black/10 bg-white/80 px-3 py-2'
+              >
+                {point}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className='mt-7 rounded-lg border border-black/12 bg-white/85 px-4 py-4'>
+          <h3 className='text-sm font-extrabold tracking-wide text-dull-black sm:text-base'>
+            Source transparency
+          </h3>
+          <p className='mt-2 text-sm leading-relaxed text-dull-black/85'>
+            Understanding where data comes from matters for trust. Here is how this
+            product relates to the publisher.
+          </p>
+          <ul className='mt-3 space-y-2 text-sm leading-relaxed text-dull-black/85'>
+            {SOURCE_TRANSPARENCY_POINTS.map((point) => (
+              <li
+                key={point}
+                className='rounded-md border border-black/10 bg-white/80 px-3 py-2'
+              >
+                {point}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className='mt-7 rounded-lg border border-black/12 bg-white/85 px-4 py-4'>
+          <h3 className='text-sm font-extrabold tracking-wide text-dull-black sm:text-base'>
+            Reading philosophy
+          </h3>
+          <p className='mt-2 text-sm leading-relaxed text-dull-black/85'>
+            Premium editorial products reward patience. We bias toward category intent,
+            legible cards, and predictable navigation so you spend mental energy on
+            choosing what to read, not fighting the interface. Cache-aware delivery
+            supports that calm pace even when networks waver.
+          </p>
         </div>
         <div className='mt-7 rounded-lg border border-black/12 bg-white/85 px-4 py-4'>
           <h3 className='text-sm font-extrabold tracking-wide text-dull-black sm:text-base'>
