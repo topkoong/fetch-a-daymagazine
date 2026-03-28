@@ -28,17 +28,28 @@ async function loadPostDetailsCache(): Promise<PostDetailsCache> {
   return cachedPostDetailsPromise;
 }
 
+let bundledPostsNormalizedPromise: Promise<WpPost[]> | null = null;
+
+/** Full list from `posts.json` (normalized once) — shared by id-map and category fallback. */
+async function loadBundledPostsNormalized(): Promise<WpPost[]> {
+  if (!bundledPostsNormalizedPromise) {
+    bundledPostsNormalizedPromise = import('@assets/cached/posts.json')
+      .then((module) => {
+        const list = Array.isArray(module.default) ? module.default : [];
+        return normalizeWpPosts(list);
+      })
+      .catch(() => []);
+  }
+  return bundledPostsNormalizedPromise;
+}
+
 let bundledPostsByIdPromise: Promise<Map<number, WpPost>> | null = null;
 
 async function loadBundledPostsById(): Promise<Map<number, WpPost>> {
   if (!bundledPostsByIdPromise) {
-    bundledPostsByIdPromise = import('@assets/cached/posts.json').then((module) => {
-      const list = Array.isArray(module.default) ? module.default : [];
+    bundledPostsByIdPromise = loadBundledPostsNormalized().then((posts) => {
       const map = new Map<number, WpPost>();
-      for (const row of list) {
-        const p = normalizeWpPost(row);
-        if (p) map.set(p.id, p);
-      }
+      for (const p of posts) map.set(p.id, p);
       return map;
     });
   }
@@ -122,27 +133,58 @@ export async function fetchPostById(postId: string): Promise<WpPost> {
   throw new Error('Unable to load this article right now.');
 }
 
+async function fetchCategoryPostsPageFromBundled(
+  categoryId: string,
+  offset: number,
+): Promise<CategoryPostsPage> {
+  const categoryNumericId = Number(categoryId);
+  const all = await loadBundledPostsNormalized();
+  const filtered = Number.isFinite(categoryNumericId)
+    ? all.filter((post) => post.categories.includes(categoryNumericId))
+    : [];
+  filtered.sort((a, b) => {
+    const tb = new Date(b.date ?? 0).getTime();
+    const ta = new Date(a.date ?? 0).getTime();
+    return tb - ta;
+  });
+  const posts = filtered.slice(offset, offset + PAGE_SIZE);
+  const nextOffset = offset + posts.length;
+  const hasMore = nextOffset < filtered.length;
+  return { posts, hasMore, nextOffset };
+}
+
+/**
+ * Category feed: live WordPress first, then **`posts.json`** (same bundle as Home) when the
+ * request fails or the body is not a JSON array — e.g. CORS or HTML from a CDN on GitHub Pages.
+ */
 export async function fetchCategoryPostsPage(
   categoryId: string,
   offset: number,
 ): Promise<CategoryPostsPage> {
-  const url = buildCategoryPostsRequestUrl(categoryId, offset);
-  const response = await axios.get(url);
-  const posts = normalizeWpPosts(response.data);
-  const totalPagesHeader = Number(response.headers['x-wp-totalpages']);
-  const totalItemsHeader = Number(response.headers['x-wp-total']);
-  const hasValidTotals =
-    Number.isFinite(totalPagesHeader) &&
-    totalPagesHeader > 0 &&
-    Number.isFinite(totalItemsHeader) &&
-    totalItemsHeader >= 0;
+  try {
+    const url = buildCategoryPostsRequestUrl(categoryId, offset);
+    const response = await axios.get(url);
+    if (!Array.isArray(response.data)) {
+      return fetchCategoryPostsPageFromBundled(categoryId, offset);
+    }
+    const posts = normalizeWpPosts(response.data);
+    const totalPagesHeader = Number(response.headers['x-wp-totalpages']);
+    const totalItemsHeader = Number(response.headers['x-wp-total']);
+    const hasValidTotals =
+      Number.isFinite(totalPagesHeader) &&
+      totalPagesHeader > 0 &&
+      Number.isFinite(totalItemsHeader) &&
+      totalItemsHeader >= 0;
 
-  const nextOffset = offset + posts.length;
-  const hasMore = hasValidTotals
-    ? nextOffset < totalItemsHeader
-    : posts.length >= PAGE_SIZE;
+    const nextOffset = offset + posts.length;
+    const hasMore = hasValidTotals
+      ? nextOffset < totalItemsHeader
+      : posts.length >= PAGE_SIZE;
 
-  return { posts, hasMore, nextOffset };
+    return { posts, hasMore, nextOffset };
+  } catch {
+    return fetchCategoryPostsPageFromBundled(categoryId, offset);
+  }
 }
 
 export default fetchPosts;

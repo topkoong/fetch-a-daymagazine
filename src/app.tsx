@@ -100,20 +100,6 @@ function App() {
             }
           />
           <Route
-            path='posts/:id'
-            element={
-              <Suspense
-                fallback={
-                  <div className='spinner-wrapper min-h-[50vh]'>
-                    <Spinner label='Loading article' />
-                  </div>
-                }
-              >
-                <PostDetails />
-              </Suspense>
-            }
-          />
-          <Route
             path='posts/categories/:id'
             element={
               <Suspense
@@ -124,6 +110,20 @@ function App() {
                 }
               >
                 <Posts />
+              </Suspense>
+            }
+          />
+          <Route
+            path='posts/:id'
+            element={
+              <Suspense
+                fallback={
+                  <div className='spinner-wrapper min-h-[50vh]'>
+                    <Spinner label='Loading article' />
+                  </div>
+                }
+              >
+                <PostDetails />
               </Suspense>
             }
           />
