@@ -1,317 +1,256 @@
-# Product Growth Plan (High-End UI/UX + SEO + Multi-Page Editorial)
+# Product Growth Plan — Cursor-Executable Patch
 
-## Vision
-
-Evolve Toppy from a single-feed interface into a premium editorial web product:
-
-- richer narrative content
-- stronger conversion copy
-- route-level SEO
-- multiple evergreen pages for discoverability and trust
-- resilient article rendering with build-time content preparation
-
-This document is intentionally detailed so each achievement can ship as one focused PR.
-
-## Product Principles
-
-1. **Editorial clarity first**: every screen helps users decide what to read next.
-2. **Premium feel, not decorative clutter**: restraint, spacing rhythm, hierarchy.
-3. **SEO by structure**: meaningful pages, durable URLs, route-specific metadata.
-4. **Performance confidence**: resilient data sourcing and graceful fallback states.
-5. **Incremental shipping discipline**: one objective per PR, measurable outcome.
-
-## Content and Brand Voice Guide
-
-### Voice
-
-- Confident, calm, expert.
-- Precise verbs over generic marketing filler.
-- Fewer words, stronger intention.
-
-### CTA Pattern
-
-- Primary CTA: action + value outcome.
-- Secondary CTA: low-friction exploration.
-- Avoid vague text such as "click here" or "read more".
-
-### Approved CTA examples
-
-- "Explore curated stories now"
-- "Read the full editorial story"
-- "Reveal 8 more standout stories"
-- "Continue to the original article"
-- "Open premium collections"
+> This document is a targeted patch on top of your existing `plan.md`.
+> It does NOT replace the plan — it fixes the 6 failure modes that make Cursor ineffective.
+> Apply each section as a direct replacement to the corresponding part of `plan.md`.
 
 ---
 
-## SEO Expansion Model
+## Fix 1 — Corrected Execution Order
 
-### Required SEO foundations
+**Replace the current "Execution Order" section at the bottom with this:**
 
-- Route-level `<title>`, description, canonical URL.
-- Route-level Open Graph and Twitter metadata updates.
-- Internal links between evergreen pages and story feeds.
-- Descriptive headings (`h1`, `h2`) aligned with search intent.
+The current order (Achievement 8 → 9) is wrong. You're optimising crawlability before the page converts.
+SEO traffic on a page that doesn't persuade is wasted crawl budget.
 
-### Content page set (multi-page architecture)
+```
+Execution order (from now):
 
-- `/` (Home) - primary discovery and conversion hub.
-- `/about` - positioning, trust, product intent.
-- `/collections` - category-index page with intent-based exploration.
-- `/insights` - methodology and editorial product thinking.
-- `/posts/:id` - article detail reader.
-- `/posts/categories/:id` - category feed pages.
+1. Achievement 4    ← FINISH THIS FIRST (hero, CTA, homepage hierarchy)
+2. Achievement 5.1  ← topic landing pages (SEO depth, uses internal links)
+3. Fix: GitHub Pages routing (BLOCKER — see Fix 3 below)
+4. Achievement 8    ← sitemap + robots.txt (only valuable once pages work)
+5. Achievement 9    ← content depth + trust signals
+```
 
-### Optional SEO phase 2
-
-- add `sitemap.xml` and `robots.txt` in `public/`
-- generate static page list for canonical management
-- add FAQ content page with schema-compatible structure
+**Why:** Achievement 4 is still "In Progress" — your homepage has no clear CTA.
+Sending Google to a page that doesn't convert is actively counter-productive.
 
 ---
 
-## Build-Time Article Preparation Strategy
+## Fix 2 — File-Level Targets for Every Achievement
 
-### Goal
+Cursor cannot act on "upgrade CTA text in Home hero" — it needs a file path.
+Add this table directly underneath the scope list of each achievement.
 
-Pre-fetch article detail payloads during CI/cache update pipelines so detail pages can be rendered from structured cached content first, then network fallback.
+### Achievement 4 file targets
 
-### Implementation direction
+```
+Files Cursor must touch:
+- src/components/Hero/Hero.tsx          ← headline + subheadline + primary CTA
+- src/components/Hero/Hero.module.css   ← spacing, font-size, button styles
+- src/components/PostCard/PostCard.tsx  ← card CTA button label + href
+- src/constants/copy.ts                 ← (create if absent) all CTA strings live here
+- src/constants/links.ts                ← (create if absent) all external URLs live here
+```
 
-- Build cache source list from `src/assets/cached/posts.json`
-- Fetch each `/wp-json/wp/v2/posts/:id`
-- Persist to `src/assets/cached/post-details.json` as keyed object by id
-- Update app fetch flow:
-  - try cache first
-  - fallback to network
-- Regenerate caches in CI/deploy and scheduled cache workflows
+### Achievement 5 / 5.1 file targets
 
-### Success criteria
+```
+Files Cursor must touch:
+- src/pages/About.tsx           ← new page
+- src/pages/Collections.tsx     ← new page
+- src/pages/Insights.tsx        ← new page
+- src/pages/topics/[slug].tsx   ← dynamic topic page (or static per topic)
+- src/router.tsx (or App.tsx)   ← add new routes
+- src/hooks/useSeo.ts           ← extend with per-route metadata
+- src/components/Navbar/Navbar.tsx ← add nav links to new pages
+```
 
-- Detail pages open with reduced wait even if source is slow.
-- App remains functional if source endpoint intermittently fails.
-- No TypeScript shape regressions in normalized post model.
+### Achievement 8 file targets
 
----
-
-## Delivery Constraints
-
-- One achievement = one branch = one PR.
-- Conventional commit format only.
-- No mixed-scope PRs.
-- Every PR must pass:
-  - `pnpm lint`
-  - `pnpm build`
-
----
-
-## Achievement Tracker
-
-## Achievement 1 - Navigation Stability and Responsiveness
-
-**Status:** Completed and merged  
-**Outcome:** Removed overlap/flicker risk in nav layout and improved breakpoint stability.
-
-## Achievement 2 - Internal Detail Flow + Image Fallback Messaging
-
-**Status:** Completed and merged  
-**Outcome:** Users stay in-app on read intent, with graceful media fallback messaging.
-
-## Achievement 3 - Typography Rhythm + First Render Stability
-
-**Status:** Completed and merged  
-**Outcome:** Better visual hierarchy and reduced perception of pop-in on first paint.
-
-## Achievement 4 - Landing Hierarchy and CTA Readability
-
-**Status:** In progress  
-**Outcome target:** Home page reads like a premium publication with clearer conversion actions.
+```
+Files Cursor must touch/create:
+- public/sitemap.xml    ← static for now; list all known routes
+- public/robots.txt     ← allow all, point to sitemap
+- public/404.html       ← CRITICAL: copy of index.html for GH Pages SPA routing
+```
 
 ---
 
-## Next Achievements (One PR each)
+## Fix 3 — GitHub Pages SPA Routing (CRITICAL BLOCKER)
 
-## Achievement 5 - Multi-Page Editorial Expansion + Route SEO
+**Add this as a standalone Achievement 3.5 — it must run BEFORE any new routes ship.**
 
-**Status:** Completed and merged  
-**Goal:** Increase indexable content surface and trust through evergreen pages.
+Every route added in Achievement 5 (`/about`, `/collections`, `/posts/:id`) will return
+a hard 404 on GitHub Pages when the user lands on or refreshes the URL directly.
+This is a platform constraint: GH Pages serves files, not a Node server.
 
-### Scope
+### Two options — pick one and commit to it
 
-- Add and route:
-  - `About`
-  - `Collections`
-  - `Insights`
-- Add route-level SEO metadata hook.
-- Add internal linking from nav and page CTAs.
+#### Option A — HashRouter (simplest, no build change needed)
 
-### Acceptance criteria
+```tsx
+// src/main.tsx — change BrowserRouter to HashRouter
+import { HashRouter } from 'react-router-dom';
 
-- Users can navigate at least 3 evergreen pages beyond feed routes.
-- Each page sets unique title/description/canonical.
-- Navigation remains responsive and accessible.
+root.render(
+  <HashRouter>
+    <App />
+  </HashRouter>,
+);
+```
 
-### Commit / PR
+URLs become `/#/about`, `/#/posts/123`. Not ideal for SEO but works perfectly.
+Use this if the site is primarily for users, not search engines.
 
-- **Commit:** `feat(seo): add editorial content pages with route-level metadata`
-- **PR title:** `feat(seo): add editorial content pages with route-level metadata`
+#### Option B — 404.html redirect trick (keeps clean URLs, SEO-friendly)
 
----
+```bash
+# vite.config.ts — add to build.rollupOptions or use a Vite plugin
+# After build, copy dist/index.html to dist/404.html
+```
 
-## Achievement 5.1 - Topic Landing Depth + Per-Story Share Metadata
+```json
+// package.json scripts
+"postbuild": "cp dist/index.html dist/404.html"
+```
 
-**Status:** In progress  
-**Goal:** Expand SEO depth with intent-based topic landing pages and improve story share consistency.
+GitHub Pages serves `404.html` for any unmatched path. The SPA router then
+takes over client-side and renders the correct route.
 
-### Scope
-
-- Add topic-specific routes such as:
-  - `/topics/business`
-  - `/topics/world`
-  - `/topics/culture`
-  - `/topics/design`
-  - `/topics/lifestyle`
-- Create topic copy blocks and curated post lists per mapped categories.
-- Improve `useSeo` for per-story share metadata (OG type, image, keywords, Twitter card consistency).
-- Apply richer metadata on post detail pages for better social previews.
-
-### Acceptance criteria
-
-- Topic routes are indexable and navigable from core UI surfaces.
-- Story detail pages expose consistent title/description/image metadata.
-- CTA copy guides users into topic hubs with intent-led language.
-
-### Commit / PR
-
-- **Commit:** `feat(seo): add topic landing pages and enrich per-story share metadata`
-- **PR title:** `feat(seo): add topic landing pages and enrich per-story share metadata`
+**Commit:** `fix(routing): add 404.html fallback for GitHub Pages SPA deep links`
+**PR title:** `fix(routing): resolve deep-link 404s on GitHub Pages`
 
 ---
 
-## Achievement 6 - Conversion Copy Upgrade (High-End Content Creator Pass)
+## Fix 4 — Design Token Spec (Replaces Vague "High Contrast" Language)
 
-**Status:** Completed and merged  
-**Goal:** Improve perceived quality and action clarity by upgrading button and CTA language across the product.
+**Add this block to your "Content and Brand Voice Guide" section:**
 
-### Scope
+Cursor must use these exact values. No arbitrary choices allowed.
 
-- Upgrade CTA text in:
-  - Home hero
-  - Content offer block
-  - Post card read action
-  - Category load-more action
-  - Article detail outbound action
-  - Navbar source action
-- Keep tone consistent with premium editorial brand voice.
+```css
+/* src/styles/tokens.css — create this file and import in main.tsx */
 
-### Acceptance criteria
+:root {
+  /* Brand */
+  --brand-red: #e8002d;
+  --brand-red-glow: rgba(232, 0, 45, 0.35);
+  --brand-dark: #111111;
+  --brand-muted: #555555;
 
-- No generic CTA copy remains in high-traffic surfaces.
-- Copy conveys specific intent and user value.
-- All updated CTAs remain concise and scannable.
+  /* Spacing (8px grid) */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+  --space-xl: 64px;
+  --space-2xl: 96px;
 
-### Commit / PR
+  /* Typography */
+  --hero-h1: clamp(2rem, 5vw, 3.5rem);
+  --section-h2: clamp(1.5rem, 3vw, 2.25rem);
+  --body: 1rem;
+  --small: 0.875rem;
 
-- **Commit:** `refactor(content): upgrade CTA messaging for premium editorial tone`
-- **PR title:** `refactor(content): upgrade CTA messaging for premium editorial tone`
+  /* Buttons */
+  --btn-padding: 14px 28px;
+  --btn-radius: 8px;
+  --btn-font-weight: 700;
+  --btn-transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+```
 
----
-
-## Achievement 7 - Build-Time Detail Cache Pipeline (CI + App Integration)
-
-**Status:** Completed (baseline merged); hardening PR adds resilience below.  
-**Goal:** Pre-structure detail pages by fetching article payloads during CI/scheduled cache workflows.
-
-### Scope
-
-- Add `fetch-a-day-post-details.sh`.
-- Add `post-details.json` cache artifact.
-- Wire `cache:build` script in `package.json`.
-- Execute cache generation in CI and deploy workflows.
-- Extend scheduled cache update workflow to include post-details artifact.
-- Update `fetchPostById` to read cache first, then network fallback.
-
-### Hardening (this PR)
-
-- Curl connect/time limits and retries; optional `DETAIL_REQUEST_DELAY_SECS` between requests.
-- Merge with existing `post-details.json`: skip network when an entry already has usable `content.rendered`.
-- `MAX_DETAILS` env caps fetches per run (CI sets a bound on pull requests only).
-- `pnpm cache:details` to rerun detail step after posts exist.
-- App: if cache hit lacks a non-empty body after strip, fall back to network.
-
-### Acceptance criteria
-
-- Detail cache generated successfully in automation environments.
-- App can resolve detail content from prebuilt cache.
-- Fallback to network remains functional.
-
-### Commit / PR
-
-- **Baseline commit:** `feat(cache): prebuild structured article detail pages for runtime`
-- **Hardening commit:** `feat(cache): harden post-details fetch pipeline and CI bounds`
+**Cursor rule:** If a PR touches any visual property (color, size, spacing), it MUST
+reference a token from this file. Hardcoded hex values in component files = PR rejection.
 
 ---
 
-## Achievement 8 - Structured Data and Crawlability Hardening
+## Fix 5 — Machine-Testable Acceptance Criteria
 
-**Goal:** Improve discoverability quality and search representation.
+**Replace every subjective acceptance criterion with one of these patterns:**
 
-### Scope
+### Bad (subjective — Cursor cannot verify)
 
-- Add `public/sitemap.xml`
-- Add `public/robots.txt`
-- Add optional JSON-LD blocks on evergreen pages (Organization, WebSite)
+```
+✗ "Tone remains cohesive and premium"
+✗ "Site feels complete and credible"
+✗ "No block feels visually disconnected"
+✗ "Copy conveys specific intent"
+```
 
-### Acceptance criteria
+### Good (machine-verifiable or human-checkable in 30 seconds)
 
-- Core routes are explicitly crawlable.
-- Metadata and structured hints are consistent.
+```
+✓ pnpm lint passes with 0 errors
+✓ pnpm build exits with code 0
+✓ grep -r "click here\|read more\|learn more" src/ returns 0 matches
+✓ grep -r "href=\"https://adaymagazine" src/ returns ≥ 3 matches (CTAs wired)
+✓ Lighthouse mobile Performance score ≥ 80
+✓ Lighthouse Accessibility score ≥ 90
+✓ No <a> tag has an empty href or href="#" (dead link check)
+✓ Every page route returns 200 in `pnpm preview` (not 404)
+✓ document.title is unique on /, /about, /collections (run in browser console)
+```
 
-### Commit / PR
+**Add this QA block to EVERY achievement:**
 
-- **Commit:** `feat(seo): add sitemap robots and structured metadata hints`
-- **PR title:** `feat(seo): add sitemap robots and structured metadata hints`
+```markdown
+### Automated checks (Cursor must run before PR)
+
+- [ ] `pnpm lint` — 0 errors
+- [ ] `pnpm build` — exits 0, no TypeScript errors
+- [ ] `grep -r "click here\|read more" src/` — 0 matches
+
+### Human checks (30-second spot check)
+
+- [ ] Open localhost:5173 — primary CTA visible without scrolling
+- [ ] Click every CTA button — opens correct adaymagazine.com URL in new tab
+- [ ] Resize to 375px — no horizontal scroll, no clipped text
+- [ ] Refresh /about directly — page loads (not 404)
+```
 
 ---
 
-## Achievement 9 - Content Depth and Trust Signals
+## Fix 6 — Achievement Status Audit
 
-**Goal:** Make the site feel complete and credible with richer long-form sections and trust content.
+**The navbar overlap (Achievement 1) is marked "Completed and merged" but the user
+still reports it as broken. This means either the fix was incomplete or a later PR
+regressed it.**
 
-### Scope
+Add this re-verification step before starting Achievement 4:
 
-- Expand home and evergreen pages with:
-  - Editorial standards section
-  - Source transparency
-  - Reading philosophy
-  - FAQ / expectation-setting blocks
+```markdown
+### Pre-Achievement 4: regression audit
 
-### Acceptance criteria
+Before touching any new code, Cursor must verify these "completed" items still work:
 
-- Every top-level page has substantial informative content (not just navigational scaffolding).
-- Tone remains cohesive and premium.
+1. Navbar overlap — open site, scroll. Nav must not overlap any content. Check:
+   - Desktop Chrome
+   - Mobile 375px
+     If broken: open a fix PR first. Commit: `fix(navbar): resolve regression in sticky positioning`
 
-### Commit / PR
+2. Internal detail flow (Achievement 2) — click any article card.
+   Must open internal reader page, NOT directly open adaymagazine.com.
+   If broken: open a fix PR before proceeding.
 
-- **Commit:** `feat(content): expand editorial trust and long-form page depth`
-- **PR title:** `feat(content): expand editorial trust and long-form page depth`
+3. Typography rhythm (Achievement 3) — open homepage.
+   H1 must be visually dominant. Body text must be readable at 16px.
+   If regressed: open a fix PR.
+
+Only once all three pass → begin Achievement 4 work.
+```
 
 ---
 
-## QA and Release Checklist (Apply per PR)
+## Summary: What Changes in plan.md
 
-- [ ] Lint passes (`pnpm lint`)
-- [ ] Build passes (`pnpm build`)
-- [ ] Mobile and desktop sanity pass complete
-- [ ] CTA copy reviewed for consistency
-- [ ] Route metadata updated and verified
-- [ ] PR description includes:
-  - Why
-  - Scope
-  - Risks
-  - Test plan
+| Section                              | Action                                                       |
+| ------------------------------------ | ------------------------------------------------------------ |
+| Execution Order                      | Rewrite — Achievement 4 first, GH Pages routing fix second   |
+| Each Achievement scope               | Add "Files Cursor must touch" table                          |
+| New section (3.5)                    | GitHub Pages SPA routing fix — Option A or B                 |
+| Content & Brand Voice Guide          | Add design tokens block with exact CSS values                |
+| Each Achievement acceptance criteria | Replace subjective language with grep/lint/Lighthouse checks |
+| Achievement status block             | Add pre-work regression audit before Achievement 4           |
 
-## Execution Order (from now)
+---
 
-1. Achievement 8 (crawlability hardening)
-2. Achievement 9 (content depth and trust signals)
+## The One-Line Rule for Writing Cursor-Effective Plans
+
+> **Every instruction must be completable by someone who has never seen your codebase
+> and is not allowed to ask a follow-up question.**
+
+If the instruction requires judgment ("make it feel premium"), it is not an instruction —
+it is a wish. Convert every wish into a file path, a value, or a grep command.
