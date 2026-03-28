@@ -1,6 +1,7 @@
 import fetchCategories from '@apis/categories';
 import fetchPosts from '@apis/posts';
 import CategoryHeader from '@components/CategoryHeader';
+import JsonLd from '@components/JsonLd';
 import PageBreak from '@components/PageBreak';
 import PageHeader from '@components/PageHeader';
 import Post from '@components/Post';
@@ -10,6 +11,7 @@ import { queryKeys } from '@constants/query-keys';
 import useBreakpoints from '@hooks/useBreakpoints';
 import useSeo from '@hooks/useSeo';
 import { useQuery } from '@tanstack/react-query';
+import { buildHomeStructuredData } from '@utils/structured-data';
 import { useCallback, useMemo } from 'preact/hooks';
 import { Link } from 'react-router-dom';
 import type {
@@ -213,6 +215,7 @@ function Home() {
 
   return (
     <article className='home-page mx-auto w-full max-w-[1600px] px-3 pb-12 sm:px-4'>
+      <JsonLd data={buildHomeStructuredData()} />
       <PageHeader
         title='Toppy × a day magazine'
         subtitle='Discover thoughtful stories across culture, work, design, and everyday life — updated from a day magazine with fast browsing and category-first exploration.'

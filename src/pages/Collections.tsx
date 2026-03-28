@@ -1,6 +1,8 @@
+import JsonLd from '@components/JsonLd';
 import PageHeader from '@components/PageHeader';
 import { PRIMARY_NAV_CATEGORIES } from '@constants/nav-categories';
 import useSeo from '@hooks/useSeo';
+import { buildEvergreenWebPageStructuredData } from '@utils/structured-data';
 import { Link } from 'react-router-dom';
 
 function Collections() {
@@ -13,6 +15,7 @@ function Collections() {
 
   return (
     <article className='mx-auto w-full max-w-5xl px-4 py-8 sm:px-6'>
+      <JsonLd data={buildEvergreenWebPageStructuredData('/collections', 'Collections')} />
       <PageHeader
         title='Collections'
         subtitle='Choose a category collection and go directly to the stories that match your intent.'
