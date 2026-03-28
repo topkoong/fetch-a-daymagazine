@@ -746,6 +746,7 @@ stage it alongside the feature files before committing.
 | —   | fix/routing-gh-pages-404-html              | 3.5         | `postbuild` copies `dist/index.html` to `dist/404.html` for GitHub Pages deep links                                                            |
 | —   | hotfix/homepage-redesign-and-reader-polish | — (hotfix)  | Editorial featured hero, category chips, feed-only home; navbar category row owned by Navbar; cream page background; related stories on reader |
 | —   | fix/post-card-cta-entities-excerpt         | HF3         | Single `Post` card CTA; `stripHtmlTags` decodes HTML entities; excerpt paragraph omitted when empty (no hardcoded fallback)                    |
+| —   | fix/related-posts-app-shell                | —           | Related stories ordered by newest date; `#app` uses brand-white like `body`; plan documents A4/A5 overlap with merged homepage/reader work     |
 
 ---
 
@@ -804,6 +805,8 @@ Shipped: one primary link per `Post` card (`COPY.CARD_CTA` as direct text), `str
 
 **Status:** In progress
 
+**Already merged (PR #28, homepage / reader polish):** `src/styles/tokens.css`, `src/types/index.ts`, `src/types/post-card-view-model.ts`, `src/utils/post-card-view-model.ts`, `src/constants/routes.ts` (`ROUTES.postDetail`), `FeaturedArticle/*`, `CategoryChips/*`, `ArticleFeed/*`, and the slimmed `Home.tsx` feed layout. Remaining checklist items below still apply to the broader Hero / `PostCard` migration and extra type barrels.
+
 **Files to touch:**
 
 ```
@@ -856,6 +859,8 @@ src/components/PostCard/index.ts ← CREATE: barrel export
 ### Achievement 5 — Internal Article Reader Page
 
 **Status:** Not started
+
+**Partial (PR #28):** The live route is `src/pages/PostDetails.tsx` (not `PostReader/`): sanitized HTML body, featured hero image, outbound source link, topic hub link, and **`RelatedArticles`** with category overlap. The checklist below still targets the planned split into `ReaderBody` / `ReaderHero` / `usePostById`, etc.
 
 **Files to touch:**
 
