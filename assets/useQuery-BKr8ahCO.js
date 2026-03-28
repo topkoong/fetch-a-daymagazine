@@ -1,1 +1,0 @@
-import{o as e,s as t}from"./posts-CTiyfOTe.js";function n(n,r){return e(n,t,r)}export{n as t};
