@@ -1,10 +1,26 @@
 /**
  * Produces plain text from WordPress `rendered` HTML for labels and alt text.
  */
-export function stripHtmlTags(html: string): string {
-  return html
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/\s+/g, ' ')
+export function stripHtmlTags(raw: string): string {
+  if (!raw) return '';
+  const withoutTags = raw.replace(/<[^>]*>/g, '');
+  if (typeof document !== 'undefined') {
+    const textarea = document.createElement('textarea');
+    textarea.innerHTML = withoutTags;
+    return textarea.value.trim();
+  }
+  return withoutTags
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#8216;/g, '\u2018')
+    .replace(/&#8217;/g, '\u2019')
+    .replace(/&#8220;/g, '\u201C')
+    .replace(/&#8221;/g, '\u201D')
+    .replace(/&#8211;/g, '\u2013')
+    .replace(/&#8212;/g, '\u2014')
+    .replace(/&nbsp;/g, ' ')
     .trim();
 }
 

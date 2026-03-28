@@ -708,19 +708,20 @@ stage it alongside the feature files before committing.
 
 ### Current Progress
 
-| #   | Achievement                                | Status         | Completed  |
-| --- | ------------------------------------------ | -------------- | ---------- |
-| 1   | Navigation stability and responsiveness    | ✅ Completed   | —          |
-| 2   | Internal detail flow + image fallback      | ✅ Completed   | —          |
-| 3   | Typography rhythm + first render stability | ✅ Completed   | —          |
-| 3.5 | GitHub Pages SPA routing fix               | ✅ Completed   | 2026-03-28 |
-| 4   | Type system, tokens, hero redesign         | 🔄 In progress | —          |
-| 5   | Internal /posts/:id reader page            | 🔲 Not started | —          |
-| 5.1 | Topic landing pages + share metadata       | 🔄 In progress | —          |
-| 6   | Conversion copy upgrade                    | ✅ Completed   | —          |
-| 7   | Build-time cache pipeline                  | 🔄 In progress | —          |
-| 8   | Sitemap, robots.txt, JSON-LD               | 🔲 Not started | —          |
-| 9   | Content depth and trust signals            | 🔲 Not started | —          |
+| #   | Achievement                                   | Status         | Completed  |
+| --- | --------------------------------------------- | -------------- | ---------- |
+| 1   | Navigation stability and responsiveness       | ✅ Completed   | —          |
+| 2   | Internal detail flow + image fallback         | ✅ Completed   | —          |
+| 3   | Typography rhythm + first render stability    | ✅ Completed   | —          |
+| 3.5 | GitHub Pages SPA routing fix                  | ✅ Completed   | 2026-03-28 |
+| 4   | Type system, tokens, hero redesign            | 🔄 In progress | —          |
+| 5   | Internal /posts/:id reader page               | 🔲 Not started | —          |
+| 5.1 | Topic landing pages + share metadata          | 🔄 In progress | —          |
+| 6   | Conversion copy upgrade                       | ✅ Completed   | —          |
+| 7   | Build-time cache pipeline                     | 🔄 In progress | —          |
+| 8   | Sitemap, robots.txt, JSON-LD                  | 🔲 Not started | —          |
+| 9   | Content depth and trust signals               | 🔲 Not started | —          |
+| HF3 | Post card: single CTA, HTML entities, excerpt | ✅ Completed   | 2026-03-28 |
 
 **Legend:** ✅ Completed · 🔄 In progress · 🔲 Not started · 🚧 Blocked
 
@@ -744,6 +745,7 @@ stage it alongside the feature files before committing.
 | —   | —                                          | 6           | All CTA copy upgraded, banned phrases removed                                                                                                  |
 | —   | fix/routing-gh-pages-404-html              | 3.5         | `postbuild` copies `dist/index.html` to `dist/404.html` for GitHub Pages deep links                                                            |
 | —   | hotfix/homepage-redesign-and-reader-polish | — (hotfix)  | Editorial featured hero, category chips, feed-only home; navbar category row owned by Navbar; cream page background; related stories on reader |
+| —   | fix/post-card-cta-entities-excerpt         | HF3         | Single `Post` card CTA; `stripHtmlTags` decodes HTML entities; excerpt paragraph omitted when empty (no hardcoded fallback)                    |
 
 ---
 
@@ -787,6 +789,14 @@ Do not create a separate commit for the plan update.
 
 **Commit:** `fix(routing): add 404.html fallback for GitHub Pages SPA deep links`
 **PR title:** `fix(routing): resolve deep-link 404s on GitHub Pages`
+
+---
+
+### HF3 — Post card: single CTA, HTML entities, excerpt fallback
+
+**Status:** ✅ Completed (2026-03-28)
+
+Shipped: one primary link per `Post` card (`COPY.CARD_CTA` as direct text), `stripHtmlTags` decodes entities (textarea in browser, manual replacements for SSR), empty excerpts hide the excerpt line with no generic filler string.
 
 ---
 
