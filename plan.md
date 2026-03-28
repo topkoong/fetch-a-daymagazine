@@ -708,19 +708,19 @@ stage it alongside the feature files before committing.
 
 ### Current Progress
 
-| #   | Achievement                                | Status         | Completed |
-| --- | ------------------------------------------ | -------------- | --------- |
-| 1   | Navigation stability and responsiveness    | ✅ Completed   | —         |
-| 2   | Internal detail flow + image fallback      | ✅ Completed   | —         |
-| 3   | Typography rhythm + first render stability | ✅ Completed   | —         |
-| 3.5 | GitHub Pages SPA routing fix               | 🔲 Not started | —         |
-| 4   | Type system, tokens, hero redesign         | 🔄 In progress | —         |
-| 5   | Internal /posts/:id reader page            | 🔲 Not started | —         |
-| 5.1 | Topic landing pages + share metadata       | 🔄 In progress | —         |
-| 6   | Conversion copy upgrade                    | ✅ Completed   | —         |
-| 7   | Build-time cache pipeline                  | 🔄 In progress | —         |
-| 8   | Sitemap, robots.txt, JSON-LD               | 🔲 Not started | —         |
-| 9   | Content depth and trust signals            | 🔲 Not started | —         |
+| #   | Achievement                                | Status         | Completed  |
+| --- | ------------------------------------------ | -------------- | ---------- |
+| 1   | Navigation stability and responsiveness    | ✅ Completed   | —          |
+| 2   | Internal detail flow + image fallback      | ✅ Completed   | —          |
+| 3   | Typography rhythm + first render stability | ✅ Completed   | —          |
+| 3.5 | GitHub Pages SPA routing fix               | ✅ Completed   | 2026-03-28 |
+| 4   | Type system, tokens, hero redesign         | 🔄 In progress | —          |
+| 5   | Internal /posts/:id reader page            | 🔲 Not started | —          |
+| 5.1 | Topic landing pages + share metadata       | 🔄 In progress | —          |
+| 6   | Conversion copy upgrade                    | ✅ Completed   | —          |
+| 7   | Build-time cache pipeline                  | 🔄 In progress | —          |
+| 8   | Sitemap, robots.txt, JSON-LD               | 🔲 Not started | —          |
+| 9   | Content depth and trust signals            | 🔲 Not started | —          |
 
 **Legend:** ✅ Completed · 🔄 In progress · 🔲 Not started · 🚧 Blocked
 
@@ -728,27 +728,25 @@ stage it alongside the feature files before committing.
 
 ### Blocked items
 
-| Achievement        | Blocked by      | Notes                                                      |
-| ------------------ | --------------- | ---------------------------------------------------------- |
-| 4, 5, 5.1, 7, 8, 9 | Achievement 3.5 | All new routes 404 on GitHub Pages until routing fix ships |
+| Achievement | Blocked by | Notes                                                                         |
+| ----------- | ---------- | ----------------------------------------------------------------------------- |
+| —           | —          | None — Achievement 3.5 ships `dist/404.html` for GitHub Pages SPA deep links. |
 
 ---
 
 ### What shipped in each PR
 
-| PR  | Branch | Achievement | What actually changed                                    |
-| --- | ------ | ----------- | -------------------------------------------------------- |
-| —   | —      | 1           | Navbar sticky, z-index fixed, mobile breakpoints stable  |
-| —   | —      | 2           | Card CTA routes internally, image fallback message added |
-| —   | —      | 3           | Type scale tightened, first-paint pop-in reduced         |
-| —   | —      | 6           | All CTA copy upgraded, banned phrases removed            |
-
-```
+| PR  | Branch                        | Achievement | What actually changed                                                               |
+| --- | ----------------------------- | ----------- | ----------------------------------------------------------------------------------- |
+| —   | —                             | 1           | Navbar sticky, z-index fixed, mobile breakpoints stable                             |
+| —   | —                             | 2           | Card CTA routes internally, image fallback message added                            |
+| —   | —                             | 3           | Type scale tightened, first-paint pop-in reduced                                    |
+| —   | —                             | 6           | All CTA copy upgraded, banned phrases removed                                       |
+| —   | fix/routing-gh-pages-404-html | 3.5         | `postbuild` copies `dist/index.html` to `dist/404.html` for GitHub Pages deep links |
 
 ---
 
 **Then add this line to your Cursor prompt, right before step 7:**
-```
 
 6b. Update plan.md: - Change this achievement's status to ✅ Completed - Fill in today's date in the Completed column - Add one sentence to the "What shipped" table describing what actually changed - Stage plan.md alongside the feature files in the same commit
 Do not create a separate commit for the plan update.
@@ -773,7 +771,7 @@ Do not create a separate commit for the plan update.
 
 ### Achievement 3.5 — GitHub Pages SPA Routing Fix
 
-**Status:** Not started — BLOCKER
+**Status:** Completed and merged
 
 **Files to touch:**
 
@@ -798,26 +796,28 @@ Do not create a separate commit for the plan update.
 **Files to touch:**
 
 ```
-src/styles/tokens.css                         ← CREATE: design tokens
-src/types/post.types.ts                       ← CREATE: Post, PostDetail, PostCardViewModel
-src/types/category.types.ts                   ← CREATE: Category, CategoryViewModel
-src/types/api.types.ts                        ← CREATE: LoadState, AsyncState
-src/types/seo.types.ts                        ← CREATE: SeoMeta, JsonLdOrganization
-src/types/index.ts                            ← CREATE: barrel export
-src/constants/routes.constants.ts             ← CREATE: ROUTES
-src/constants/api.constants.ts                ← CREATE: API_ENDPOINTS, MAX_POSTS_PER_PAGE
-src/constants/copy.constants.ts               ← CREATE: COPY
-src/constants/external-links.constants.ts     ← CREATE: EXTERNAL_LINKS
-src/utils/sanitize.utils.ts                   ← CREATE: stripHtml, sanitizeHtml
-src/utils/post.utils.ts                       ← CREATE: toPostCardViewModel
-src/components/Hero/Hero.tsx                  ← REWRITE: headline + CTA using COPY constants
-src/components/Hero/Hero.module.css           ← REWRITE: retro styles via tokens
-src/components/Hero/Hero.types.ts             ← CREATE: HeroProps
-src/components/Hero/index.ts                  ← CREATE: barrel export
-src/components/PostCard/PostCard.tsx          ← UPDATE: use PostCardViewModel, COPY.CARD_CTA
-src/components/PostCard/PostCard.types.ts     ← CREATE: PostCardProps typed with PostCardViewModel
-src/components/PostCard/PostCard.module.css   ← UPDATE: retro ink-shadow button styles
-src/components/PostCard/index.ts              ← CREATE: barrel export
+
+src/styles/tokens.css ← CREATE: design tokens
+src/types/post.types.ts ← CREATE: Post, PostDetail, PostCardViewModel
+src/types/category.types.ts ← CREATE: Category, CategoryViewModel
+src/types/api.types.ts ← CREATE: LoadState, AsyncState
+src/types/seo.types.ts ← CREATE: SeoMeta, JsonLdOrganization
+src/types/index.ts ← CREATE: barrel export
+src/constants/routes.constants.ts ← CREATE: ROUTES
+src/constants/api.constants.ts ← CREATE: API_ENDPOINTS, MAX_POSTS_PER_PAGE
+src/constants/copy.constants.ts ← CREATE: COPY
+src/constants/external-links.constants.ts ← CREATE: EXTERNAL_LINKS
+src/utils/sanitize.utils.ts ← CREATE: stripHtml, sanitizeHtml
+src/utils/post.utils.ts ← CREATE: toPostCardViewModel
+src/components/Hero/Hero.tsx ← REWRITE: headline + CTA using COPY constants
+src/components/Hero/Hero.module.css ← REWRITE: retro styles via tokens
+src/components/Hero/Hero.types.ts ← CREATE: HeroProps
+src/components/Hero/index.ts ← CREATE: barrel export
+src/components/PostCard/PostCard.tsx ← UPDATE: use PostCardViewModel, COPY.CARD_CTA
+src/components/PostCard/PostCard.types.ts ← CREATE: PostCardProps typed with PostCardViewModel
+src/components/PostCard/PostCard.module.css ← UPDATE: retro ink-shadow button styles
+src/components/PostCard/index.ts ← CREATE: barrel export
+
 ```
 
 **TypeScript requirements:**
@@ -849,23 +849,25 @@ src/components/PostCard/index.ts              ← CREATE: barrel export
 **Files to touch:**
 
 ```
-src/pages/PostReader/PostReader.tsx           ← CREATE: reader page component
-src/pages/PostReader/PostReader.module.css    ← CREATE: retro reader layout styles
-src/pages/PostReader/PostReader.types.ts      ← CREATE: PostReaderProps
-src/pages/PostReader/index.ts                ← CREATE: barrel export
-src/components/ReaderTopBar/ReaderTopBar.tsx  ← CREATE: back + external link bar
+
+src/pages/PostReader/PostReader.tsx ← CREATE: reader page component
+src/pages/PostReader/PostReader.module.css ← CREATE: retro reader layout styles
+src/pages/PostReader/PostReader.types.ts ← CREATE: PostReaderProps
+src/pages/PostReader/index.ts ← CREATE: barrel export
+src/components/ReaderTopBar/ReaderTopBar.tsx ← CREATE: back + external link bar
 src/components/ReaderTopBar/ReaderTopBar.types.ts
 src/components/ReaderTopBar/index.ts
-src/components/ReaderHero/ReaderHero.tsx      ← CREATE: full-width hero image
+src/components/ReaderHero/ReaderHero.tsx ← CREATE: full-width hero image
 src/components/ReaderHero/ReaderHero.types.ts
 src/components/ReaderHero/index.ts
-src/components/ReaderBody/ReaderBody.tsx      ← CREATE: sanitized HTML renderer
+src/components/ReaderBody/ReaderBody.tsx ← CREATE: sanitized HTML renderer
 src/components/ReaderBody/ReaderBody.types.ts ← ReaderBodyProps { contentHtml: string }
 src/components/ReaderBody/index.ts
-src/components/ReaderFooterCTA/              ← CREATE: next article + external CTA
-src/hooks/usePostById.ts                      ← CREATE: AsyncState<PostDetail>, cache-first
-src/router.tsx                               ← ADD: /posts/:id route
-src/assets/cached/post-details.json          ← must exist (from cache:details script)
+src/components/ReaderFooterCTA/ ← CREATE: next article + external CTA
+src/hooks/usePostById.ts ← CREATE: AsyncState<PostDetail>, cache-first
+src/router.tsx ← ADD: /posts/:id route
+src/assets/cached/post-details.json ← must exist (from cache:details script)
+
 ```
 
 **TypeScript requirements:**
@@ -894,13 +896,15 @@ src/assets/cached/post-details.json          ← must exist (from cache:details 
 **Files to touch:**
 
 ```
-src/pages/TopicPage/TopicPage.tsx             ← CREATE
-src/pages/TopicPage/TopicPage.types.ts        ← TopicPageProps
+
+src/pages/TopicPage/TopicPage.tsx ← CREATE
+src/pages/TopicPage/TopicPage.types.ts ← TopicPageProps
 src/pages/TopicPage/index.ts
-src/constants/topics.constants.ts             ← TopicConfig interface + TOPICS array
-src/hooks/useTopicPosts.ts                    ← returns AsyncState<PostCardViewModel[]>
-src/hooks/useSeo.ts                           ← extend: per-story OG image, Twitter card
-src/router.tsx                               ← ADD: /topics/:slug route
+src/constants/topics.constants.ts ← TopicConfig interface + TOPICS array
+src/hooks/useTopicPosts.ts ← returns AsyncState<PostCardViewModel[]>
+src/hooks/useSeo.ts ← extend: per-story OG image, Twitter card
+src/router.tsx ← ADD: /topics/:slug route
+
 ```
 
 **TypeScript requirements:**

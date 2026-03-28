@@ -25,6 +25,7 @@
     "cache:build": "bash ./cachescripts/cache-build.sh",
     "cache:details": "bash ./cachescripts/fetch-a-day-post-details.sh",
     "build": "tsc && vite build",
+    "postbuild": "cp dist/index.html dist/404.html",
     "preview": "vite preview",
     "lint:fix": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
     "lint:format": "prettier --log-level warn --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\"",
