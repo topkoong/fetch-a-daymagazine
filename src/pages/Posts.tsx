@@ -1,3 +1,12 @@
+/**
+ * **Category archive** for navbar/chip links: `/posts/categories/:id` where `id` is a WordPress
+ * category id (see `PRIMARY_NAV_CATEGORIES`). **Title** comes from router `location.state.category`
+ * when navigating internally; a cold open shows the generic label "Category" until we add slug lookup.
+ *
+ * **Data:** `useInfiniteQuery` pages with `fetchCategoryPostsPage` (live REST, then **bundled
+ * `posts.json` slice** on failure / non-JSON—critical on GitHub Pages). **Session storage** remembers
+ * how many cards the user expanded via "load more" per category id.
+ */
 import { fetchCategoryPostsPage } from '@apis/posts';
 import PageBreak from '@components/PageBreak';
 import PageHeader from '@components/PageHeader';
@@ -17,6 +26,7 @@ interface CategoryRouteState {
   category?: string;
 }
 
+/** Initial visible rows before user clicks load-more; must align with `PAGE_SIZE` pacing in API. */
 const BASE_VISIBLE_POST_COUNT = 8;
 
 function Posts() {
@@ -52,6 +62,7 @@ function Posts() {
     isFetchingNextPage,
   } = useInfiniteQuery({
     queryKey,
+    // `pageParam` is byte offset for live WP API and the bundled fallback (see `posts.ts`).
     queryFn: ({ pageParam }) => fetchCategoryPostsPage(categoryId ?? '', pageParam),
     initialPageParam: 0,
     getNextPageParam: (lastPage) => {
@@ -93,6 +104,7 @@ function Posts() {
     setDesiredVisibleCount(BASE_VISIBLE_POST_COUNT);
   }, [savedVisibleCountKey]);
 
+  // After returning with a saved "desired visible" count, prefetch pages until we have enough rows.
   useEffect(() => {
     if (!hasValidCategoryId) return;
     if (!hasNextPage) return;

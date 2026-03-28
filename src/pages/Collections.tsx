@@ -1,3 +1,7 @@
+/**
+ * **Collections** — grid of links into `/posts/categories/:id` using `PRIMARY_NAV_CATEGORIES`.
+ * Trust/FAQ copy explains how feeds relate to WordPress data.
+ */
 import JsonLd from '@components/JsonLd';
 import PageHeader from '@components/PageHeader';
 import { PRIMARY_NAV_CATEGORIES } from '@constants/nav-categories';

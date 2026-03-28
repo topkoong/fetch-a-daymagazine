@@ -1,3 +1,8 @@
+/**
+ * **Editorial card** for list surfaces (home sections, category/topic grids). Resolves featured
+ * image from the post or `cachedPostsById`, defers off-screen thumbnails (blur placeholder) via
+ * {@link useIntersectionObserver}, and links to the internal reader with `COPY.CARD_CTA` text.
+ */
 import placeholderImage from '@assets/images/placeholder.png';
 import { COPY } from '@constants/copy.constants';
 import useIntersectionObserver from '@hooks/useIntersectionObserver';

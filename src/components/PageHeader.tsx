@@ -1,3 +1,4 @@
+/** Centered **H1 + optional deck** used on evergreen pages, topic landings, and error states. */
 interface PageHeaderProps {
   title: string;
   subtitle?: string;

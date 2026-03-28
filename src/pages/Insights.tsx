@@ -1,3 +1,7 @@
+/**
+ * **Insights** — product/editorial strategy narrative, transparency, FAQ. Static content with
+ * JSON-LD WebPage + `useSeo`.
+ */
 import JsonLd from '@components/JsonLd';
 import PageHeader from '@components/PageHeader';
 import useSeo from '@hooks/useSeo';

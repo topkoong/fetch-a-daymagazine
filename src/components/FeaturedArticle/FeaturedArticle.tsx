@@ -1,3 +1,7 @@
+/**
+ * **Hero** for the newest post on Home: uses `PostCardViewModel` (plain strings, optional image URL).
+ * CTA copy comes from `COPY`; internal links use {@link ROUTES.postDetail}.
+ */
 import { COPY } from '@constants/copy.constants';
 import { ROUTES } from '@constants/routes';
 import { Link } from 'react-router-dom';

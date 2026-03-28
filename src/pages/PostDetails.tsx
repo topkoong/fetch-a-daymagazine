@@ -24,8 +24,10 @@ interface PostDetailsRouteState {
 }
 
 /**
- * Single-article reader: loads one post by id, reuses the **same magazine list query** as Home
- * (`queryKeys.allPosts`) to compute related cards without a second bespoke endpoint.
+ * Single-article **reader**: loads one post by id via `fetchPostById` (detail cache → network → list
+ * snapshot). Body HTML is **sanitized** for XSS (`sanitizeArticleBodyHtml`); head/meta use `useSeo`.
+ * Reuses the **same magazine list query** as Home (`queryKeys.allPosts`) for **related** cards
+ * (`getRelatedPosts`) without a separate CMS endpoint.
  */
 function PostDetails() {
   const { id: postId } = useParams();

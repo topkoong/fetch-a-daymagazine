@@ -1,3 +1,8 @@
+/**
+ * **Client-side** document head management: updates `<title>`, canonical link, Open Graph, and
+ * Twitter meta tags on route change. Uses `SITE_URL` + optional `path` for absolute URLs; pairs
+ * with {@link JsonLd} on pages that also emit `application/ld+json`.
+ */
 import { SITE_NAME, SITE_URL } from '@constants/site';
 import { useEffect } from 'preact/hooks';
 

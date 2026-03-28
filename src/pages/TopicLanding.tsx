@@ -1,3 +1,11 @@
+/**
+ * **Topic hubs** (`/topics/:slug`) are **curated groupings** defined in `topic-landings.ts`: each
+ * maps a slug to a set of WordPress **category ids**. Posts are loaded with the same `fetchPosts()`
+ * home feed call, then filtered client-side (max {@link MAX_TOPIC_POSTS}). On failure, the query
+ * falls back to bundled `posts.json`—same pattern as category pages.
+ *
+ * Unknown slugs render a picker of all configured topics instead of a hard 404 body.
+ */
 import fetchPosts from '@apis/posts';
 import PageHeader from '@components/PageHeader';
 import Post from '@components/Post';
@@ -9,6 +17,7 @@ import { useMemo } from 'preact/hooks';
 import { Link, useParams } from 'react-router-dom';
 import type { WpPost } from 'types/wordpress';
 
+/** Cap grid length so topic pages stay fast even if the feed is huge. */
 const MAX_TOPIC_POSTS = 24;
 
 async function loadCachedPostsData(): Promise<WpPost[]> {

@@ -1,3 +1,15 @@
+/**
+ * **Home** loads two parallel queries—**all posts** and **all categories**—then:
+ * 1. Sorts posts by date and takes the newest as the **featured** hero (`FeaturedArticle`).
+ * 2. Builds **per-category sections** for the scroll feed (`ArticleFeed`): only categories whose
+ *    WordPress `name` is ASCII-only (avoids Thai/non-Latin desk labels in the grid).
+ * 3. Passes `cachedPostsById` into cards so thumbnails can merge from the list payload when a
+ *    row is missing `_embedded` media.
+ *
+ * **Cache key:** `queryKeys.allPosts` uses `fetchMagazinePostsWithFallback`; on small breakpoints
+ * that prefers `mobile-posts.json` when falling back—keep **PostDetails** on the same flag
+ * (`useBreakpoints`) so related-articles sees the same pool as Home.
+ */
 import fetchCategories from '@apis/categories';
 import { fetchMagazinePostsWithFallback } from '@apis/magazine-feed';
 import ArticleFeed from '@components/ArticleFeed';
@@ -21,7 +33,9 @@ import type {
   WpPostWithResolvedCategories,
 } from 'types/wordpress';
 
+/** Only category names matching this pattern become feed columns (stable English desk names). */
 const ASCII_CATEGORY_NAME = /^[A-Za-z0-9]+$/;
+/** Cards visible **per category row**; tuned so xs/sm stay dense, wide screens show more columns. */
 const MAX_POSTS_BY_BREAKPOINT = {
   xs: 1,
   sm: 1,
@@ -31,12 +45,17 @@ const MAX_POSTS_BY_BREAKPOINT = {
   '2xl': 8,
 } as const;
 
+/** Bundled categories snapshot when `fetchCategories()` throws (CI / blocked API). */
 async function loadCachedCategoriesData(): Promise<WpCategory[]> {
   const module = await import('@assets/cached/categories.json');
   const data = module.default;
   return Array.isArray(data) ? (data as WpCategory[]) : [];
 }
 
+/**
+ * Groups **non-featured** posts under ASCII category names. A post can appear in multiple
+ * sections if WordPress assigns multiple qualifying categories.
+ */
 function buildCategoryFeedSections(
   categories: WpCategory[] | undefined,
   posts: WpPost[] | undefined,
@@ -91,6 +110,7 @@ function buildCategoryFeedSections(
   return sections;
 }
 
+/** First ASCII category name on the post, for the featured chip (order follows `post.categories`). */
 function getPrimaryAsciiCategoryLabel(
   post: WpPost,
   categories: WpCategory[] | undefined,
@@ -118,6 +138,7 @@ function Home() {
   });
 
   const { active, isXs, isSm } = useBreakpoints();
+  /** Drives `fetchMagazinePostsWithFallback` — must match PostDetails for shared `queryKeys.allPosts`. */
   const shouldUseMobileCache = isXs || isSm;
 
   const fetchPostsWithFallback = useCallback(async () => {
