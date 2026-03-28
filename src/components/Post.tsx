@@ -1,6 +1,5 @@
 import placeholderImage from '@assets/images/placeholder.png';
 import { COPY } from '@constants/copy.constants';
-import { getPrimaryTopicLandingForPost } from '@constants/topic-landings';
 import useIntersectionObserver from '@hooks/useIntersectionObserver';
 import { stripHtmlTags } from '@utils/format-content';
 import { useMemo, useRef, useState } from 'preact/hooks';
@@ -54,7 +53,7 @@ function resolveFeaturedImage(
 
 function createExcerptPreview(post: WpPost): string {
   const rawExcerpt = stripHtmlTags(post.excerpt?.rendered ?? '');
-  if (!rawExcerpt) return 'A curated story from a day magazine.';
+  if (!rawExcerpt) return '';
   return rawExcerpt.length > 160 ? `${rawExcerpt.slice(0, 157)}...` : rawExcerpt;
 }
 
@@ -86,8 +85,6 @@ function PostCard({ post, prioritizeMedia = false, cachedPostsById }: PostCardPr
       })
     : null;
 
-  const topicHub = getPrimaryTopicLandingForPost(post);
-
   return (
     <li className='post-card list-none'>
       <article className='post-card__inner flex h-full flex-col overflow-hidden rounded-lg border-2 border-black bg-white shadow-sm transition-shadow duration-300 hover:shadow-md'>
@@ -95,9 +92,11 @@ function PostCard({ post, prioritizeMedia = false, cachedPostsById }: PostCardPr
           <h2 className='post-title line-clamp-3 min-h-[4.5rem] leading-snug'>
             {headingText}
           </h2>
-          <p className='mt-2 line-clamp-3 min-h-[4.2rem] text-sm leading-relaxed text-dull-black/80'>
-            {excerptPreview}
-          </p>
+          {excerptPreview ? (
+            <p className='mt-2 line-clamp-3 text-sm leading-relaxed text-dull-black/80'>
+              {excerptPreview}
+            </p>
+          ) : null}
           {publishedDate ? (
             <p className='mt-3 text-xs font-semibold uppercase tracking-wide text-dull-black/70'>
               Published {publishedDate}
@@ -139,25 +138,15 @@ function PostCard({ post, prioritizeMedia = false, cachedPostsById }: PostCardPr
             ) : null}
           </div>
         </div>
-        <footer className='post-card__footer space-y-2 px-6 pb-6 pt-2'>
+        <footer className='post-card__footer px-6 pb-6 pt-2'>
           <Link
             to={`/posts/${post.id}`}
             state={{ sourceUrl: post.link, title: headingText }}
-            className='btn-primary w-full max-w-xs transition hover:bg-neutral-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
+            className='btn-primary block w-full text-center transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
             aria-label={`${COPY.CARD_CTA}: ${headingText || 'post'}`}
           >
-            <span className='btn-secondary text-base normal-case sm:text-lg'>
-              {COPY.CARD_CTA}
-            </span>
+            {COPY.CARD_CTA}
           </Link>
-          {topicHub ? (
-            <Link
-              to={`/topics/${topicHub.slug}`}
-              className='block w-full max-w-xs rounded-md border border-black/50 bg-white px-3 py-2 text-center text-xs font-semibold tracking-wide text-dull-black transition hover:bg-black hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black sm:text-sm'
-            >
-              Browse the {topicHub.title} collection
-            </Link>
-          ) : null}
         </footer>
       </article>
     </li>
