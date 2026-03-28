@@ -27,7 +27,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <Navbar />
-      <main className='min-h-0 pt-16 lg:pt-[7.75rem]'>
+      <main className='min-h-0 overflow-x-hidden pt-16 lg:pt-[7.75rem]'>
         <Routes>
           <Route
             path='/'

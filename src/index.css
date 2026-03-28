@@ -1,9 +1,11 @@
+@import './styles/tokens.css';
 @import 'tailwindcss';
 
 @theme {
   --color-bright-green: #39ff14dd;
   --color-bright-yellow: #fcd200;
   --color-brand-cream: #f5f0e8;
+  --color-brand-white: #fafaf7;
   --color-dull-black: #333;
   --shadow-sm: 8px 8px 0px rgba(0, 0, 0, 1);
   --shadow-md: 15px 15px 0px rgba(0, 0, 0, 1);
@@ -42,7 +44,8 @@ body {
   height: 100%;
   width: 100%;
   font-family: 'FA Sysfont C', Krungthep, monospace !important;
-  @apply min-h-full bg-bright-green;
+  @apply min-h-full overflow-x-hidden bg-brand-white;
+  background-color: var(--brand-white);
 }
 
 #app {

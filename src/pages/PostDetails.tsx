@@ -1,13 +1,19 @@
+import { fetchMagazinePostsWithFallback } from '@apis/magazine-feed';
 import { fetchPostById } from '@apis/posts';
 import PageBreak from '@components/PageBreak';
 import PageHeader from '@components/PageHeader';
+import { RelatedArticles } from '@components/RelatedArticles';
 import Spinner from '@components/Spinner';
+import { DEFAULT_STALE_TIME_MS, REFETCH_INTERVAL } from '@constants/index';
 import { PRIMARY_NAV_CATEGORIES } from '@constants/nav-categories';
 import { queryKeys } from '@constants/query-keys';
 import { getPrimaryTopicLandingForPost } from '@constants/topic-landings';
+import useBreakpoints from '@hooks/useBreakpoints';
 import useSeo from '@hooks/useSeo';
 import { useQuery } from '@tanstack/react-query';
 import { sanitizeArticleBodyHtml, stripHtmlTags } from '@utils/format-content';
+import { toPostCardViewModel } from '@utils/post-card-view-model';
+import { getRelatedPosts } from '@utils/related-posts';
 import { Fragment } from 'preact';
 import { useMemo } from 'preact/hooks';
 import { Link, useLocation, useParams } from 'react-router-dom';
@@ -22,12 +28,28 @@ function PostDetails() {
   const location = useLocation();
   const routeState = location.state as PostDetailsRouteState | null;
   const hasValidPostId = typeof postId === 'string' && /^\d+$/.test(postId);
+  const { isXs, isSm } = useBreakpoints();
+  const shouldUseMobileCache = isXs || isSm;
 
   const { data, isPending, isError, error } = useQuery({
     queryKey: [...queryKeys.allPosts, 'detail', postId ?? ''],
     queryFn: () => fetchPostById(postId ?? ''),
     enabled: hasValidPostId,
   });
+
+  const { data: feedPosts } = useQuery({
+    queryKey: queryKeys.allPosts,
+    queryFn: () => fetchMagazinePostsWithFallback(shouldUseMobileCache),
+    staleTime: DEFAULT_STALE_TIME_MS,
+    refetchInterval: REFETCH_INTERVAL,
+  });
+
+  const relatedCards = useMemo(() => {
+    if (!data || !feedPosts?.length) return [];
+    const currentVm = toPostCardViewModel(data, null);
+    const allVms = feedPosts.map((p) => toPostCardViewModel(p, null));
+    return getRelatedPosts(currentVm, allVms, 3);
+  }, [data, feedPosts]);
 
   const errorMessage = error instanceof Error ? error.message : null;
   const pageTitle = stripHtmlTags(
@@ -92,7 +114,7 @@ function PostDetails() {
   });
 
   return (
-    <article className='mx-auto w-full max-w-4xl px-4 py-8 sm:px-6'>
+    <article className='mx-auto min-h-[50vh] w-full max-w-4xl bg-brand-white px-4 py-8 sm:px-6'>
       <PageHeader
         title={pageTitle}
         subtitle='Experience the full story in a focused editorial layout sourced from a day magazine.'
@@ -146,6 +168,7 @@ function PostDetails() {
               No article body is currently available from the source feed.
             </p>
           )}
+          {data ? <RelatedArticles posts={relatedCards} currentPostId={data.id} /> : null}
           <div className='mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center'>
             {topicHub ? (
               <Link
