@@ -748,8 +748,8 @@ stage it alongside the feature files before committing.
 | —   | fix/post-card-cta-entities-excerpt         | HF3         | Single `Post` card CTA; `stripHtmlTags` decodes HTML entities; excerpt paragraph omitted when empty (no hardcoded fallback)                                                    |
 | —   | fix/related-posts-app-shell                | —           | Related stories ordered by newest date; `#app` uses brand-white like `body`; plan documents A4/A5 overlap with merged homepage/reader work                                     |
 | #32 | chore/docs-developer-comments              | —           | JSDoc/comments for related posts, magazine feed fallback, PostDetails queries + related strip, RelatedArticles data contract, `stripHtmlTags`, post-card VM, `index.css` shell |
-| —   | chore/plan-closeout-seo-types              | —           | `plan.md` achievements marked complete vs shipped tree; `src/types/seo.types.ts` + typed JSON-LD graph in `structured-data.ts` / `JsonLd`                                      |
-| —   | fix/category-feed-bundled-fallback         | —           | Navbar category `/posts/categories/:id` uses bundled `posts.json` when live WP request fails or returns non-JSON; `posts/categories` route ordered before `posts/:id`          |
+| #33 | chore/plan-closeout-seo-types              | —           | `plan.md` achievements marked complete vs shipped tree; `src/types/seo.types.ts` + typed JSON-LD graph in `structured-data.ts` / `JsonLd`                                      |
+| #34 | fix/category-feed-bundled-fallback         | —           | Navbar category `/posts/categories/:id` uses bundled `posts.json` when live WP request fails or returns non-JSON; `posts/categories` route ordered before `posts/:id`          |
 
 ---
 
@@ -948,7 +948,7 @@ export interface TopicConfig {
 
 **Status:** ✅ Completed (2026-03-28)
 
-**Shipped:** `.github/workflows/deployment.yml` runs `pnpm cache:build` before `pnpm build`; `cachescripts/cache-build.sh`, `fetch-a-day-post-details.sh`, `fetch-a-day-posts.sh`, validated JSON under `src/assets/cached/`. Further curl timeouts / `MAX_DETAILS` caps remain optional hardening.
+**Shipped:** `.github/workflows/deployment.yml` runs `pnpm cache:build` before `pnpm build`; `cachescripts/cache-build.sh`, `fetch-a-day-posts.sh`, `fetch-a-day-post-details.sh`, validated JSON under `src/assets/cached/`. **PR #34:** `fetchCategoryPostsPage` uses that bundled list when the live category API fails or returns non-JSON (navbar `/posts/categories/:id` on GitHub Pages). Further curl timeouts / `MAX_DETAILS` caps remain optional hardening.
 
 **TypeScript requirements:**
 
@@ -1014,7 +1014,7 @@ The ordered milestones below shipped under different **file names** than some ea
 7. Achievement 9    ✅ Trust/editorial depth on `About`, `Insights`, `Collections` (no separate `SocialProof` component)
 ```
 
-**Optional follow-ups (not blockers):** split `PostReader/*` for readability; add a reusable `SocialProof` strip; further curl hardening in cache scripts per Achievement 7 notes.
+**Optional follow-ups (not blockers):** split `PostReader/*` for readability; add a reusable `SocialProof` strip; further curl hardening in cache scripts per Achievement 7 notes; optional `mobile-posts.json` slice for category fallback on small viewports (PR #34 uses full `posts.json`).
 
 ---
 
