@@ -1,42 +1,26 @@
-## Summary
+## What this PR does
+<!-- One paragraph. What changed and why. No bullet soup. -->
 
-<!-- What does this PR change and why? Link issues (e.g. Closes #123). -->
+## Why it matters
+<!-- What breaks or degrades without this. User impact. -->
 
-## Type of change
-
-<!-- Check all that apply. -->
-
-- [ ] Feature / user-facing behavior
-- [ ] Bug fix
-- [ ] Chore (tooling, deps, CI, docs only)
-- [ ] Performance
-- [ ] Accessibility / UX
-
-## Scope
-
-<!-- APIs, pages, components, workflows, etc. -->
-
+## Files changed
+<!-- List every file touched with one-line reason -->
 -
 
-## Test plan
+## How to test
+<!-- Exact numbered steps — no "it should work" -->
+1.
+2.
+3.
 
-<!-- How reviewers can verify this. -->
+## Acceptance criteria
+<!-- Copy directly from plan.md for this achievement -->
+- [ ] `pnpm lint` — 0 errors
+- [ ] `pnpm build` — 0 TypeScript errors
+- [ ] No CTA contains "click here", "read more", or "learn more"
 
-- [ ] `pnpm install --frozen-lockfile` (Node per `.nvmrc` / `engines`)
-- [ ] `pnpm lint`
-- [ ] `pnpm build`
-- [ ] Manual: <!-- describe flows, URLs, breakpoints -->
-
-## Commits
-
-<!-- Use [Conventional Commits](https://www.conventionalcommits.org/) (e.g. feat:, fix:, chore:). Prefer 1–3 focused commits per PR. -->
-
--
-
-## Screenshots / recordings
-
-<!-- Optional: UI or before/after. -->
-
-## Notes for reviewers
-
-<!-- Risks, follow-ups, deployment or cache script impacts. -->
+## Screenshots
+| Before | After |
+|--------|-------|
+| | |
