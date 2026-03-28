@@ -219,6 +219,7 @@ Pre-fetch article detail payloads during CI/cache update pipelines so detail pag
 
 ## Achievement 7 - Build-Time Detail Cache Pipeline (CI + App Integration)
 
+**Status:** Completed (baseline merged); hardening PR adds resilience below.  
 **Goal:** Pre-structure detail pages by fetching article payloads during CI/scheduled cache workflows.
 
 ### Scope
@@ -230,6 +231,14 @@ Pre-fetch article detail payloads during CI/cache update pipelines so detail pag
 - Extend scheduled cache update workflow to include post-details artifact.
 - Update `fetchPostById` to read cache first, then network fallback.
 
+### Hardening (this PR)
+
+- Curl connect/time limits and retries; optional `DETAIL_REQUEST_DELAY_SECS` between requests.
+- Merge with existing `post-details.json`: skip network when an entry already has usable `content.rendered`.
+- `MAX_DETAILS` env caps fetches per run (CI sets a bound on pull requests only).
+- `pnpm cache:details` to rerun detail step after posts exist.
+- App: if cache hit lacks a non-empty body after strip, fall back to network.
+
 ### Acceptance criteria
 
 - Detail cache generated successfully in automation environments.
@@ -238,8 +247,8 @@ Pre-fetch article detail payloads during CI/cache update pipelines so detail pag
 
 ### Commit / PR
 
-- **Commit:** `feat(cache): prebuild structured article detail pages for runtime`
-- **PR title:** `feat(cache): prebuild structured article detail pages for runtime`
+- **Baseline commit:** `feat(cache): prebuild structured article detail pages for runtime`
+- **Hardening commit:** `feat(cache): harden post-details fetch pipeline and CI bounds`
 
 ---
 
@@ -304,6 +313,5 @@ Pre-fetch article detail payloads during CI/cache update pipelines so detail pag
 
 ## Execution Order (from now)
 
-1. Achievement 7 (build-time detail cache)
-2. Achievement 8 (crawlability hardening)
-3. Achievement 9 (content depth and trust signals)
+1. Achievement 8 (crawlability hardening)
+2. Achievement 9 (content depth and trust signals)

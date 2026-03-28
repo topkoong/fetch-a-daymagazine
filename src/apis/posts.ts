@@ -1,4 +1,5 @@
 import { A_DAY_POSTS_ENDPOINT, PAGE_SIZE } from '@constants/index';
+import { stripHtmlTags } from '@utils/format-content';
 import { normalizeWpPost, normalizeWpPosts } from '@utils/normalize-wp-post';
 import axios from 'axios';
 import type { CategoryPostsPage, WpPost } from 'types/wordpress';
@@ -27,6 +28,12 @@ async function loadPostDetailsCache(): Promise<PostDetailsCache> {
   return cachedPostDetailsPromise;
 }
 
+function hasUsableDetailBody(post: WpPost): boolean {
+  const raw = post.content?.rendered;
+  if (typeof raw !== 'string' || !raw.trim()) return false;
+  return stripHtmlTags(raw).trim().length > 0;
+}
+
 export function buildCategoryPostsRequestUrl(categoryId: string, offset: number): string {
   const params = new URLSearchParams({
     categories: categoryId,
@@ -46,7 +53,7 @@ export async function fetchPosts(): Promise<WpPost[]> {
 export async function fetchPostById(postId: string): Promise<WpPost> {
   const cachedMap = await loadPostDetailsCache();
   const cached = normalizeWpPost(cachedMap[postId]);
-  if (cached) {
+  if (cached && hasUsableDetailBody(cached)) {
     return cached;
   }
 
