@@ -34,7 +34,9 @@ jobs:
 
       - name: Build article caches before app build
         env:
-          # Bound detail fetches on pull requests so CI stays reliable; full cache on push to master.
+          # adaymagazine.com often returns HTTP 403 to GitHub IPs; use committed JSON instead of live fetch.
+          CACHE_FETCH_OFFLINE: '1'
+          # Used only when CACHE_FETCH_OFFLINE is unset (local / self-hosted). PRs cap detail fetches.
           MAX_DETAILS: ${{ github.event_name == 'pull_request' && 150 || 0 }}
         run: pnpm cache:build
 
