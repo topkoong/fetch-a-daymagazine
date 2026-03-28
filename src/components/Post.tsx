@@ -1,4 +1,5 @@
 import placeholderImage from '@assets/images/placeholder.png';
+import { getPrimaryTopicLandingForPost } from '@constants/topic-landings';
 import useIntersectionObserver from '@hooks/useIntersectionObserver';
 import { stripHtmlTags } from '@utils/format-content';
 import { useMemo, useRef, useState } from 'preact/hooks';
@@ -82,6 +83,8 @@ function PostCard({ post, prioritizeMedia = false, cachedPostsById }: PostCardPr
       })
     : null;
 
+  const topicHub = getPrimaryTopicLandingForPost(post);
+
   return (
     <li className='post-card list-none'>
       <article className='post-card__inner flex h-full flex-col overflow-hidden rounded-lg border-2 border-black bg-bright-yellow shadow-sm transition-shadow duration-300 hover:shadow-md'>
@@ -129,7 +132,7 @@ function PostCard({ post, prioritizeMedia = false, cachedPostsById }: PostCardPr
             ) : null}
           </div>
         </div>
-        <footer className='post-card__footer px-6 pb-6 pt-2'>
+        <footer className='post-card__footer space-y-2 px-6 pb-6 pt-2'>
           <Link
             to={`/posts/${post.id}`}
             state={{ sourceUrl: post.link, title: headingText }}
@@ -140,6 +143,14 @@ function PostCard({ post, prioritizeMedia = false, cachedPostsById }: PostCardPr
               Read the complete story brief
             </span>
           </Link>
+          {topicHub ? (
+            <Link
+              to={`/topics/${topicHub.slug}`}
+              className='block w-full max-w-xs rounded-md border border-black/50 bg-white px-3 py-2 text-center text-xs font-semibold tracking-wide text-dull-black transition hover:bg-black hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black sm:text-sm'
+            >
+              Browse the {topicHub.title} collection
+            </Link>
+          ) : null}
         </footer>
       </article>
     </li>

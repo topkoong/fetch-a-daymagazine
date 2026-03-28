@@ -64,6 +64,33 @@ function Navbar() {
           </li>
           <li>
             <Link
+              to='/topics/culture'
+              className='rounded px-2 py-1 text-xs font-semibold tracking-wide text-white/85 transition hover:text-white'
+              onClick={closeMobileMenu}
+            >
+              Culture
+            </Link>
+          </li>
+          <li>
+            <Link
+              to='/topics/design'
+              className='rounded px-2 py-1 text-xs font-semibold tracking-wide text-white/85 transition hover:text-white'
+              onClick={closeMobileMenu}
+            >
+              Design
+            </Link>
+          </li>
+          <li>
+            <Link
+              to='/topics/lifestyle'
+              className='rounded px-2 py-1 text-xs font-semibold tracking-wide text-white/85 transition hover:text-white'
+              onClick={closeMobileMenu}
+            >
+              Lifestyle
+            </Link>
+          </li>
+          <li>
+            <Link
               to='/insights'
               className='rounded px-2 py-1 text-xs font-semibold tracking-wide text-white/85 transition hover:text-white'
               onClick={closeMobileMenu}
@@ -175,6 +202,33 @@ function Navbar() {
               onClick={closeMobileMenu}
             >
               World
+            </Link>
+          </li>
+          <li>
+            <Link
+              to='/topics/culture'
+              className='block rounded px-2 py-2 text-xs font-semibold uppercase tracking-wide text-white transition hover:bg-blue-700 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400 sm:text-sm'
+              onClick={closeMobileMenu}
+            >
+              Culture
+            </Link>
+          </li>
+          <li>
+            <Link
+              to='/topics/design'
+              className='block rounded px-2 py-2 text-xs font-semibold uppercase tracking-wide text-white transition hover:bg-blue-700 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400 sm:text-sm'
+              onClick={closeMobileMenu}
+            >
+              Design
+            </Link>
+          </li>
+          <li>
+            <Link
+              to='/topics/lifestyle'
+              className='block rounded px-2 py-2 text-xs font-semibold uppercase tracking-wide text-white transition hover:bg-blue-700 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400 sm:text-sm'
+              onClick={closeMobileMenu}
+            >
+              Lifestyle
             </Link>
           </li>
           <li>

@@ -1,3 +1,5 @@
+import type { WpPost } from 'types/wordpress';
+
 export interface TopicLandingDefinition {
   slug: string;
   title: string;
@@ -63,4 +65,15 @@ export const TOPIC_LANDINGS: readonly TopicLandingDefinition[] = [
 export function getTopicBySlug(slug: string | undefined): TopicLandingDefinition | null {
   if (!slug) return null;
   return TOPIC_LANDINGS.find((topic) => topic.slug === slug) ?? null;
+}
+
+/** First topic hub whose category ids overlap the post (stable list order). */
+export function getPrimaryTopicLandingForPost(
+  post: WpPost,
+): TopicLandingDefinition | null {
+  const ids = new Set(post.categories);
+  for (const topic of TOPIC_LANDINGS) {
+    if (topic.categoryIds.some((cid) => ids.has(cid))) return topic;
+  }
+  return null;
 }

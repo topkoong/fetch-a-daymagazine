@@ -40,6 +40,7 @@ export function normalizeWpPost(raw: unknown): WpPost | null {
     excerpt: { rendered: excerptRendered },
     content: { rendered: contentRendered },
     date: typeof source.date === 'string' ? source.date : undefined,
+    modified: typeof source.modified === 'string' ? source.modified : undefined,
     categories: normalizeCategoryIds(source.categories),
     featured_image:
       typeof source.featured_image === 'object' && source.featured_image
